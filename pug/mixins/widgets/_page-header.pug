@@ -1,0 +1,7 @@
+mixin PageHeader(config)
+  h3=config.title
+  p.mb-0=config.description
+  if config.url
+    a(href=config.url target='_blank').btn.btn-link.btn-sm.pl-0.mt-2=config.linkText
+      span.fas.fa-chevron-right.ml-1.fs--2
+  

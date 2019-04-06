@@ -57,16 +57,26 @@ $grays: map_merge($grays, (
 //*-----------------------------------------------
 //|   Solid Colors
 //-----------------------------------------------*/
-$blue: #2c7be5 !default;
-$indigo: #727cf5 !default;
-$purple: #6b5eae !default;
-$pink: #ff679b !default;
-$red: #e63757 !default;
-$orange: #fd7e14 !default;
-$yellow: #f5803e !default;
-$green: #00d27a !default;
-$teal: #02a8b5 !default;
-$cyan: #39afd1 !default;
+////$blue: #2c7be5 !default;
+//$indigo: #727cf5 !default;
+////$purple: #6b5eae !default;
+////$pink: #ff679b !default;
+////$red: #e63757 !default;
+////$orange: #fd7e14 !default;
+////$yellow: #f5803e !default;
+////$green: #00d27a !default;
+////$teal: #02a8b5 !default;
+//$cyan: #39afd1 !default;
+
+$blue: #007aff !default;
+$purple: #5856d6 !default;
+$pink: #ff2d55 !default;
+$red: #ff3b30 !default;
+$orange: #ff9500 !default;
+$yellow: #ffcc00 !default;
+$green: #4cd964 !default;
+$teal: #5ac8fa !default;
+
 
 //*-----------------------------------------------
 //|   Theme Colors
@@ -74,7 +84,7 @@ $cyan: #39afd1 !default;
 $primary: $blue !default;
 $secondary: $gray-600 !default;
 $success: $green !default;
-$info: $cyan !default;
+$info: $teal !default;
 $warning: $yellow !default;
 $danger: $red !default;
 $light: $gray-100 !default;

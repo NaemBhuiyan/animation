@@ -1,8 +1,9 @@
 mixin navbar
-  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fs--1.font-weight-semi-bold.navbar-standard.navbar-theme&attributes(attributes)
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light.fs--1.font-weight-semi-bold.navbar-standard.navbar-theme&attributes(attributes)
     .container
       a(href=`${CWD}index.html`).navbar-brand
-        .d-flex.align-items-center.text-primary
+        img(src=`${CWD}assets/img/logo.png` alt='logo' width=40)
+        //- .d-flex.align-items-center.text-primary
           span.text-white ZiON
       button.navbar-toggler.collapsed(type='button', data-toggle='collapse', data-target='#navbarStandard', aria-controls='navbarStandard', aria-expanded='false', aria-label='Toggle navigation')
         span.navbar-toggler-icon

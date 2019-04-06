@@ -1,4 +1,5 @@
 extends _skeleton-theme
+include mixins/navbars/navbar-elements
 include mixins/widgets/_widgets
 
 block append styles
@@ -16,25 +17,4 @@ block append content
         block component
 
       .col.d-none.d-lg-block
-        - var components = Object.keys(sitemap.components.inners)
-        - var plugins = Object.keys(sitemap.plugins.inners)
-        - var utilities = Object.keys(sitemap.utilities.inners)
-        ul.nav.flex-column
-          li.nav-item
-            a.nav-link(data-toggle="collapse" href="#components" role="button" aria-expanded="false" aria-controls="components") Components
-            .nav.collapse.pl-3(id='components')
-              each value, key in components
-                a.nav-link.w-100(href=`${CWD}components/${value}.html`)
-                  +cleanText(value)
-          li.nav-item
-            a.nav-link(data-toggle="collapse" href="#plugins" role="button" aria-expanded="false" aria-controls="plugins") Plugins
-            .nav.collapse.pl-3(id='plugins')
-              each value, key in plugins
-                a.nav-link.w-100(href=`${CWD}components/${value}.html`)
-                  +cleanText(value)
-          li.nav-item
-            a.nav-link(data-toggle="collapse" href="#utilities" role="button" aria-expanded="false" aria-controls="utilities") Utilities
-            .nav.collapse.pl-3(id='utilities')
-              each value, key in utilities
-                a.nav-link.w-100(href=`${CWD}components/${value}.html`)
-                  +cleanText(value)
+        +navbarElements

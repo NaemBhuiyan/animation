@@ -8,7 +8,7 @@ block append scripts
   script(src!=`https://maps.googleapis.com/maps/api/js?key=${API_GMAP}&callback=initMap` async)
 
 
-block append content
+block component
   +PageHeader('Google Map')
     p.mt-2.mb-0 #{theme} uses Google map with Snazzy Maps, with different color schemes aimed towards web designers and developers.
     
