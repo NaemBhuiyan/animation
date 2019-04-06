@@ -1,0 +1,27 @@
+
+  
+
+mixin bulkSelect
+  p Bulk select allows users to check multiple checkboxes at once and toggles a UI for bulk actions to be performed for the selected items.
+      strong Bulk select consist of four main parts:
+      ol 
+        li The main checkbox, which is used for checking all the other checkboxes, the class 
+          code checkbox-bulk-select
+          |  is used to define that item.
+        li The target checkboxes are wrapped using a unique id, in this example 
+          code bulk-select-body
+          | . Every targeted checkbox within this wrapper is marked as 
+          code checkbox-bulk-select-target
+          | . The id 
+          code bulk-select-body
+          |  is used to hook it to the main checkbox with 
+          code data-checkbox-body="#bulk-select-body"
+        li The element with id 
+          code bulk-select-actions
+          |  will be toggled by checking the main checkbox, which is hooked using 
+          code data-checkbox-actions="#bulk-select-actions"
+        li Bulk select actions will be replaced with the content of 
+          code bulk-select-replace-element 
+          | id, which is hooked using 
+          code data-checkbox-replaced-element="#bulk-select-replace-element"
+      img.img-fluid.rounded(src=`${CWD}assets/img/doc/bulk-select.png` alt="")
