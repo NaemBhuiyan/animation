@@ -1,0 +1,26 @@
+extends ../_skeleton-component
+
+block append variables
+  - var firstParent = 'plugins'              
+  - var currentPage = 'countdown'
+
+block append scripts
+  script(src=`${CWD}assets/lib/jquery-countdown/jquery.countdown.min.js`)
+
+block append content
+  +PageHeader('Count Down')
+    p.mt-2 A simple and HTML agnostic date countdown plugin for jQuery
+    a(href='//hilios.github.io/jQuery.countdown/' target='_blank').btn.btn-link.pl-0.btn-sm  The Final Countdown Documentation
+      span.fas.fa-chevron-right.ml-1.fs--2
+  .card.mb-3
+    .card-header
+      h5.mb-0 Example
+    .card-body.bg-light
+      +componentCard
+       span.fs-4.font-weight-medium(data-countdown='2019/12/31' data-countdown-fallback='Getting ready')
+  .card.mb-3
+    .card-header
+      h5.mb-0 Javascript
+    .card-body.bg-light
+      +componentCardLib
+        script(src=`assets/lib/jquery-countdown/jquery.countdown.min.js`)

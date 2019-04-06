@@ -1,0 +1,86 @@
+extends ../_skeleton-component
+
+block append variables
+  - var firstParent = 'components'              
+  - var currentPage = 'avatar'
+  - var status = ['online', 'offline', 'away', 'do-not-disturb'];
+  - var avatars = ['5xl', '4xl', '3xl', '2xl', 'xl', 'l', 'm', 's'];
+  -
+    var pageHeader = {
+      title: 'Avatar',
+      description:'Use avater of different shapes and sizes with a single component.',
+    }
+
+block component
+  .card.mb-3
+    .card-body
+      +PageHeader(pageHeader)
+  .row.no-gutters
+    .col-md-4.pr-md-2
+      .card.mb-3
+        .card-header
+          h5.mb-0 Circular
+        .card-body.bg-light
+          +componentCard
+            +Avatar({size: '4xl'})
+    .col-md-4.px-md-2
+      .card.mb-3
+        .card-header
+          h5.mb-0 Square
+        .card-body.bg-light
+          +componentCard
+            .avatar.avatar-4xl
+              = '\n'
+              img(src=`${CWD}assets/img/team/2.jpg` alt="")
+              = '\n'
+    .col-md-4.pl-md-2
+      .card.mb-3
+        .card-header
+          h5.mb-0 Soft
+        .card-body.bg-light
+          +componentCard
+            +Avatar({size: '4xl', img: 'team/3.jpg', round: 'soft' })
+
+    .col-md-4.pr-md-2
+      .card.mb-3
+        .card-header
+          h5.mb-0 Content
+        .card-body.bg-light
+          +componentCard
+            +Avatar({size: '4xl', more: '12+', round: 'circle' })
+
+    .col-md-4.px-md-2
+      .card.mb-3
+        .card-header
+          h5.mb-0 Name
+        .card-body.bg-light
+          +componentCard
+            +Avatar({size: '4xl', name: 'Emma Watson', round: 'circle' })
+
+    .col-md-4.pl-md-2
+      .card.mb-3
+        .card-header
+          h5.mb-0 Emoji
+        .card-body.bg-light
+          +componentCard
+            +Avatar({size: '4xl', emoji: '🎁', round: 'circle' })
+  
+  
+  .card.mb-3
+    .card-header
+      h5.mb-0 Status
+    .card-body.bg-light
+      +componentCard
+        .row.align-items-center
+          each value in status
+            .col-auto
+              +Avatar({size: '4xl', img: 'team/1.jpg', status: value, round: 'circle'})
+  .card.mb-3
+    .card-header
+      h5.mb-0 Sizes
+    .card-body.bg-light
+      +componentCard
+        .row.align-items-center.mt-4
+          each size, index in avatars
+            .col-auto
+              +Avatar({size, img: 'team/1.jpg', round: 'circle'})

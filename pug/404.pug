@@ -1,0 +1,10 @@
+extends _skeleton-theme
+include mixins/pages/error/_error404
+
+block append variables
+  - var CWD = './'
+
+block wrapperContent
+  .row.flex-center.text-center.min-vh-100
+    .col-sm-11.col-md-9.col-lg-7.col-xl-6.col-xxl-5
+      +error404

@@ -1,0 +1,276 @@
+extends ../_skeleton-component
+  
+block append variables
+  - var firstParent = 'utilities'              
+  - var currentPage = 'typography'
+ 
+block append content
+  +PageHeader('Typography')
+    p.mt-2 Documentation and examples for #{theme} typography, including global settings, headings, body text, lists, and special typographic element.
+    a(href=`https://getbootstrap.com/docs/4.3/content/typography` target='_blank').btn.btn-link.pl-0.btn-sm Typography on Bootstrap
+      span.fas.fa-chevron-right.ml-1.fs--2
+  .card.mb-3
+    .card-header
+      h5 Font Family
+      p.mb-0 You have three 
+        code font-family 
+        |  helper classes available to use.
+    .card-body.bg-light
+      +componentCard
+        .text-sans-serif Poppins
+        = '\n'
+        .text-base Open Sans
+        = '\n'
+        code.text-monospace Monospace
+  .card.mb-3
+    .card-header
+      h5 Headings
+      p.mb-0
+        strong theme
+        |  has all the html headings, 
+        code #{'<h1>'}
+        |  through 
+        code #{'<h6>'}
+        | , styled for you. Also you can use 
+        code .h1
+        |   through 
+        code .h6
+        |   classes when you want to match the font styling of a heading but still want your text to be displayed inline.
+    .card-body.bg-light
+      +componentCard
+        h1 Heading 1
+        h2 Heading 2
+        h3 Heading 3
+        h4 Heading 4
+        h5 Heading 5
+        h6 Heading 6
+  .card.mb-3
+    .card-header
+      h5 Paragraphs
+      p.mb-0 This is a paragraph text. Following text are dummy copy text. Donec feugiat lorem dolor, eu fringilla urna tincidunt quis. In vitae dignissim lectus. Maecenas varius libero non metus rhoncus sagittis. Proin posuere iaculis auctor. Vivamus orci lorem, sollicitudin at convallis in, feugiat eget felis. Integer maximus, metus sit amet imperdiet semper, erat felis vulputate odio, nec malesuada metus.
+    .card-body.bg-light
+      +componentCard
+        p
+          | Your paragraph text goes here.
+  
+  .card.mb-3
+    .card-header
+      h5 Lead Paragraph and Drop cap
+      p.mb-0
+        | Make a paragraph stand out by adding 
+        code .lead
+        |  and for drop cap, use 
+        code .dropcap
+        |  class.
+    .card-body.bg-light
+      +componentCard
+        p.dropcap.lead Morem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus at cumque deleniti dolores, est fugiat harum impedit ipsam, itaque iusto magnam natus neque, nulla placeat quis quod recusandae sapiente. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque consectetur culpa eos est exercitationem harum impedit iusto magnam molestiae neque non officia, pariatur possimus rem sapiente, sequi! Beatae, quae.
+  .card.mb-3
+    .card-header
+      h5.mb-0 Font Weights
+    .card-body.bg-light
+        +componentCardLib
+          .font-weight-thin {font-weight: 100 !important;}
+          .font-weight-extra-light {font-weight: 200 !important;}
+          .font-weight-light {font-weight: 300 !important;}
+          .font-weight-normal {font-weight: 400 !important;}
+          .font-weight-medium {font-weight: 500 !important;}
+          .font-weight-semi-bold {font-weight: 600 !important;}
+          .font-weight-bold {font-weight: 700 !important;}
+          .font-weight-extra-bold {font-weight: 800 !important;}
+          .font-weight-black {font-weight: 900 !important;}
+  .card.mb-3
+    .card-header
+      h5 Colors
+      p.mb-0 Use the following colors to change the text color
+    .card-body.bg-light
+      +componentCard
+        h5.text-primary .text-primary
+        h5.text-info .text-info
+        h5.text-success .text-success
+        h5.text-warning .text-warning
+        h5.text-danger .text-danger
+        h5.text-black .text-black
+        h5.text-dark .text-dark
+        h5.text-1000 .text-1000
+        h5.text-900 .text-900
+        h5.text-800 .text-800
+        h5.text-700 .text-700
+        h5.text-600 .text-600
+        h5.text-500 .text-500
+        h5.text-400 .text-400
+        h5.text-300
+          span.bg-black .text-300
+        h5.text-200
+          span.bg-dark .text-200
+        h5.text-light
+          span.bg-1000 .text-light
+        h5.text-white
+          span.bg-900 .text-white
+  .card.mb-3
+    .card-header
+      h5 Sizes
+      p.mb-0 If you want different sizes of fonts, you may use the following classes.
+    .card-body.bg-light
+      +componentCard
+        h6.fs--2 .fs--2
+        h6.fs--1 .fs--1
+        h6.fs-0 .fs-0
+        h6.fs-1 .fs-1
+        h6.fs-2 .fs-2
+        h6.fs-4 .fs-4
+        h6.fs-5 .fs-5
+        h6.fs-6 .fs-6
+        h6.fs-7 .fs-7
+        h6.fs-8 .fs-8
+  
+  .row 
+    .col-sm-6
+      .card.mb-3
+        .card-header
+          h5.mb-0 Left Alignment
+        .card-body.bg-light
+          +componentCard
+            .text-left
+              | Pellentesque cursus placerat hendrerit. Donec sed erat nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce vitae consequat erat. Quisque faucibus felis et fringilla imperdiet. Etiam at porttitor elit, quis convallis massa. Ut id risus sapien. Praesent sit amet arcu a eros laoreet facilisis id eget risus.
+
+    .col-sm-6
+      .card.mb-3
+        .card-header
+          h5.mb-0 Right Alignment
+        .card-body.bg-light
+          +componentCard
+            .text-right Pellentesque cursus placerat hendrerit. Donec sed erat nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce vitae consequat erat. Quisque faucibus felis et fringilla imperdiet. Etiam at porttitor elit, quis convallis massa. Ut id risus sapien. Praesent sit amet arcu a eros laoreet facilisis id eget risus.
+
+    .col-sm-6
+      .card.mb-3
+        .card-header
+          h5.mb-0 Center Aligned
+        .card-body.bg-light
+          +componentCard
+            .text-center Pellentesque cursus placerat hendrerit. Donec sed erat nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce vitae consequat erat. Quisque faucibus felis et fringilla imperdiet. Etiam at porttitor elit, quis convallis massa. Ut id risus sapien. Praesent sit amet arcu a eros laoreet facilisis id eget risus.
+    .col-sm-6
+      .card.mb-3
+        .card-header
+          h5.mb-0 Justified
+        .card-body.bg-light
+          +componentCard
+            .text-justify Pellentesque cursus placerat hendrerit. Donec sed erat nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce vitae consequat erat. Quisque faucibus felis et fringilla imperdiet. Etiam at porttitor elit, quis convallis massa. Ut id risus sapien. Praesent sit amet arcu a eros laoreet facilisis id eget risus.
+      
+  .card.mb-3
+    .card-header
+      h5.mb-0 Transformation
+    .card-body.bg-light
+      +componentCard
+        .text-lowercase Lowercased text
+        .text-uppercase Uppercased text
+        .text-capitalize Capitalized text
+  .card.mb-3
+    .card-header
+      h5 Inline styles
+      p.mb-0 
+        | Use these tags for inline styling. Feel free to use 
+        code #{'<b>'}
+        |  and 
+        code #{'<em>'}
+        |  tags insted of 
+        code #{'<strong>'}
+        |  and 
+        code #{'<i>'}
+        |  tags.
+    .card-body.bg-light
+      +componentCard
+        p
+          mark Highlight text
+        p
+          del Deleted text
+        p
+          u Underlined text
+        p
+          small Small text
+        p
+          strong Bold text
+        p
+          i Italic text
+  .card.mb-3
+    .card-header
+      h5.mb-0 Blockquotes
+    .card-body.bg-light
+      +componentCard
+        blockquote.blockquote.my-3
+          p.fs-2.text-800.font-italic Racing is life, everything before or after is just waiting.”
+          footer.blockquote-footer Frank Zappa
+  
+  .row
+    .col-lg-6
+      .card.mb-3
+        .card-header
+          h5.mb-0 Unordered List
+          p.mb-0 A list of items in which the order does not explicitly matter.
+        .card-body.bg-light
+          +componentCard
+            ul
+              li Lorem ipsum dolor sit amet
+              li Consectetur adipiscing elit
+              li Nulla volutpat aliquam velit
+                ul
+                  li Phasellus iaculis neque
+                  li Purus sodales ultricies
+              li Faucibus porta lacus fringilla vel
+    .col-lg-6
+      .card.mb-3
+        .card-header
+          h5 Ordered List
+          p.mb-0 A list of items in which the order does explicitly matter.
+        .card-body.bg-light
+          +componentCard
+            ol
+              li Lorem ipsum dolor sit amet
+              li Consectetur adipiscing elit
+              li Nulla volutpat aliquam velit
+                ol
+                  li Phasellus iaculis neque
+                  li Purus sodales ultricies
+              li Faucibus porta lacus fringilla vel
+    .col-lg-6
+      .card.mb-3
+        .card-header
+          h5 Unstyled List
+          p.mb-0 Adding 
+            code list-unstyled
+            |  class to  
+            code ul
+            |  element will produce the following list style:
+        .card-body.bg-light
+          +componentCard
+            ul.list-unstyled
+              li Lorem ipsum dolor sit amet
+              li Consectetur adipiscing elit
+              li Nulla volutpat aliquam velit
+                = '\n'
+                ul.list-unstyled.pl-4
+                  li Phasellus iaculis neque
+                  li Purus sodales ultricies
+              li Faucibus porta lacus fringilla vel
+    .col-lg-6
+      .card.mb-3
+        .card-header
+          h5 Checkmarked List
+          p.mb-0 Adding 
+            code style-check
+            |  class to  
+            code ul
+            |  element will produce the following list style:
+
+        .card-body.bg-light
+          +componentCard
+            ul.style-check
+              li Lorem ipsum dolor sit amet
+              li Consectetur adipiscing elit
+              li Nulla volutpat aliquam velit
+                = '\n'
+                ul
+                  li Phasellus iaculis neque
+                  li Purus sodales ultricies
+              li Faucibus porta lacus fringilla vel 
+    

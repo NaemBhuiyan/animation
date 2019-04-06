@@ -1,0 +1,64 @@
+mixin navbar
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fs--1.font-weight-semi-bold.navbar-standard.navbar-theme&attributes(attributes)
+    .container
+      a(href=`${CWD}index.html`).navbar-brand
+        .d-flex.align-items-center.text-primary
+          span.text-white ZiON
+      button.navbar-toggler.collapsed(type='button', data-toggle='collapse', data-target='#navbarStandard', aria-controls='navbarStandard', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarStandard.collapse.navbar-collapse
+        ul.navbar-nav.align-items-center
+          li.nav-item.dropdown
+            a#navbarDropdownDocumentation.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Documentation
+            .dropdown-menu.dropdown-menu-card(aria-labelledby='navbarDropdownDocumentation')
+              .bg-white.rounded-soft.py-2
+                - var documentation = Object.keys(sitemap.documentation.inners)
+                each value in documentation
+                  a.dropdown-item(href=`${CWD}documentation/${value}.html`)
+                    +cleanText(value)
+          li.nav-item.dropdown
+            a#navbarDropdownComponents.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Components
+            .dropdown-menu.dropdown-menu-card(aria-labelledby='navbarDropdownComponents')
+              .card.shadow-none.navbar-card-components
+                .card-body
+                  - var components = Object.keys(sitemap.components.inners)
+                  - var plugins = Object.keys(sitemap.plugins.inners)
+                  - var utilities = Object.keys(sitemap.utilities.inners)
+                  .row
+                    .col-6.col-sm-auto
+                      ul.nav.flex-column
+                        each value, index in components
+                          if index < components.length / 2
+                            li.nav-item
+                              a.nav-link.py-1.text-700.font-weight-medium(href=`${CWD}components/${value}.html`)
+                                +cleanText(value)
+                    .col-6.col-sm-auto
+                      ul.nav.flex-column
+                        each value, index in components
+                          if index >= components.length / 2
+                            li.nav-item
+                              a.nav-link.py-1.text-700.font-weight-medium(href=`${CWD}components/${value}.html`)
+                                +cleanText(value)
+                    .col-6.col-sm-auto
+                      .nav-link.py-1.text-900.font-weight-bold Plugins
+                      ul.nav.flex-column
+                        each value, index in plugins
+                          if index < 14
+                            li.nav-item
+                              a.nav-link.py-1.text-700.font-weight-medium(href=`${CWD}plugins/${value}.html`)
+                                +cleanText(value)
+                    .col-6.col-sm-auto
+                      ul.nav.flex-column
+                        each value, index in plugins
+                          if index >= 14
+                            li.nav-item
+                              a.nav-link.py-1.text-700.font-weight-medium(href=`${CWD}plugins/${value}.html`)
+                                +cleanText(value)
+
+                      .nav-link.py-1.text-900.font-weight-bold.mt-2 Utilities
+                      ul.nav.flex-column
+                        each value, index in utilities
+                          if utilities.length
+                            li.nav-item
+                              a.nav-link.py-1.text-700.font-weight-medium(href=`${CWD}utilities/${value}.html`)
+                                +cleanText(value)

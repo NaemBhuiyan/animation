@@ -1,0 +1,54 @@
+extends ../_skeleton-component
+
+block append variables
+  - var firstParent = 'plugins'              
+  - var currentPage = 'fancybox'
+
+block append styles
+  link(href=`${CWD}assets/lib/fancybox/jquery.fancybox.min.css`, rel='stylesheet')
+
+block append scripts
+  script(src=`${CWD}assets/lib/fancybox/jquery.fancybox.min.js`)
+
+block append content
+  +PageHeader('Fancybox')
+    p.mt-2 jQuery lightbox script for displaying images, videos and more. Touch enabled, responsive and fully customizable.
+    a(href='//fancyapps.com/fancybox/3/docs/' target='_blank').btn.btn-link.pl-0.btn-sm  Fancybox Documentation
+      span.fas.fa-chevron-right.ml-1.fs--2
+
+  .card.mb-3
+    .card-header
+      h5.mb-0 Example
+    .card-body.bg-light.overflow-hidden
+      .row
+        .col-sm-6
+          +componentCard
+            a(href=`${CWD}assets/img/generic/2.jpg` data-fancybox data-caption='Image caption')
+              = '\n'
+              img(src=`${CWD}assets/img/generic/2.jpg` alt='').rounded.w-100
+              = '\n'
+
+  .card.mb-3
+    .card-header
+      h5.mb-0 Gallery
+    .card-body.bg-light.overflow-hidden
+      +componentCard
+        .row.no-gutters
+          .col-4.px-1
+            +fancybox('gallery/1.jpg', 'gallery')
+          .col-4.px-1
+            +fancybox('gallery/2.jpg', 'gallery')
+          .col-4.px-1
+            +fancybox('gallery/3.jpg', 'gallery')
+  .card.mb-3
+    .card-header
+      h5.mb-0 Stylesheet
+    .card-body.bg-light
+      +componentCardLib
+        link(href=`assets/lib/fancybox/jquery.fancybox.min.css`, rel='stylesheet')
+  .card.mb-3
+    .card-header
+      h5.mb-0 Javascript
+    .card-body.bg-light
+      +componentCardLib
+        script(src=`assets/lib/fancybox/jquery.fancybox.min.js`)

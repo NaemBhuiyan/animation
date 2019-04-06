@@ -1,0 +1,53 @@
+extends ../_skeleton-component
+
+block append variables
+  - var firstParent = 'components'              
+  - var currentPage = 'media-object'
+
+block append content
+  +PageHeader('Media Object')
+    p.mt-2 Documentation and examples for #{theme}'s' media object to construct highly repetitive components like blog comments, tweets, and the like
+    a(href='https://getbootstrap.com/docs/4.3/components/media-object/' target='_blank').btn.btn-link.pl-0.btn-sm  Media Object on Bootstrap
+      span.fas.fa-chevron-right.ml-1.fs--2
+
+  .card.mb-3
+    .card-header
+      h5.mb-0 Example
+    .card-body.bg-light
+      +componentCard
+        +Media({img:{ src: `gallery/1.jpg`}, title: 'Media Heading', hr:false})
+          p Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+  .card.mb-3
+    .card-header
+      h5.mb-0 Nesting
+    .card-body.bg-light
+      +componentCard
+        
+        +Media({img:{src:`gallery/2.jpg`}, title: 'Media Heading', hr:false})
+          p Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate consequuntur a nisi dolorem amet.
+          +Media({img:{src:`gallery/3.jpg`}, title: 'Media Heading',hr:false})
+            p Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla
+
+  .card.mb-3
+    .card-header
+      h5.mb-0 Media List
+    .card-body.bg-light
+      +componentCard
+        ul.list-unstyled
+          li.media
+            = '\n' 
+            img.mr-3.rounded(src=`${CWD}assets/img/gallery/4.jpg`, alt='Generic placeholder image' width="70")
+            .media-body
+              h5.mt-0.mb-1 List-based media object
+              p Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+          li.media.my-4
+            img.mr-3.rounded(src=`${CWD}assets/img/gallery/5.jpg`, alt='Generic placeholder image' width="70")
+            .media-body
+              h5.mt-0.mb-1 List-based media object
+              p Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+          li.media
+            img.mr-3.rounded(src=`${CWD}assets/img/gallery/6.jpg`, alt='Generic placeholder image' width="70")
+            .media-body
+              h5.mt-0.mb-1 List-based media object
+              p Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.

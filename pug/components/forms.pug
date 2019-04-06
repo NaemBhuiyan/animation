@@ -1,0 +1,360 @@
+extends ../_skeleton-component
+
+block append variables
+  - var firstParent = 'components'              
+  - var currentPage = 'forms'
+
+block append content
+  +PageHeader('Forms')
+    p.mt-2 Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.
+    a(href='https://getbootstrap.com/docs/4.3/components/forms/' target='_blank').btn.btn-link.pl-0.btn-sm  Forms on Bootstrap
+      span.fas.fa-chevron-right.ml-1.fs--2
+  .card.mb-3
+    .card-header 
+      h5.mb-0 Basic Form
+    .card-body.bg-light
+      +componentCard
+        form
+          .form-group
+            = '\n'
+            label(for="name") Name
+            = '\n'
+            input.form-control#name(type="text" placeholder="Name")
+            = '\n'
+          .form-group
+            = '\n'
+            label(for="readonly") Read Only
+            = '\n'
+            input.form-control#readonly(type='text', placeholder='Readonly input here…', readonly='')
+            = '\n'
+          .form-group
+            = '\n'
+            label Read only plain text
+            = '\n'
+            input#staticEmail.form-control-plaintext(type='text', readonly='', value='email@example.com')
+            = '\n'
+
+          .form-group
+            = '\n'
+            label(for="email1") Email
+            = '\n'
+            input.form-control#email1(type="email" placeholder="Email")
+            = '\n'
+          .form-group
+            = '\n'
+            label(for="password") Password
+            = '\n'
+            input.form-control#password(type="password" placeholder="Password")
+            = '\n'
+          .form-group.form-check
+            = '\n'
+            input.form-check-input#defaultcheckbox1(type="checkbox")
+            = '\n'
+            label.form-check-label(for="defaultcheckbox1") Cehckbox
+            = '\n'
+          .form-group.form-check
+            = '\n'
+            input#defaultCheck2.form-check-input(type='checkbox', value='', disabled='')
+            = '\n'
+            label.form-check-label(for='defaultCheck2') Disabled checkbox
+            = '\n'
+          .form-group.form-check
+            = '\n'
+            input#exampleRadios2.form-check-input(type='radio', name='exampleRadios', value='option2')
+            = '\n'
+            label.form-check-label(for='exampleRadios2') Default radio
+            = '\n'
+          .form-group.form-check
+            = '\n'
+            input#exampleRadios3.form-check-input(type='radio', name='exampleRadios', value='option3', disabled='')
+            = '\n'
+            label.form-check-label(for='exampleRadios3') Disabled radio
+            = '\n'
+          .form-group
+            = '\n'
+            label(for='exampleFormControlFile1') Example file input
+            = '\n'
+            input#exampleFormControlFile1.form-control-file(type='file')
+            = '\n'
+          .form-group
+            = '\n'
+            label(for='exampleFormControlSelect1') Example select
+            = '\n'
+            select#exampleFormControlSelect1.form-control
+              option 1
+              option 2
+              option 3
+              option 4
+              option 5
+            = '\n'
+          .form-group
+            = '\n'
+            label(for='exampleFormControlSelect2') Example multiple select
+            = '\n'
+            select#exampleFormControlSelect2.form-control(multiple='')
+              option 1
+              option 2
+              option 3
+              option 4
+              option 5
+            = '\n'
+          .form-group
+            = '\n'
+            label(for='exampleFormControlTextarea1') Example textarea
+            = '\n'
+            textarea#exampleFormControlTextarea1.form-control(rows='3')
+            = '\n'
+
+          .form-group
+            = '\n'
+            label(for='formControlRange') Example Range input
+            = '\n'
+            input#formControlRange.form-control-range(type='range')
+            = '\n'
+
+        button.btn.btn-primary.mb-3(type="submit") Save
+
+
+  .card.mb-3
+    .card-header
+      h5.mb-0 Input Group
+    .card-body.bg-light
+      +componentCard
+        .input-group.mb-3
+          .input-group-prepend
+            span#basic-addon1.input-group-text @
+          input.form-control(type='text', placeholder='Username', aria-label='Username', aria-describedby='basic-addon1')
+        .input-group.mb-3
+          input.form-control(type='text', placeholder="Recipient's username", aria-label="Recipient's username", aria-describedby='basic-addon2')
+          .input-group-append
+            span#basic-addon2.input-group-text @example.com
+        label(for='basic-url') Your vanity URL
+        .input-group.mb-3
+          .input-group-prepend
+            span#basic-addon3.input-group-text https:example.com/users/
+          input#basic-url.form-control(type='text', aria-describedby='basic-addon3')
+        .input-group.mb-3
+          .input-group-prepend
+            span.input-group-text $
+          input.form-control(type='text', aria-label='Amount (to the nearest dollar)')
+          .input-group-append
+            span.input-group-text .00
+        .input-group.mb-3
+          .input-group-prepend
+            span.input-group-text With textarea
+          textarea.form-control(aria-label='With textarea')
+        .input-group.mb-3
+          .input-group-prepend
+            .input-group-text
+              input(type='checkbox', aria-label='Checkbox for following text input')
+          input.form-control(type='text', aria-label='Text input with checkbox')
+        .input-group.mb-3
+          .input-group-prepend
+            .input-group-text
+              input(type='radio', aria-label='Radio button for following text input')
+          input.form-control(type='text', aria-label='Text input with radio button')
+        .input-group.mb-3
+          .input-group-prepend
+            span.input-group-text First and last name
+          input.form-control(type='text', aria-label='First name')
+          input.form-control(type='text', aria-label='Last name')
+        .input-group.mb-3
+          .input-group-prepend
+            span.input-group-text $
+            span.input-group-text 0.00
+          input.form-control(type='text', aria-label='Dollar amount (with dot and two decimal places)')
+        .input-group.mb-3
+          input.form-control(type='text', aria-label='Dollar amount (with dot and two decimal places)')
+          .input-group-append
+            span.input-group-text $
+            span.input-group-text 0.00
+        .input-group.mb-3
+          .input-group-prepend
+            button.btn.btn-primary.dropdown-toggle.shadow-none(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Dropdown
+            .dropdown-menu
+              a.dropdown-item(href='#') Action
+              a.dropdown-item(href='#') Another action
+              a.dropdown-item(href='#') Something else here
+              .dropdown-divider(role='separator')
+              a.dropdown-item(href='#') Separated link
+          input.form-control(type='text', aria-label='Text input with dropdown button')
+        .input-group
+          input.form-control(type='text', aria-label='Text input with dropdown button')
+          .input-group-append
+            button.btn.btn-primary.dropdown-toggle.shadow-none(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Dropdown
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item(href='#') Action
+              a.dropdown-item(href='#') Another action
+              a.dropdown-item(href='#') Something else here
+              .dropdown-divider(role='separator')
+              a.dropdown-item(href='#') Separated link
+
+  +PageHeader('Custom Forms')
+    p.mt-2 For even more customization and cross-browser consistency, use Bootstrap's completely custom form elements to replace the browser defaults. 
+    a(href='https://getbootstrap.com/docs/4.3/components/forms/#custom-forms' target='_blank').btn.btn-link.pl-0.btn-sm  Custom Forms on Bootstrap
+      span.fas.fa-chevron-right.ml-1.fs--2
+  .row.no-gutters
+    .col-lg-6.pr-lg-2
+      .card.mb-3
+        .card-header
+          h5.mb-0 Checkboxes
+        .card-body.bg-light
+          +componentCard
+            .custom-control.custom-checkbox
+              = '\n'
+              input#customCheck1.custom-control-input(type='checkbox')
+              = '\n'
+              label.custom-control-label(for='customCheck1') Check this custom checkbox
+              = '\n'
+            .custom-control.custom-checkbox
+              = '\n'
+              input#customCheck2.custom-control-input(type='checkbox')
+              = '\n'
+              label.custom-control-label(for='customCheck2') Check another custom checkbox
+              = '\n'
+
+    .col-lg-6.pl-lg-2
+      .card.mb-3
+        .card-header
+          h5.mb-0 Radios
+        .card-body.bg-light
+          +componentCard
+            .custom-control.custom-radio
+              = '\n'
+              input#customRadio1.custom-control-input(type='radio', name='customRadio')
+              = '\n'
+              label.custom-control-label(for='customRadio1') Toggle this custom radio
+              = '\n'
+            .custom-control.custom-radio
+              = '\n'
+              input#customRadio2.custom-control-input(type='radio', name='customRadio')
+              = '\n'
+              label.custom-control-label(for='customRadio2') Or toggle this other custom radio
+              = '\n'
+
+    .col-lg-6.pr-lg-2
+      .card.mb-3
+        .card-header
+          h5.mb-0 Inline Radios
+        .card-body.bg-light
+          label.mb-0 Select one option
+          +componentCard
+            .custom-control.custom-radio.custom-control-inline
+              = '\n'
+              input#customRadioInline1.custom-control-input(type='radio', name='customRadioInline1')
+              = '\n'
+              label.custom-control-label(for='customRadioInline1') Toggle
+              = '\n'
+            .custom-control.custom-radio.custom-control-inline
+              = '\n'
+              input#customRadioInline2.custom-control-input(type='radio', name='customRadioInline1')
+              = '\n'
+              label.custom-control-label(for='customRadioInline2') Or toggle this
+              = '\n'
+    .col-lg-6.pl-lg-2
+      .card.mb-3
+        .card-header
+          h5.mb-0 Disabled
+        .card-body.bg-light
+          +componentCard
+            .custom-control.custom-checkbox
+              = '\n'
+              input#customCheckDisabled1.custom-control-input(type='checkbox', disabled='')
+              = '\n'
+              label.custom-control-label(for='customCheckDisabled1') Check this custom checkbox
+              = '\n'
+            .custom-control.custom-radio
+              = '\n'
+              input#customRadioDisabled2.custom-control-input(type='radio', name='radioDisabled', disabled='')
+              = '\n'
+              label.custom-control-label(for='customRadioDisabled2') Toggle this custom radio
+              = '\n'
+    .col-lg-6.pr-lg-2
+      .card.mb-3
+        .card-header
+          h5.mb-0 Switches
+        .card-body.bg-light
+          +componentCard
+            .custom-control.custom-switch
+              = '\n'
+              input#customSwitch1.custom-control-input(type='checkbox')
+              = '\n'
+              label.custom-control-label(for='customSwitch1') Toggle this switch element
+              = '\n'
+    .col-lg-6.pl-lg-2
+      .card.mb-3
+        .card-header
+          h5.mb-0 Disabled Switches
+        .card-body.bg-light
+          +componentCard
+            .custom-control.custom-switch
+              = '\n'
+              input#customSwitch2.custom-control-input(type='checkbox', disabled='')
+              = '\n'
+              label.custom-control-label(for='customSwitch2') Disabled switch element
+              = '\n'
+    .col-lg-6.pr-lg-2
+      .card.mb-3
+        .card-header
+          h5.mb-0   Custom Select
+        .card-body.bg-light
+          +componentCard
+            select.custom-select.custom-select-lg.mb-3
+              option(selected='') Open this select menu
+              option(value='1') One
+              option(value='2') Two
+              option(value='3') Three
+            = '\n'
+            select.custom-select.mb-3
+              option(selected='') Open this select menu
+              option(value='1') One
+              option(value='2') Two
+              option(value='3') Three
+            = '\n'
+            select.custom-select.custom-select-sm.mb-3
+              option(selected='') Open this select menu
+              option(value='1') One
+              option(value='2') Two
+              option(value='3') Three
+    .col-lg-6.pl-lg-2
+      .card.mb-3
+        .card-header
+          h5.mb-0   Multiple Select
+        .card-body.bg-light
+          +componentCard
+            select.custom-select.mb-3(multiple='')
+              option(selected='') Open this select menu
+              option(value='1') One
+              option(value='2') Two
+              option(value='3') Three
+              option(value='2') Two
+              option(value='3') Four
+            = '\n'
+            select.custom-select(multiple='' size="3")
+              option(selected='') Open this select menu
+              option(value='1') One
+              option(value='2') Two
+              option(value='3') Three
+              option(value='3') Four
+    .col-lg-6.pr-lg-2
+      .card.mb-3
+        .card-header
+          h5.mb-0 Range Input
+        .card-body.bg-light
+          +componentCard
+            label(for='customRange1') Example range
+            = '\n'
+            input#customRange1.custom-range(type='range')
+    .col-lg-6.pl-lg-2
+      .card.mb-3
+        .card-header
+          h5.mb-0 File Browser
+        .card-body.bg-light
+          +componentCard
+            .custom-file
+              = '\n'
+              input#customFile.custom-file-input(type='file')
+              = '\n'
+              label.custom-file-label(for='customFile') Choose file
+              = '\n'
+

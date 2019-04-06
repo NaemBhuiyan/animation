@@ -1,0 +1,125 @@
+extends core/_skeleton
+include _functions
+include mixins/navbars/navbar
+  
+
+block append variables
+  - var title = 'Create ZiON Template';
+  - var themeName = 'ZiON';
+  - var version = 'v6.1.0';
+  - var theme = `${themeName}-${version}`;
+  - var bootstrapVersion = 4.3;
+  - var ATTRS_MAIN = { id: 'top', class: 'main' };
+  - var colors = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark'];
+  - var grays = ['black', 1100, 1000, 900, 800, 700, 600, 500, 400, 300, 200, 100, 'white'];
+  - var colorsAll = colors.concat(grays);
+  -
+    var sitemap = {
+      components: {
+        icon: 'fas fa-puzzle-piece',
+        inners: {
+          alerts: 'alerts',
+          avatar: 'avatar',
+          background: 'background',
+          badges: 'badges',
+          breadcrumb: 'breadcrumb',
+          'bulk-select': 'bulk-select',
+          buttons: 'buttons',
+          cards: 'cards',
+          carousel: 'carousel',
+          collapse: 'collapse',
+          countup: 'countup',
+          dropdowns: 'dropdowns',
+          fancyscroll: 'fancyscroll',
+          fancytab: 'fancytab',
+          forms: 'forms',
+          hoverbox: 'hoverbox',
+          'list-group': 'list-group',
+          modals: 'modals',
+          'media-object': 'media-object',
+          navs: 'navs',
+          navbar: 'navbar',
+          'page-headers': 'page-headers',
+          pagination: 'pagination',
+          popovers: 'popovers',
+          progress: 'progress',
+          scrollspy: 'scrollspy',
+          tables: 'tables',
+          tabs: 'tabs',
+          tooltips: 'tooltips',
+        }
+      },
+      utilities: {
+        icon: 'fab fa-hotjar',
+        inners: {
+          borders: 'borders',
+          colors: 'colors',
+          grid: 'grid',
+          sizing: 'sizing',
+          spacing: 'spacing',
+          typography: 'typography'
+        }
+      },
+      plugins: {
+        icon: 'fas fa-plug',
+        inners: {
+          accordion: 'accordion',
+          charts: 'charts',
+          countdown: 'countdown',
+          'data-table': 'data-table',
+          'date-picker': 'date-picker',
+          fancybox: 'fancybox',
+          fontawesome: 'fontawesome',
+          'google-map': 'google-map',
+          'inline-player': 'inline-player',
+          jqvmap: 'jqvmap',
+          lightbox: 'lightbox',
+          notifications: 'notifications',
+          'owl-carousel': 'owl-carousel',
+          progressbar: 'progressbar',
+          remodal: 'remodal',
+          select2: 'select2',
+          tinymce: 'tinymce',
+          'typed-text': 'typed-text'
+        }
+      },
+      documentation: {
+        icon: 'fas fa-book',
+        inners: {
+          'getting-started': 'getting-started',
+          'file-structure': 'file-structure',
+          customization: 'customization',
+          'fluid-layout': 'fluid-layout',
+          gulp: 'gulp',
+          RTL: 'RTL',
+          plugins: 'plugins',
+        }
+      },
+      changelog: {
+        icon: 'fas fa-code-branch',
+        link: 'changelog',
+        badge: {
+          text: version,
+          type: 'primary'
+        }
+      }
+    };
+
+
+block scripts
+  script(src=`${CWD}assets/lib/stickyfilljs/stickyfill.min.js`)
+  script(src=`${CWD}assets/lib/sticky-kit/sticky-kit.min.js`)
+  
+  if ENV === 'LIVE'
+    // Global site tag (gtag.js) - Google Analytics
+
+block styles
+  link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:100,200,300,400,500,600,700,800,900' rel='stylesheet')
+  
+
+block mainContent
+  +navbar
+  block wrapperContent 
+    block beforeContent
+    block content
+    block afterContent

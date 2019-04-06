@@ -1,0 +1,52 @@
+extends ../_skeleton-component
+
+block append variables
+  - var firstParent = 'plugins'
+  - var currentPage = 'jqvmap'
+
+block append styles
+  link(href=`${CWD}assets/lib/jqvmap/jqvmap.min.css`, rel='stylesheet')
+
+block append scripts
+  script(src=`${CWD}assets/lib/jqvmap/jquery.vmap.min.js`)
+  script(src=`${CWD}assets/lib/jqvmap/maps/jquery.vmap.world.js` charset="utf-8")
+  script(src=`${CWD}assets/lib/jqvmap/maps/jquery.vmap.usa.js` charset="utf-8")
+
+block append content
+  +PageHeader('jqvmap')
+    p.mt-2 JQVMap is a jQuery plugin that renders 
+      strong Interactive, Clickable Vector Maps
+      | . It uses resizable Scalable Vector Graphics (SVG) for modern browsers like Firefox, Safari, Chrome, Opera and Internet Explorer 9.
+    a(href='https://www.10bestdesign.com/jqvmap/documentation/' target='_blank').btn.btn-link.pl-0.btn-sm  jqvmap Documentation
+      span.fas.fa-chevron-right.ml-1.fs--2
+  .row.no-gutters
+    .col-lg-6.pr-lg-2
+      .card.mb-3
+        .card-header.bg-light
+          h5.mb-0 World Map
+        .card-body
+          +componentCard
+            .vmap(style="height: 429px;" data-options={map: 'world_en'})
+    .col-lg-6.pl-lg-2
+      .card.mb-3
+        .card-header.bg-light
+          h5.mb-0 USA Map
+        .card-body
+          +componentCard
+            .vmap(style="height: 429px;" data-options={map: 'usa_en'})
+    .col-lg-12
+      .card.mb-3
+        .card-header
+          h5.mb-0 Stylesheet
+        .card-body.bg-light
+          +componentCardLib
+            link(href=`assets/lib/jqvmap/jqvmap.min.css`, rel='stylesheet')
+    .col-lg-12
+      .card.mb-3
+        .card-header
+          h5.mb-0 Javascript
+        .card-body.bg-light
+          +componentCardLib
+            script(src=`assets/lib/jqvmap/jquery.vmap.min.js`)
+            script(src=`assets/lib/jqvmap/maps/jquery.vmap.world.js` charset="utf-8")
+            script(src=`assets/lib/jqvmap/maps/jquery.vmap.usa.js` charset="utf-8")

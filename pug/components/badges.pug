@@ -1,0 +1,40 @@
+extends ../_skeleton-component
+include mixins/_badges
+
+block append variables
+  - var firstParent = 'components'              
+  - var currentPage = 'badges'
+
+block component
+  .card.mb-3
+    .card-body
+      +PageHeader(pageHeader)
+  
+  .card.mb-3
+    .card-header
+      h5.mb-0 Contextual variations
+    .card-body.bg-light
+      +componentCard
+        +badgeSolid
+
+  .card.mb-3
+    .card-header  
+      h5.mb-0 Pill badges
+    .card-body.bg-light
+      +componentCard
+        +badgePill
+        
+  .card.mb-3
+    .card-header
+      h5.mb-0 Soft badges
+    .card-body.bg-light
+      +componentCard
+        +badgeSoft
+
+  .card.mb-3
+    .card-header
+      h5.mb-0 Soft pill badges
+    .card-body.bg-light
+      +componentCard
+        +badgeSoftPill
+

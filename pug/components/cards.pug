@@ -1,0 +1,205 @@
+extends ../_skeleton-component
+
+block append variables
+  - var firstParent = 'components'              
+  - var currentPage = 'cards'
+
+block append content
+  +PageHeader('Cards')
+    p.mt-2 #{theme}’s cards provide a flexible and extensible content container with multiple variants and options.
+    a(href='https://getbootstrap.com/docs/4.3/components/card/' target='_blank').btn.btn-link.pl-0.btn-sm  Card on Bootstrap
+      span.fas.fa-chevron-right.ml-1.fs--2
+
+  .row.no-gutters
+    .col-xl-6.pr-xl-2
+      .card.mb-3
+        .card-header
+          h5.mb-0 Basic Example
+        .card-body.bg-light.overflow-hidden
+          +componentCard
+            .card(style='width: 20rem;')
+              .card-img-top
+                img.img-fluid(src=`${CWD}assets/img/generic/1.jpg`, alt='Card image cap')
+              .card-body
+                h5.card-title Card title
+                p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+                a.btn.btn-primary.btn-sm(href='#!') Go somewhere
+    .col-xl-6.pl-xl-2
+      .card.mb-3
+        .card-header
+          h5.mb-0 Card with list
+        .card-body.bg-light
+          +componentCard
+            +CardUserPreferences
+
+  .card.mb-3
+    .card-header
+      h5.mb-0 Card with image
+    .card-body.bg-light.overflow-hidden
+      +componentCard
+        .card(style='width: 20rem;')
+          .card-img-top
+            img.img-fluid(src=`${CWD}assets/img/generic/3.jpg`, alt='Card image cap')
+          .card-body
+            h5.card-title Card title
+            p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+          ul.list-group.list-group-flush
+            li.list-group-item Cras justo odio
+            li.list-group-item Dapibus ac facilisis in
+            li.list-group-item Vestibulum at eros
+          .card-body
+            a.card-link(href='#!') Card link
+            a.card-link(href='#!') Another link
+
+  .card.mb-3
+    .card-header
+      h5.mb-0 Notification
+    .card-body.bg-light.overflow-hidden
+      +componentCard
+        .fs--1(style="max-width: 25rem;")
+          +Notification({
+            avatar: {size: '2xl', img: 'team/1.jpg'},
+            body: '<strong>Emma Watson</strong> replied to your comment : "Nice Dashboard 😍"',
+            time: 'Just now',
+            emoji: '💬',
+          })
+  .card.mb-3
+    .card-header
+      h5.mb-0 Notification Group
+    .card-body.bg-light.overflow-hidden
+      +componentCard
+        +CardNotification
+
+  .card.mb-3
+    .card-header
+      h5.mb-0 Background
+    .card-body.bg-light.overflow-hidden
+      +componentCard
+        +CardOverlay({
+          title: 'Card title', 
+          body: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.', 
+          img: 'generic/3.jpg',
+          attrs: {
+            style: 'max-width: 30rem',
+          }
+        }).align-items-end.d-flex
+  
+  .card.mb-3
+    .card-header
+      h5.mb-0 Card Groups
+    .card-body.bg-light.overflow-hidden
+      +componentCard
+        .card-group
+          .card
+            .card-img-top
+              img.img-fluid(src=`${CWD}assets/img/generic/10.jpg`, alt='Card image cap')
+            .card-body
+              h5.card-title First card title
+              p.card-text
+                | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+              p.card-text
+                small.text-muted Last updated 45 mins ago
+          .card
+            .card-img-top
+              img.img-fluid(src=`${CWD}assets/img/generic/11.jpg`, alt='Card image cap')
+            .card-body
+              h5.card-title Second card title
+              p.card-text This card has supporting text below as a natural lead-in to additional content.
+              p.card-text
+                small.text-muted Last updated an hour ago
+          .card
+            .card-img-top
+              img.img-fluid(src=`${CWD}assets/img/generic/12.jpg`, alt='Card image cap')
+            .card-body
+              h5.card-title Yet another card title
+              p.card-text
+                | This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+              p.card-text
+                small.text-muted Last updated yesterday
+  .card.mb-3
+    .card-header
+      h5.mb-0 Card Decks
+    .card-body.bg-light.overflow-hidden
+      +componentCard
+        .card-deck
+          .card
+            .card-img-top
+              img.img-fluid(src=`${CWD}assets/img/generic/6.jpg`, alt='Card image cap')
+            .card-body
+              h5.card-title Awesome card title
+              p.card-text
+                | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+              p.card-text
+                small.text-muted Last updated 22 mins ago
+          .card
+            .card-img-top
+              img.img-fluid(src=`${CWD}assets/img/generic/7.jpg`, alt='Card image cap')
+            .card-body
+              h5.card-title Beautiful card title
+              p.card-text This card has supporting text below as a natural lead-in to additional content.
+              p.card-text
+                small.text-muted Last updated 3 hours ago
+          .card
+            .card-img-top
+              img.img-fluid(src=`${CWD}assets/img/generic/8.jpg`, alt='Card image cap')
+            .card-body
+              h5.card-title Gorgeous card title
+              p.card-text
+                | This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+              p.card-text
+                small.text-muted Last updated on Monday
+  .card.mb-3
+    .card-header
+      h5.mb-0 Card styles
+    .card-body
+      +componentCard
+        .row
+          .col-sm-6.col-lg-4.mb-4
+            .card.text-white.bg-primary
+              .card-body
+                .card-title Primary card title
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card's content.
+          .col-sm-6.col-lg-4.mb-4
+            .card.text-white.bg-secondary
+              .card-body
+                .card-title Secondary card title
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card's content.
+          .col-sm-6.col-lg-4.mb-4
+            .card.text-white.bg-success
+              .card-body
+                .card-title Success card title
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card's content.
+          .col-sm-6.col-lg-4.mb-4
+            .card.text-white.bg-danger
+              .card-body
+                .card-title Danger card title
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card's content.
+          .col-sm-6.col-lg-4.mb-4
+            .card.text-white.bg-warning
+              .card-body
+                .card-title Warning card title
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card's content.
+          .col-sm-6.col-lg-4.mb-4
+            .card.text-white.bg-info
+              .card-body
+                .card-title Info card title
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card's content.
+          .col-sm-6.col-lg-4.mb-4
+            .card.bg-light
+              .card-body
+                .card-title Light card title
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card's content.
+          .col-sm-6.col-lg-4.mb-4
+            .card.text-white.bg-dark
+              .card-body
+                .card-title Dark card title
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card's content.
+                

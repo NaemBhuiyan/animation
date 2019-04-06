@@ -1,0 +1,38 @@
+extends ../_skeleton-component
+
+block append variables
+  - var firstParent = 'components'              
+  - var currentPage = 'tooltips'
+ 
+block append content
+  +PageHeader('Tooltips')
+    p.mt-2 Documentation and examples for adding #{theme} tooltips with CSS and JavaScript using CSS3 for animations and data-attributes for local title storage.    
+    a(href='https://getbootstrap.com/docs/4.3/components/tooltips/' target='_blank').btn.btn-link.pl-0.btn-sm  Tooltips on Bootstrap
+        span.fas.fa-chevron-right.ml-1.fs--2
+
+  .card.mb-3
+    .card-header
+      h5.mb-0 Example
+    .card-body.bg-light
+      +componentCard
+        button.btn.btn-secondary.btn-sm.m-1(type='button', data-toggle='tooltip', data-placement='top', title='Tooltip on top')
+          = '\n'
+          | Tooltip on top
+          = '\n'
+        = '\n'
+        button.btn.btn-secondary.btn-sm.m-1(type='button', data-toggle='tooltip', data-placement='right', title='Tooltip on right')
+          = '\n'
+          | Tooltip on right
+          = '\n'
+        = '\n'
+        button.btn.btn-secondary.btn-sm.m-1(type='button', data-toggle='tooltip', data-placement='bottom', title='Tooltip on bottom')
+          = '\n'
+          | Tooltip on bottom
+          = '\n'
+        = '\n'
+        button.btn.btn-secondary.btn-sm.m-1(type='button', data-toggle='tooltip', data-placement='left', title='Tooltip on left')
+          = '\n'
+          | Tooltip on left
+          = '\n'
+        = '\n'
+        button.btn.btn-secondary.btn-sm.m-1(type='button', data-toggle='tooltip', data-html='true', title='<em>Tooltip</em> <u>with</u> <b>HTML</b>') Tooltip with HTML

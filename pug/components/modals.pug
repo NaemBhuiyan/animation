@@ -1,0 +1,32 @@
+extends ../_skeleton-component
+
+block append variables
+  - var firstParent = 'components'              
+  - var currentPage = 'modals'
+
+block append content
+  +PageHeader('Modals')
+    p.mt-2 Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.
+    a(href='https://getbootstrap.com/docs/4.3/components/modal/' target='_blank').btn.btn-link.pl-0.btn-sm  Modal on Bootstrap
+      span.fas.fa-chevron-right.ml-1.fs--2
+  .card.mb-3
+    .card-header
+      h5 Example
+    .card-body.bg-light
+      +componentCard
+        // Button trigger modal
+        = '\n'
+        button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModal') Launch demo modal
+        // Modal
+        #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+          .modal-dialog(role='document')
+            .modal-content
+              .modal-header
+                h5#exampleModalLabel.modal-title Modal Title
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                  span(aria-hidden='true').font-weight-light &times;
+              .modal-body
+                p Woohoo, you're reading this text in a modal!
+              .modal-footer
+                button.btn.btn-secondary.btn-sm(type='button', data-dismiss='modal') Close
+                button.btn.btn-primary.btn-sm(type='button') Save changes

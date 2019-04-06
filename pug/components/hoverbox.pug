@@ -1,0 +1,37 @@
+extends ../_skeleton-component
+
+block append variables
+  - var firstParent = 'components'              
+  - var currentPage = 'hoverbox'
+
+block append content
+  +PageHeader('Hoverbox')
+    p.mt-2.mb-0 Style your card with a different design using theme Hoverbox
+  .row.no-gutters
+    .col-lg-6.pr-lg-2
+      .card.mb-3
+        .card-header
+          h5.mb-3 Example
+        .card-body.bg-light.overflow-hidden
+          +componentCard
+            .hoverbox.rounded-soft.text-center
+              = '\n'
+              img(src=`${CWD}assets/img/generic/3.jpg` alt="").img-fluid
+              .hoverbox-content.bg-dark.p-5.self-center
+                div
+                  p.lead.text-white Style your card with different design using theme Hoverbox
+                  = '\n'
+                  a(href='#!').btn.btn-light.btn-sm.mt-1 Learn more
+    .col-lg-6.pl-lg-2
+      .card.mb-3
+        .card-header
+          h5.mb-3 Change Image
+        .card-body.bg-light.overflow-hidden
+          +componentCard
+            a.color-white(href='#!')
+              .hoverbox.rounded-soft
+                = '\n'
+                img.img-fluid(src=`${CWD}assets/img/generic/1.jpg` alt="")
+                .hoverbox-content
+                  = '\n'
+                  img.img-fluid(src=`${CWD}assets/img/generic/2.jpg` alt="")

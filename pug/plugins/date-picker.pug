@@ -1,0 +1,78 @@
+extends ../_skeleton-component
+
+
+block append variables
+  - var firstParent = 'plugins'              
+  - var currentPage = 'date-picker'
+
+block append styles
+  link(href=`${CWD}assets/lib/flatpickr/flatpickr.min.css`, rel='stylesheet')
+block append scripts
+  script(src=`${CWD}assets/lib/flatpickr/flatpickr.min.js`)
+
+block append content
+  +PageHeader('Date Picker')
+    p.mt-2 Lightweight, powerful javascript datetimepicker with no dependencies.
+    a(href='https://flatpickr.js.org/' target='_blank').btn.btn-link.pl-0.btn-sm  Flatpickr documentation
+      span.fas.fa-chevron-right.ml-1.fs--2
+  .card.mb-3
+    .card-header
+      h5.mb-0 Stylesheet
+    .card-body.bg-light
+      +componentCardLib
+        link(href=`assets/lib/flatpickr/flatpickr.min.css`, rel='stylesheet')
+  .card.mb-3
+    .card-header
+      h5.mb-0 Javascript
+    .card-body.bg-light
+      +componentCardLib
+        script(src=`assets/lib/flatpickr/flatpickr.min.js`)
+  .row.no-gutters
+    .col-lg-6.pr-lg-2
+      .card.mb-3
+        .card-header
+          h5.mb-0 Date Picker
+        .card-body.bg-light
+            +componentCard
+              .form-group
+                = '\n'
+                label(for="datepicker") Start Date
+                = '\n'  
+                input.form-control.datetimepicker#datepicker(type="text" data-options!={dateFormat:'d/m/y'})
+                = '\n'
+    .col-lg-6.pl-lg-2 
+      .card.mb-3
+        .card-header
+          h5.mb-0 Time Picker
+        .card-body.bg-light
+            +componentCard
+              .form-group
+                = '\n'
+                label(for="timepicker1") Start Time
+                = '\n'  
+                input.form-control.datetimepicker#timepicker1(type="text" data-options!={enableTime:true, noCalendar: true, dateFormat:'H:i'})
+                = '\n'
+    .col-lg-6.pr-lg-2
+      .card.mb-3
+        .card-header
+          h5.mb-0 Date &amp; Time Picker
+        .card-body.bg-light
+            +componentCard
+              .form-group
+                = '\n'
+                label(for="datetimepicker") Start Date
+                = '\n'  
+                input.form-control.datetimepicker#datetimepicker(type="text" data-options!={enableTime: true, dateFormat:'d/m/y H:i'})
+                = '\n'
+    .col-lg-6.pl-lg-2 
+      .card.mb-3
+        .card-header
+          h5.mb-0 Range
+        .card-body.bg-light
+            +componentCard
+              .form-group
+                = '\n'
+                label(for="timepicker2") Select Time Range
+                = '\n'  
+                input.form-control.datetimepicker#timepicker2(type="text" data-options!={mode:'range', dateFormat:'d/m/y'})
+                = '\n'
