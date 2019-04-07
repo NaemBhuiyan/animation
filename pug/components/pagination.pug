@@ -1,14 +1,15 @@
 extends ../_skeleton-component
+include mixins/_pagination
 
 block append variables
   - var firstParent = 'components'              
   - var currentPage = 'pagination'
 
 block component
-  +PageHeader('Pagination')
-    p.mt-2 Documentation and examples for showing pagination to indicate a series of related content exists across multiple pages.
-    a(href='https://getbootstrap.com/docs/4.3/components/pagination/' target='_blank').btn.btn-link.pl-0.btn-sm  Pagination on Bootstrap
-      span.fas.fa-chevron-right.ml-1.fs--2
+  .card.mb-3
+    .card-body
+      +PageHeader(pageHeader)
+    
 
   .row.no-gutters
     .col-xl-6.pr-xl-2
@@ -17,40 +18,14 @@ block component
           h5.mb-0 Example with text
         .card-body.bg-light
           +componentCard
-            nav(aria-label='Page navigation example')
-              ul.pagination
-                li.page-item
-                  a.page-link(href='#') Previous
-                li.page-item.active
-                  a.page-link(href='#') 1
-                li.page-item
-                  a.page-link(href='#') 2
-                li.page-item
-                  a.page-link(href='#') 3
-                li.page-item
-                  a.page-link(href='#') Next
+            +paginationText
     .col-xl-6.pl-xl-2
       .card.mb-3
         .card-header
           h5.mb-0 Example with icon
         .card-body.bg-light
           +componentCard
-            nav(aria-label='Page navigation example')
-              ul.pagination
-                li.page-item
-                  a.page-link(href='#', aria-label='Previous')
-                    span(aria-hidden='true') &laquo;
-                    span.sr-only Previous
-                li.page-item.active
-                  a.page-link(href='#') 1
-                li.page-item
-                  a.page-link(href='#') 2
-                li.page-item
-                  a.page-link(href='#') 3
-                li.page-item
-                  a.page-link(href='#', aria-label='Next')
-                    span(aria-hidden='true') &raquo;
-                    span.sr-only Next
+            +paginationIcon
   .card.mb-3
     .card-header
       h5.mb-1 Sizing
@@ -61,30 +36,9 @@ block component
         | for additional sizes.        
     .card-body.bg-light
       +componentCard
-        nav(aria-label='...')
-          ul.pagination.pagination-lg
-            li.page-item.active
-              a.page-link(href='#', tabindex='-1') 1
-            li.page-item
-              a.page-link(href='#') 2
-            li.page-item
-              a.page-link(href='#') 3
+        +paginationSize.pagination-lg
+        +paginationSize
+        +paginationSize.pagination-sm
         
                 
-        nav(aria-label='...')
-          ul.pagination
-            li.page-item
-              a.page-link(href='#', tabindex='-1') 1
-            li.page-item.active
-              a.page-link(href='#') 2
-            li.page-item
-              a.page-link(href='#') 3
-
-        nav(aria-label='...')
-          ul.pagination.pagination-sm
-            li.page-item
-              a.page-link(href='#', tabindex='-1') 1
-            li.page-item
-              a.page-link(href='#') 2
-            li.page-item.active
-              a.page-link(href='#') 3
+        
