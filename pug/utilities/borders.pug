@@ -1,77 +1,21 @@
 extends ../_skeleton-component
+include mixins/_borders
 
 block append variables
   - var firstParent = 'utilities'
   - var currentPage = 'borders'
 
-block append content
-  +PageHeader('Borders')
-    p.mt-2 Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.
-    a(href='https://getbootstrap.com/docs/4.3/utilities/borders/' target='_blank').btn.btn-link.pl-0.btn-sm  Borders on Bootstrap
-      span.fas.fa-chevron-right.ml-1.fs--2
+block component
+  .card.mb-3
+    .card-body
+      +PageHeader(pageHeader)
   .row
     .col-12
       .card.mb-3
         .card-header
           h5.mb-0 Border
-          p The classes are named using the format 
-            code border-{side}
-            |  for 
-            code xs
-            |  and 
-            code border-{breakpoint}-{side}
-            |  for 
-            code sm
-            | , 
-            code md
-            | , 
-            code lg
-            | , and 
-            code xl
-            | .
         .card-body.bg-light
-          p
-            | Where 
-            em side
-            |  is one of: 
-          ul
-            li
-              code top
-              |  - for classes that set style for 
-              code border-top
-            li
-              code bottom
-              |  - for classes that set style for 
-              code border-bottom
-            li
-              code left
-              |  - for classes that set style for 
-              code border-left
-            li
-              code right
-              |  - for classes that set style for 
-              code margin-right
-            li
-              code x
-              |  - for classes that set both 
-              code *-left
-              |  and 
-              code *-right
-            li
-              code y
-              |  - for classes that set both 
-              code *-top
-              |  and 
-              code *-bottom
-            li
-              | blank - for classes that set the 
-              code border
-              |  style on all 4 side of the element.
-
-          p
-            | Use border utilities to quickly style the 
-            code border
-            |  of an element. Great for images, buttons, or any other element.
+          +borderDoc
 
   .row.no-gutters.border-component
     .col-xl-6.pr-xl-2
@@ -79,17 +23,8 @@ block append content
         .card-header
           h5.mb-0 Additive
         .card-body.bg-light
-
           +componentCard.p-4
-            span.border
-            = '\n'
-            span.border-top
-            = '\n'
-            span.borderright
-            = '\n'
-            span.border-bottom
-            = '\n'
-            span.border-left
+            +borderAdditive
         = '\n'
     .col-xl-6.pl-xl-2
       .card.mb-3
@@ -97,16 +32,7 @@ block append content
           h5.mb-0 Subtractive
         .card-body.bg-light
           +componentCard.p-4
-            span.border.border-0
-            = '\n'
-            span.border.border-top-0
-            = '\n'
-            span.border.border-right-0
-            = '\n'
-            span.border.border-bottom-0
-            = '\n'
-            span.border.border-left-0
-            = '\n'
+            +borderSubtractive
     .col-xl-6.pr-xl-2
       .card.mb-3
         .card-header
@@ -114,24 +40,7 @@ block append content
           p.mb-0 Change the border color using utilities built on our theme colors
         .card-body.bg-light
           +componentCard
-            span.border.border-primary
-            = '\n'
-            span.border.border-secondary
-            = '\n'
-            span.border.border-success
-            = '\n'
-            span.border.border-danger
-            = '\n'
-            span.border.border-warning
-            = '\n'
-            span.border.border-info
-            = '\n'
-            span.border.border-light
-            = '\n'
-            span.border.border-dark
-            = '\n'
-            span.border.border-white
-            = '\n'
+            +borderColor
     .col-xl-6.pl-xl-2
       .card.mb-3
         .card-header
@@ -139,126 +48,23 @@ block append content
           p.mb-0 Add classes to an element to easily round its corners.
         .card-body.bg-light
           +componentCard
-            span.rounded-0
-            = '\n'
-            span.rounded
-            = '\n'
-            span.rounded-soft
-            = '\n'
-            span.rounded-circle
+            +borderRadius
           = '\n'
   .row.border-component
     .col-12
       .card.mb-3
         .card-header
           h5.mb-1 Border Style
-          p.mb-0  For the dashed border, the classes are named using the format, 
-            code border-dashed-{side}
-            |  for 
-            code xs
-            |  and 
-            code border-{breakpoint}-dashed-{side}
-            |  for 
-            code sm
-            | , 
-            code md
-            | , 
-            code lg
-            | , 
-            code xl
-            |  and 
-            code xxl
-            | .
-          p
-            | Where 
-            em side
-            |  is same as documented before.
+          +borderStyleDoc
         .card-body.bg-light
           +componentCard
-            span.border-dashed
-            = '\n'
-            span.border-dashed-top
-            = '\n'
-            span.border-dashed-right
-            = '\n'
-            span.border-dashed-bottom
-            = '\n'
-            span.border-dashed-left
-            = '\n'
+            +borderStyle
     .col-12
       .card
         .card-header
           h4 Border color and width
-
-          p Border color set as 
-            code currentColor
-            |  and border width 
-            code 1px
-            | . Modifier can be used to change border color and width. The modifier classes for color are named using the format 
-            code border-{color}
-            |  and for width 
-            code border-2x
-            | .
-          p
-            | Where
-            em  color
-            |  is one of: 
-            each val in colorsAll
-              code #{val}
-              | , 
+          +borderColorWidthDoc
+          
         .card-body.bg-light
           +componentCard
-            span.border.border-info
-            = '\n'
-            span.border.border-success
-            = '\n'
-            span.border.border-warning
-            = '\n'
-            span.border.border-danger
-            = '\n'
-            span.border.border-stunning
-            = '\n'
-            span.border.border-cake
-            = '\n'
-            span.border.border-facebook
-            = '\n'
-            span.border.border-twitter
-            = '\n'
-            span.border.border-google-plus
-            = '\n'
-            span.border.border-github
-            = '\n'
-            .w-100
-            = '\n'
-            span.border.border-black
-            = '\n'
-            span.border.border-dark
-            = '\n'
-            span.border.border-1100
-            = '\n'
-            span.border.border-1000
-            = '\n'
-            span.border.border-900
-            = '\n'
-            span.border.border-800
-            = '\n'
-            span.border.border-700
-            = '\n'
-            span.border.border-600
-            = '\n'
-            span.border.border-500
-            = '\n'
-            span.border.border-400
-            = '\n'
-            span.border.border-300
-            = '\n'
-            span.border.border-200
-            = '\n'
-            span.border.border-100
-            = '\n'
-            span.border.border-light
-            = '\n'
-            span.border.border-white
-            = '\n'
-            span.border.border-2x
-      
+            +borderColorWidth
