@@ -1,0 +1,17 @@
+block append variables
+  -
+    var pageHeader = {
+      title: 'Popovers',
+      description: "Documentation and examples for showing pagination to indicate a series of related content exists across multiple pages.",
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/components/popovers/`,
+      linkText: 'Popovers on Bootstrap'
+    }
+  
+mixin popover
+  button.btn.btn-secondary.m-1(type='button', data-container='body', data-toggle='popover', data-placement='top', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Popover on top
+  = '\n'
+  button.btn.btn-secondary.m-1(type='button', data-container='body', data-toggle='popover', data-placement='right', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Popover on right
+  = '\n'
+  button.btn.btn-secondary.m-1(type='button', data-container='body', data-toggle='popover', data-placement='bottom', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Popover on bottom
+  = '\n'
+  button.btn.btn-secondary.m-1(type='button', data-container='body', data-toggle='popover', data-placement='left', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Popover on left

@@ -1,65 +1,35 @@
 extends ../_skeleton-component
+include mixins/_navs
 
 block append variables
   - var firstParent = 'components'              
   - var currentPage = 'navs'
 
 block component
-  +PageHeader('Navs')
-    p.mt-2 Documentation and examples of how to use Bootstrap’s included navigation components.
-    a(href='https://getbootstrap.com/docs/4.3/components/navs/' target='_blank').btn.btn-link.pl-0.btn-sm  Navs on Bootstrap
-      span.fas.fa-chevron-right.ml-1.fs--2
+  .card.mb-3
+    .card-body
+      +PageHeader(pageHeader)
+    
   .card.mb-3
     .card-header
       h5.mb-0 Horizontal
     .card-body.bg-light
-      +componentCard
-        ul.nav
-          li.nav-item
-            a.nav-link.active(href='#') Active
-          li.nav-item
-            a.nav-link(href='#') Link
-          li.nav-item
-            a.nav-link(href='#') Link
-          li.nav-item
-            a.nav-link.disabled(href='#') Disabled
+      +navs
   .card.mb-3
     .card-header
       h5.mb-0 Vertical
     .card-body.bg-light
       +componentCard  
-        ul.nav.flex-column
-          li.nav-item
-            a.nav-link.active(href='#') Active
-          li.nav-item
-            a.nav-link(href='#') Link
-          li.nav-item
-            a.nav-link(href='#') Link
-          li.nav-item
-            a.nav-link.disabled(href='#') Disabled
+        +navs.flex-column
   .card.mb-3
     .card-header
       h5.mb-0 Pills
     .card-body.bg-light
       +componentCard  
-        ul.nav.nav-pills
-          li.nav-item
-            a.nav-link.active(href='#') Active
-          li.nav-item
-            a.nav-link(href='#') Link
-          li.nav-item
-            a.nav-link(href='#') Link
-          li.nav-item
-            a.nav-link.disabled(href='#') Disabled
+        +navs.nav-pills
   .card.mb-3
     .card-header
       h5.mb-0 Fill and Justify
     .card-body.bg-light
       +componentCard  
-        ul.nav.nav-pills.nav-fill
-          li.nav-item
-            a.nav-link.active(href='#') Active
-          li.nav-item
-            a.nav-link(href='#') Longer nav link
-          li.nav-item
-            a.nav-link(href='#') Link
+        +navsFill
