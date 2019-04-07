@@ -133,11 +133,82 @@
       </nav>
       <div class="container">
         <div class="row mt-3">
-          <div class="col-lg-9 col-xxl-10"></div>
+          <div class="col-lg-9 col-xxl-10">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h3>Collapse</h3>
+                <p class="mb-0">Toggle the visibility of content with a few classes and Bootstrap's JavaScript plugins.</p><a class="btn btn-link btn-sm pl-0 mt-2" href="https://getbootstrap.com/docs/4.3/components/collapse/" target="_blank">collapse on Bootstrap<span class="fas fa-chevron-right ml-1 fs--2"></span></a>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-header">
+                <h5 class="mb-0">Accordion Example</h5>
+              </div>
+              <div class="card-body bg-light">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="accordion" id="accordionExample">
+                      <div class="card">
+                        <div class="card-header border-bottom" id="headingOne">
+                          <h5 class="mb-0"><button class="btn btn-link p-0" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Collapsible Group Item #1</button></h5>
+                        </div>
+                        <div class="collapse show" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample">
+                          <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header border-bottom" id="headingTwo">
+                          <h5 class="mb-0"><button class="btn btn-link p-0 collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Collapsible Group Item #2</button></h5>
+                        </div>
+                        <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                          <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header border-bottom" id="headingThree">
+                          <h5 class="mb-0"><button class="btn btn-link p-0 collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Collapsible Group Item #3</button></h5>
+                        </div>
+                        <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample">
+                          <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12"><pre class="rounded mt-2"><code class="language-html">&lt;div class=&quot;accordion&quot; id=&quot;accordionExample&quot;&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-header border-bottom&quot; id=&quot;headingOne&quot;&gt;
+      &lt;h5 class=&quot;mb-0&quot;&gt;&lt;button class=&quot;btn btn-link p-0&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#collapseOne&quot; aria-expanded=&quot;true&quot; aria-controls=&quot;collapseOne&quot;&gt;Collapsible Group Item #1&lt;/button&gt;&lt;/h5&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;collapse show&quot; id=&quot;collapseOne&quot; aria-labelledby=&quot;headingOne&quot; data-parent=&quot;#accordionExample&quot;&gt;
+      &lt;div class=&quot;card-body&quot;&gt;Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-header border-bottom&quot; id=&quot;headingTwo&quot;&gt;
+      &lt;h5 class=&quot;mb-0&quot;&gt;&lt;button class=&quot;btn btn-link p-0 collapsed&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#collapseTwo&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseTwo&quot;&gt;Collapsible Group Item #2&lt;/button&gt;&lt;/h5&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;collapse&quot; id=&quot;collapseTwo&quot; aria-labelledby=&quot;headingTwo&quot; data-parent=&quot;#accordionExample&quot;&gt;
+      &lt;div class=&quot;card-body&quot;&gt;Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-header border-bottom&quot; id=&quot;headingThree&quot;&gt;
+      &lt;h5 class=&quot;mb-0&quot;&gt;&lt;button class=&quot;btn btn-link p-0 collapsed&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#collapseThree&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseThree&quot;&gt;Collapsible Group Item #3&lt;/button&gt;&lt;/h5&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;collapse&quot; id=&quot;collapseThree&quot; aria-labelledby=&quot;headingThree&quot; data-parent=&quot;#accordionExample&quot;&gt;
+      &lt;div class=&quot;card-body&quot;&gt;Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="col d-none d-lg-block">
             <ul class="nav flex-column sticky-kit mt-6 accordion font-weight-semi-bold" id="sidebar-nav">
-              <li class="nav-item"><a class="nav-link text-600 collapsed" data-toggle="collapse" href="#components" role="button" aria-expanded="false" aria-controls="components">Components</a>
-                <div class="nav collapse pl-3" id="components" data-parent="#sidebar-nav"><a class="nav-link w-100 py-0 text-600" href="../components/alerts.html">Alerts</a><a class="nav-link w-100 py-0 text-600" href="../components/avatar.html">Avatar</a><a class="nav-link w-100 py-0 text-600" href="../components/background.html">Background</a><a class="nav-link w-100 py-0 text-600" href="../components/badges.html">Badges</a><a class="nav-link w-100 py-0 text-600" href="../components/breadcrumb.html">Breadcrumb</a><a class="nav-link w-100 py-0 text-600" href="../components/bulk-select.html">Bulk select</a><a class="nav-link w-100 py-0 text-600" href="../components/buttons.html">Buttons</a><a class="nav-link w-100 py-0 text-600" href="../components/cards.html">Cards</a><a class="nav-link w-100 py-0 text-600" href="../components/carousel.html">Carousel</a><a class="nav-link w-100 py-0 text-600" href="../components/collapse.html">Collapse</a><a class="nav-link w-100 py-0 text-600" href="../components/countup.html">Countup</a><a class="nav-link w-100 py-0 text-600" href="../components/dropdowns.html">Dropdowns</a><a class="nav-link w-100 py-0 text-600" href="../components/fancyscroll.html">Fancyscroll</a><a class="nav-link w-100 py-0 text-600" href="../components/fancytab.html">Fancytab</a><a class="nav-link w-100 py-0 text-600" href="../components/forms.html">Forms</a><a class="nav-link w-100 py-0 text-600" href="../components/hoverbox.html">Hoverbox</a><a class="nav-link w-100 py-0 text-600" href="../components/list-group.html">List group</a><a class="nav-link w-100 py-0 text-600" href="../components/modals.html">Modals</a><a class="nav-link w-100 py-0 text-600" href="../components/media-object.html">Media object</a><a class="nav-link w-100 py-0 text-600" href="../components/navs.html">Navs</a><a class="nav-link w-100 py-0 text-600" href="../components/navbar.html">Navbar</a><a class="nav-link w-100 py-0 text-600" href="../components/page-headers.html">Page headers</a><a class="nav-link w-100 py-0 text-600" href="../components/pagination.html">Pagination</a><a class="nav-link w-100 py-0 text-600" href="../components/popovers.html">Popovers</a><a class="nav-link w-100 py-0 text-600" href="../components/progress.html">Progress</a><a class="nav-link w-100 py-0 text-600" href="../components/scrollspy.html">Scrollspy</a><a class="nav-link w-100 py-0 text-600" href="../components/tables.html">Tables</a><a class="nav-link w-100 py-0 text-600" href="../components/tabs.html">Tabs</a><a class="nav-link w-100 py-0 text-600" href="../components/tooltips.html">Tooltips</a></div>
+              <li class="nav-item"><a class="nav-link text-info" data-toggle="collapse" href="#components" role="button" aria-expanded="true" aria-controls="components">Components</a>
+                <div class="nav collapse pl-3 show" id="components" data-parent="#sidebar-nav"><a class="nav-link w-100 py-0 text-600" href="../components/alerts.html">Alerts</a><a class="nav-link w-100 py-0 text-600" href="../components/avatar.html">Avatar</a><a class="nav-link w-100 py-0 text-600" href="../components/background.html">Background</a><a class="nav-link w-100 py-0 text-600" href="../components/badges.html">Badges</a><a class="nav-link w-100 py-0 text-600" href="../components/breadcrumb.html">Breadcrumb</a><a class="nav-link w-100 py-0 text-600" href="../components/bulk-select.html">Bulk select</a><a class="nav-link w-100 py-0 text-600" href="../components/buttons.html">Buttons</a><a class="nav-link w-100 py-0 text-600" href="../components/cards.html">Cards</a><a class="nav-link w-100 py-0 text-600" href="../components/carousel.html">Carousel</a><a class="nav-link w-100 py-0 text-info" href="../components/collapse.html">Collapse</a><a class="nav-link w-100 py-0 text-600" href="../components/countup.html">Countup</a><a class="nav-link w-100 py-0 text-600" href="../components/dropdowns.html">Dropdowns</a><a class="nav-link w-100 py-0 text-600" href="../components/fancyscroll.html">Fancyscroll</a><a class="nav-link w-100 py-0 text-600" href="../components/fancytab.html">Fancytab</a><a class="nav-link w-100 py-0 text-600" href="../components/forms.html">Forms</a><a class="nav-link w-100 py-0 text-600" href="../components/hoverbox.html">Hoverbox</a><a class="nav-link w-100 py-0 text-600" href="../components/list-group.html">List group</a><a class="nav-link w-100 py-0 text-600" href="../components/modals.html">Modals</a><a class="nav-link w-100 py-0 text-600" href="../components/media-object.html">Media object</a><a class="nav-link w-100 py-0 text-600" href="../components/navs.html">Navs</a><a class="nav-link w-100 py-0 text-600" href="../components/navbar.html">Navbar</a><a class="nav-link w-100 py-0 text-600" href="../components/page-headers.html">Page headers</a><a class="nav-link w-100 py-0 text-600" href="../components/pagination.html">Pagination</a><a class="nav-link w-100 py-0 text-600" href="../components/popovers.html">Popovers</a><a class="nav-link w-100 py-0 text-600" href="../components/progress.html">Progress</a><a class="nav-link w-100 py-0 text-600" href="../components/scrollspy.html">Scrollspy</a><a class="nav-link w-100 py-0 text-600" href="../components/tables.html">Tables</a><a class="nav-link w-100 py-0 text-600" href="../components/tabs.html">Tabs</a><a class="nav-link w-100 py-0 text-600" href="../components/tooltips.html">Tooltips</a></div>
               </li>
               <li class="nav-item"><a class="nav-link text-600 collapsed" data-toggle="collapse" href="#plugins" role="button" aria-expanded="false" aria-controls="plugins">Plugins</a>
                 <div class="nav collapse pl-3" id="plugins" data-parent="#sidebar-nav"><a class="nav-link w-100 py-0 text-600" href="../plugins/accordion.html">Accordion</a><a class="nav-link w-100 py-0 text-600" href="../plugins/charts.html">Charts</a><a class="nav-link w-100 py-0 text-600" href="../plugins/countdown.html">Countdown</a><a class="nav-link w-100 py-0 text-600" href="../plugins/data-table.html">Data table</a><a class="nav-link w-100 py-0 text-600" href="../plugins/date-picker.html">Date picker</a><a class="nav-link w-100 py-0 text-600" href="../plugins/fancybox.html">Fancybox</a><a class="nav-link w-100 py-0 text-600" href="../plugins/fontawesome.html">Fontawesome</a><a class="nav-link w-100 py-0 text-600" href="../plugins/google-map.html">Google map</a><a class="nav-link w-100 py-0 text-600" href="../plugins/inline-player.html">Inline player</a><a class="nav-link w-100 py-0 text-600" href="../plugins/jqvmap.html">Jqvmap</a><a class="nav-link w-100 py-0 text-600" href="../plugins/lightbox.html">Lightbox</a><a class="nav-link w-100 py-0 text-600" href="../plugins/notifications.html">Notifications</a><a class="nav-link w-100 py-0 text-600" href="../plugins/owl-carousel.html">Owl carousel</a><a class="nav-link w-100 py-0 text-600" href="../plugins/progressbar.html">Progressbar</a><a class="nav-link w-100 py-0 text-600" href="../plugins/remodal.html">Remodal</a><a class="nav-link w-100 py-0 text-600" href="../plugins/select2.html">Select2</a><a class="nav-link w-100 py-0 text-600" href="../plugins/tinymce.html">Tinymce</a><a class="nav-link w-100 py-0 text-600" href="../plugins/typed-text.html">Typed text</a></div>
@@ -146,95 +217,6 @@
                 <div class="nav collapse pl-3" id="utilities" data-parent="#sidebar-nav"><a class="nav-link w-100 py-0 text-600" href="../utilities/borders.html">Borders</a><a class="nav-link w-100 py-0 text-600" href="../utilities/colors.html">Colors</a><a class="nav-link w-100 py-0 text-600" href="../utilities/grid.html">Grid</a><a class="nav-link w-100 py-0 text-600" href="../utilities/sizing.html">Sizing</a><a class="nav-link w-100 py-0 text-600" href="../utilities/spacing.html">Spacing</a><a class="nav-link w-100 py-0 text-600" href="../utilities/typography.html">Typography</a></div>
               </li>
             </ul>
-          </div>
-        </div>
-      </div>
-      <h3></h3>
-      <p class="mb-0"></p>
-      <div class="card mb-3">
-        <div class="card-header">
-          <h5 class="mb-0 contains-anchor" id="gulp-start">To start your project run:<a href="#gulp-start" data-fancyscroll data-offset="96">#</a></h5>
-        </div>
-        <div class="card-body bg-light"><code class="fs-2 border rounded py-2 px-3 d-block border-300 bg-white">gulp</code>
-          <p class="mt-4">The <code>gulp</code> command will build, serve and watch the project with the following gulp tasks:</p>
-          <div class="table-responsive">
-            <table class="table table-bordered">
-              <thead class="thead-light text-center text-sans-serif">
-                <tr>
-                  <th class="text-nowrap">Task</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="text-nowrap"><code>clean</code></td>
-                  <td>Delete the following directories:<pre><code class="lang-html">js/bootstrap
-scss/bootstrap
-pages/assets/css
-pages/assets/js
-pages/assets/lib</code></pre>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="text-nowrap"><code>scss</code></td>
-                  <td>Compiles <code>scss/theme.scss</code> and generates <code>theme.css</code> and <code>theme.map</code> to the <code>pages/assets/css/ </code> directory.</td>
-                </tr>
-                <tr>
-                  <td class="text-nowrap"><code>scss:min</code></td>
-                  <td>Compiles <code>scss/theme.scss</code> and generates <code>theme.min.css</code>,
-                    and <code>theme.min.map</code> to the <code>pages/assets/css/ </code> directory.</td>
-                </tr>
-                <tr>
-                  <td class="text-nowrap"><code>scss:rtl</code></td>
-                  <td>Compiles <code>scss/theme.scss</code> and generates <code>theme-rtl.css</code>,
-                    and <code>theme-rtl.map</code> to the <code>pages/assets/css/ </code> directory.</td>
-                </tr>
-                <tr>
-                  <td class="text-nowrap"><code>scss:rtl:min</code></td>
-                  <td>Compiles <code>scss/theme.scss</code> and generates <code>theme-rtl.min.css</code>,
-                    and <code>theme-rtl.min.map</code> to the <code>pages/assets/css/ </code> directory.</td>
-                </tr>
-                <tr>
-                  <td class="text-nowrap"><code>js:bootstrap</code></td>
-                  <td>Concat the <code>js</code> files from <code>js/bootstrap/</code> and transpiles with babel to <code>bootstrap.js</code>, <code>bootstrap.min.js</code> to the <code>pages/assets/js/</code> directory.</td>
-                </tr>
-                <tr>
-                  <td class="text-nowrap"><code>js:theme</code></td>
-                  <td>Concat the <code>js</code> files from <code>js/theme/</code> and transpiles with babel to <code>theme.js</code>, <code>theme.min.js</code> to the <code>pages/assets/js/</code> directory.</td>
-                </tr>
-                <tr>
-                  <td class="text-nowrap"><code>js:plugins</code></td>
-                  <td>Concat the <code>js</code> files according to the <code>Paths.JS.PLUGINS</code> array declared in <code>gulpfile.js</code> and transpiles with babel to <code>plugins.js</code> and <code>plugins.min.js</code> to the <code>pages/assets/js/</code> directory.</td>
-                </tr>
-                <tr>
-                  <td class="text-nowrap"><code>js</code></td>
-                  <td>Run the following tasks parallelly:<ul>
-                      <li><code>js:bootstrap</code></li>
-                      <li><code>js:theme</code></li>
-                      <li><code>js:plugins</code></li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="text-nowrap"><code>copy:dependency</code></td>
-                  <td>Copies the dependencies from <code>node_modules/</code> directory to <code>pages/assets/</code> directory according to the <code>Paths.DEPENDENCIES</code> object declared in <code>gulpfile.js</code>.</td>
-                </tr>
-                <tr>
-                  <td class="text-nowrap"><code>watch</code></td>
-                  <td>All of the following folders are monitored for changes, which will tell the browser to reload automatically after any changes are made:<pre><code class="lang-html">pages/*.html
-pages/assets/fonts/
-pages/assets/video/
-pages/assets/img/
-scss/ 
-js/</code></pre>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="text-nowrap"><code>serve</code></td>
-                  <td>Starts a <code>Browsersync</code> instance on port <code>3000</code> served from <code>pages</code>, defaults to <code>index.html</code>.</td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </div>
       </div>

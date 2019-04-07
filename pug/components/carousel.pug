@@ -1,4 +1,6 @@
 extends ../_skeleton-component
+include mixins/_carousel
+
 block append styles
   link(href=`${CWD}assets/lib/owl.carousel/owl.carousel.css`, rel='stylesheet')
 block append scripts
@@ -7,110 +9,31 @@ block append scripts
 block append variables
   - var firstParent = 'components'
   - var currentPage = 'carousel'
+  
 
 block component
-  +PageHeader('Carousel')
-    p.mt-2 A slideshow component for cycling through elements—images or slides of text—like a carousel.
-    a(href='https://getbootstrap.com/docs/4.3/components/carousel/' target='_blank').btn.btn-link.pl-0.btn-sm  Carousel on Bootstrap
-      span.fas.fa-chevron-right.ml-1.fs--2
+  .card.mb-3
+    .card-body
+      +PageHeader(pageHeader)
+    
   .card.mb-3
     .card-header
       h5.mb-0 Basic Example
     .card-body.bg-light.overflow-hidden
       +componentCard
-        #carouselExampleControls.carousel.slide(data-ride='carousel')
-          ol.carousel-indicators
-            li.active(data-target='#carouselExampleControls', data-slide-to='0')
-            li(data-target='#carouselExampleControls', data-slide-to='1')
-            li(data-target='#carouselExampleControls', data-slide-to='2')
-          .carousel-inner.rounded
-            .carousel-item.active
-              img.d-block.w-100(src=`${CWD}assets/img/generic/6.jpg`, alt='First slide')
-            .carousel-item
-              img.d-block.w-100(src=`${CWD}assets/img/generic/7.jpg`, alt='Second slide')
-            .carousel-item
-              img.d-block.w-100(src=`${CWD}assets/img/generic/8.jpg`, alt='Third slide')
-          = '\n'
-          a.carousel-control-prev(href='#carouselExampleControls', role='button', data-slide='prev')
-            = '\n'
-            span.carousel-control-prev-icon(aria-hidden='true')
-            = '\n'
-            span.sr-only Previous
-            = '\n'
-          = '\n'
-          a.carousel-control-next(href='#carouselExampleControls', role='button', data-slide='next')
-            = '\n'
-            span.carousel-control-next-icon(aria-hidden='true')
-            = '\n'
-            span.sr-only Next
-            = '\n'
+        +cardBasic
   .card.mb-3
     .card-header
       h5.mb-0 With Captions
     .card-body.bg-light.overflow-hidden
       +componentCard
-        #carouselExampleCaptions.carousel.slide(data-ride='carousel')
-          ol.carousel-indicators
-            li.active(data-target='#carouselExampleCaptions', data-slide-to='0')
-            li(data-target='#carouselExampleCaptions', data-slide-to='1')
-            li(data-target='#carouselExampleCaptions', data-slide-to='2')
-          .carousel-inner.rounded
-            .carousel-item.active
-              img.d-block.w-100(src=`${CWD}assets/img/generic/10.jpg`, alt='First slide')
-              .carousel-caption.d-none.d-md-block
-                h5.text-white First Slide Heading
-                p Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            .carousel-item
-              img.d-block.w-100(src=`${CWD}assets/img/generic/11.jpg`, alt='Second slide')
-              .carousel-caption.d-none.d-md-block
-                h5.text-white First Slide Heading
-                p Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            .carousel-item
-              img.d-block.w-100(src=`${CWD}assets/img/generic/12.jpg`, alt='Third slide')
-              .carousel-caption.d-none.d-md-block
-                h5.text-white First Slide Heading
-                p Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          = '\n'
-          a.carousel-control-prev(href='#carouselExampleCaptions', role='button', data-slide='prev')
-            = '\n'
-            span.carousel-control-prev-icon(aria-hidden='true')
-            = '\n'
-            span.sr-only Previous
-            = '\n'
-          = '\n'
-          a.carousel-control-next(href='#carouselExampleCaptions', role='button', data-slide='next')
-            = '\n'
-            span.carousel-control-next-icon(aria-hidden='true')
-            = '\n'
-            span.sr-only Next
-            = '\n'
+        +carouselWithCaption
   .card
     .card-header
       h5.mb-0 Fade Example
     .card-body.bg-light.overflow-hidden
       +componentCard
-        #carouselExampleFade.carousel.slide.carousel-fade(data-ride='carousel')
-          .carousel-inner.rounded
-            .carousel-item.active
-              img.d-block.w-100(src=`${CWD}assets/img/generic/8.jpg`, alt='First slide')
-            .carousel-item
-              img.d-block.w-100(src=`${CWD}assets/img/generic/7.jpg`, alt='Second slide')
-            .carousel-item
-              img.d-block.w-100(src=`${CWD}assets/img/generic/6.jpg`, alt='Third slide')
-          = '\n'
-          a.carousel-control-prev(href='#carouselExampleFade', role='button', data-slide='prev')
-            = '\n'
-            span.carousel-control-prev-icon(aria-hidden='true')
-            = '\n'
-            span.sr-only Previous
-            = '\n'
-          = '\n'
-          a.carousel-control-next(href='#carouselExampleFade', role='button', data-slide='next')
-            = '\n'
-            span.carousel-control-next-icon(aria-hidden='true')
-            = '\n'
-            span.sr-only Next
-            = '\n'
+        +cardWithFade
 
 
 

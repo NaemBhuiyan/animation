@@ -3,10 +3,18 @@ extends ../_skeleton-component
 block append variables
   - var firstParent = 'components'              
   - var currentPage = 'countup'
+   -
+    var pageHeader = {
+      title: 'Countup',
+      description: 'Count up component will start counting after an element with data-countup attribute become visible in the viewport.',
+    }
+
 
 block component
-  +PageHeader('Countup')
-    p.mt-2.mb-0 Count up component will start counting after an element with data-countup attribute become visible in the viewport.
+  .card.mb-3
+    .card-body
+      +PageHeader(pageHeader)
+    
   .card.mb-3
     .card-header
       h5.mb-0 Example
