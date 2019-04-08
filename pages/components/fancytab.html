@@ -143,28 +143,119 @@
         <div class="row mt-3">
           <div class="col-lg-9 col-xxl-10">
             <div class="card mb-3">
-              <div class="card-body">
-                <h3>Progress Bars</h3>
-                <p class="mb-0">Documentation and examples for using ZiON-v6.1.0 custom progress bars featuring support for stacked bars, animated backgrounds, and text labels</p><a class="btn btn-link btn-sm pl-0 mt-2" href="https://getbootstrap.com/docs/4.3/components/popovers/" target="_blank">Progress Bars on Bootstrap<span class="fas fa-chevron-right ml-1 fs--2"></span></a>
+              <div class="card-header">
+                <h3>Fancytab</h3>
+                <p class="mb-0">These modular elements can be readily used and customized in every layout across pages.</p>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-header">
+                <h5 class="mb-1">Example</h5>
+                <p class="mb-0">Add class <code>.active</code> to <code>.nav-bar-item.px-3.px-sm-4</code> and corresponding <code>.tab-content</code> which you want to show after page loading.</p>
+              </div>
+              <div class="card-body bg-light overflow-hidden">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="fancy-tab">
+                      <div class="nav-bar nav-bar-center">
+                        <div class="nav-bar-item px-3 px-sm-4 active"><span class="fas fa-home fs-2"></span>
+                          <div class="mt-1">Home</div>
+                        </div>
+                        <div class="nav-bar-item px-3 px-sm-4"><span class="fas fa-user-circle fs-2"></span>
+                          <div class="mt-1">Profile</div>
+                        </div>
+                        <div class="nav-bar-item px-3 px-sm-4"><span class="fas fa-cog fs-2"></span>
+                          <div class="mt-1">Settings</div>
+                        </div>
+                      </div>
+                      <div class="tab-contents">
+                        <div class="tab-content active">
+                          <p class="lead">Duis ac facilisis mauris. Pellentesque leo tortor, maximus sed gravida dapibus, suscipit non nisi. Duis ultrices diam a maximus imperdiet. Nam eu purus a erat tristique ornare. Donec condimentum tristique diam eu congue.</p>
+                        </div>
+                        <div class="tab-content">
+                          <p class="lead">Nullam sed tempus mauris, vitae pretium nibh. Nam pretium diam id massa mollis pretium. Aenean lacus massa, tristique id mauris ac, sollicitudin auctor neque. Cras laoreet nunc nibh, ac tristique orci rutrum quis. Nam luctus, sapien ligula finibus turpis.</p>
+                        </div>
+                        <div class="tab-content">
+                          <p class="lead">Vestibulum convallis diam id nibh tempus, ac scelerisque nulla congue. Cras laoreet nunc nibh, ac tristique orci rutrum quis. Sed eu tellus pharetra, scelerisque nulla in, vehicula libero. Curabitur interdum nec metus ante sed luctus.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <pre class="rounded mt-2"><code class="language-html">&lt;div class=&quot;fancy-tab&quot;&gt;
+  &lt;div class=&quot;nav-bar nav-bar-center&quot;&gt;
+    &lt;div class=&quot;nav-bar-item px-3 px-sm-4 active&quot;&gt;&lt;span class=&quot;fas fa-home fs-2&quot;&gt;&lt;/span&gt;
+      &lt;div class=&quot;mt-1&quot;&gt;Home&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;nav-bar-item px-3 px-sm-4&quot;&gt;&lt;span class=&quot;fas fa-user-circle fs-2&quot;&gt;&lt;/span&gt;
+      &lt;div class=&quot;mt-1&quot;&gt;Profile&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;nav-bar-item px-3 px-sm-4&quot;&gt;&lt;span class=&quot;fas fa-cog fs-2&quot;&gt;&lt;/span&gt;
+      &lt;div class=&quot;mt-1&quot;&gt;Settings&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tab-contents&quot;&gt;
+    &lt;div class=&quot;tab-content active&quot;&gt;
+      &lt;p class=&quot;lead&quot;&gt;Duis ac facilisis mauris. Pellentesque leo tortor, maximus sed gravida dapibus, suscipit non nisi. Duis ultrices diam a maximus imperdiet. Nam eu purus a erat tristique ornare. Donec condimentum tristique diam eu congue.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
+      &lt;p class=&quot;lead&quot;&gt;Nullam sed tempus mauris, vitae pretium nibh. Nam pretium diam id massa mollis pretium. Aenean lacus massa, tristique id mauris ac, sollicitudin auctor neque. Cras laoreet nunc nibh, ac tristique orci rutrum quis. Nam luctus, sapien ligula finibus turpis.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
+      &lt;p class=&quot;lead&quot;&gt;Vestibulum convallis diam id nibh tempus, ac scelerisque nulla congue. Cras laoreet nunc nibh, ac tristique orci rutrum quis. Sed eu tellus pharetra, scelerisque nulla in, vehicula libero. Curabitur interdum nec metus ante sed luctus.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="row no-gutters">
               <div class="col-xl-6 pr-xl-2">
                 <div class="card mb-3">
                   <div class="card-header">
-                    <h5 class="mb-0">Basic Example</h5>
+                    <h5 class="mb-1">Left Align</h5>
+                    <p class="mb-0">Left align position is the default position. So no class is needed to add.</p>
                   </div>
-                  <div class="card-body bg-light">
+                  <div class="card-body bg-light overflow-hidden">
                     <div class="row">
                       <div class="col-12">
-                        <div class="progress mb-3" style="height:15px">
-                          <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                        <div class="fancy-tab">
+                          <div class="nav-bar">
+                            <div class="nav-bar-item px-3 px-sm-4 active">Home</div>
+                            <div class="nav-bar-item px-3 px-sm-4">Profile</div>
+                            <div class="nav-bar-item px-3 px-sm-4">Settings</div>
+                          </div>
+                          <div class="tab-contents">
+                            <div class="tab-content active">
+                              <p class="lead">Duis ac facilisis mauris. Pellentesque leo tortor, maximus sed gravida dapibus, suscipit non nisi. Duis ultrices diam a maximus imperdiet. Nam eu purus a erat tristique ornare. Donec condimentum tristique diam eu congue.</p>
+                            </div>
+                            <div class="tab-content">
+                              <p class="lead">Nullam sed tempus mauris, vitae pretium nibh. Nam pretium diam id massa mollis pretium. Aenean lacus massa, tristique id mauris ac, sollicitudin auctor neque. Cras laoreet nunc nibh, ac tristique orci rutrum quis. Nam luctus, sapien ligula finibus turpis.</p>
+                            </div>
+                            <div class="tab-content">
+                              <p class="lead">Vestibulum convallis diam id nibh tempus, ac scelerisque nulla congue. Cras laoreet nunc nibh, ac tristique orci rutrum quis. Sed eu tellus pharetra, scelerisque nulla in, vehicula libero. Curabitur interdum nec metus ante sed luctus.</p>
+                            </div>
                           </div>
                         </div>
                       </div>
                       <div class="col-12">
-                        <pre class="rounded mt-2"><code class="language-html">&lt;div class=&quot;progress mb-3&quot; style=&quot;height:15px&quot;&gt;
-  &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; style=&quot;width: 70%&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+                        <pre class="rounded mt-2"><code class="language-html">&lt;div class=&quot;fancy-tab&quot;&gt;
+  &lt;div class=&quot;nav-bar&quot;&gt;
+    &lt;div class=&quot;nav-bar-item px-3 px-sm-4 active&quot;&gt;Home&lt;/div&gt;
+    &lt;div class=&quot;nav-bar-item px-3 px-sm-4&quot;&gt;Profile&lt;/div&gt;
+    &lt;div class=&quot;nav-bar-item px-3 px-sm-4&quot;&gt;Settings&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tab-contents&quot;&gt;
+    &lt;div class=&quot;tab-content active&quot;&gt;
+      &lt;p class=&quot;lead&quot;&gt;Duis ac facilisis mauris. Pellentesque leo tortor, maximus sed gravida dapibus, suscipit non nisi. Duis ultrices diam a maximus imperdiet. Nam eu purus a erat tristique ornare. Donec condimentum tristique diam eu congue.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
+      &lt;p class=&quot;lead&quot;&gt;Nullam sed tempus mauris, vitae pretium nibh. Nam pretium diam id massa mollis pretium. Aenean lacus massa, tristique id mauris ac, sollicitudin auctor neque. Cras laoreet nunc nibh, ac tristique orci rutrum quis. Nam luctus, sapien ligula finibus turpis.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
+      &lt;p class=&quot;lead&quot;&gt;Vestibulum convallis diam id nibh tempus, ac scelerisque nulla congue. Cras laoreet nunc nibh, ac tristique orci rutrum quis. Sed eu tellus pharetra, scelerisque nulla in, vehicula libero. Curabitur interdum nec metus ante sed luctus.&lt;/p&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                       </div>
@@ -175,19 +266,48 @@
               <div class="col-xl-6 pl-xl-2">
                 <div class="card mb-3">
                   <div class="card-header">
-                    <div class="h5 mb-0">Label</div>
+                    <h5 class="mb-1">Center Align</h5>
+                    <p class="mb-0">Add class <code>.nav-bar-center</code> to <code>.nav-bar</code> for fancy-tab position and <code>.text-center</code> to <code>.tab-contents</code> for content position.</p>
                   </div>
-                  <div class="card-body bg-light">
+                  <div class="card-body bg-light overflow-hidden">
                     <div class="row">
                       <div class="col-12">
-                        <div class="progress mb-3" style="height:15px">
-                          <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%
+                        <div class="fancy-tab">
+                          <div class="nav-bar nav-bar-center">
+                            <div class="nav-bar-item px-3 px-sm-4 active">Home</div>
+                            <div class="nav-bar-item px-3 px-sm-4">Profile</div>
+                            <div class="nav-bar-item px-3 px-sm-4">Settings</div>
+                          </div>
+                          <div class="tab-contents">
+                            <div class="tab-content active">
+                              <p class="lead">Duis ac facilisis mauris. Pellentesque leo tortor, maximus sed gravida dapibus, suscipit non nisi. Duis ultrices diam a maximus imperdiet. Nam eu purus a erat tristique ornare. Donec condimentum tristique diam eu congue.</p>
+                            </div>
+                            <div class="tab-content">
+                              <p class="lead">Nullam sed tempus mauris, vitae pretium nibh. Nam pretium diam id massa mollis pretium. Aenean lacus massa, tristique id mauris ac, sollicitudin auctor neque. Cras laoreet nunc nibh, ac tristique orci rutrum quis. Nam luctus, sapien ligula finibus turpis.</p>
+                            </div>
+                            <div class="tab-content">
+                              <p class="lead">Vestibulum convallis diam id nibh tempus, ac scelerisque nulla congue. Cras laoreet nunc nibh, ac tristique orci rutrum quis. Sed eu tellus pharetra, scelerisque nulla in, vehicula libero. Curabitur interdum nec metus ante sed luctus.</p>
+                            </div>
                           </div>
                         </div>
                       </div>
                       <div class="col-12">
-                        <pre class="rounded mt-2"><code class="language-html">&lt;div class=&quot;progress mb-3&quot; style=&quot;height:15px&quot;&gt;
-  &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; style=&quot;width: 50%&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;50%
+                        <pre class="rounded mt-2"><code class="language-html">&lt;div class=&quot;fancy-tab&quot;&gt;
+  &lt;div class=&quot;nav-bar nav-bar-center&quot;&gt;
+    &lt;div class=&quot;nav-bar-item px-3 px-sm-4 active&quot;&gt;Home&lt;/div&gt;
+    &lt;div class=&quot;nav-bar-item px-3 px-sm-4&quot;&gt;Profile&lt;/div&gt;
+    &lt;div class=&quot;nav-bar-item px-3 px-sm-4&quot;&gt;Settings&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tab-contents&quot;&gt;
+    &lt;div class=&quot;tab-content active&quot;&gt;
+      &lt;p class=&quot;lead&quot;&gt;Duis ac facilisis mauris. Pellentesque leo tortor, maximus sed gravida dapibus, suscipit non nisi. Duis ultrices diam a maximus imperdiet. Nam eu purus a erat tristique ornare. Donec condimentum tristique diam eu congue.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
+      &lt;p class=&quot;lead&quot;&gt;Nullam sed tempus mauris, vitae pretium nibh. Nam pretium diam id massa mollis pretium. Aenean lacus massa, tristique id mauris ac, sollicitudin auctor neque. Cras laoreet nunc nibh, ac tristique orci rutrum quis. Nam luctus, sapien ligula finibus turpis.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
+      &lt;p class=&quot;lead&quot;&gt;Vestibulum convallis diam id nibh tempus, ac scelerisque nulla congue. Cras laoreet nunc nibh, ac tristique orci rutrum quis. Sed eu tellus pharetra, scelerisque nulla in, vehicula libero. Curabitur interdum nec metus ante sed luctus.&lt;/p&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                       </div>
@@ -195,186 +315,64 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="card mb-3">
-              <div class="card-header">
-                <div class="h5 mb-0">Height</div>
-              </div>
-              <div class="card-body bg-light">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="progress mb-3" style="height:1px">
-                      <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                      </div>
-                    </div>
-                    <div class="progress mb-3" style="height:10px">
-                      <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                      </div>
-                    </div>
-                    <div class="progress mb-3" style="height:20px">
-                      <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                      </div>
-                    </div>
+              <div class="col-xl-6 pr-xl-2">
+                <div class="card mb-3">
+                  <div class="card-header">
+                    <h5 class="mb-1">Right Align</h5>
+                    <p class="mb-0">Add class <code>.nav-bar-right</code> to <code>.nav-bar</code> for fancy-tab position and <code>.text-right</code> to <code>.tab-contents</code> for content position.</p>
                   </div>
-                  <div class="col-12">
-                    <pre class="rounded mt-2"><code class="language-html">&lt;div class=&quot;progress mb-3&quot; style=&quot;height:1px&quot;&gt;
-  &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; style=&quot;width: 70%&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+                  <div class="card-body bg-light overflow-hidden">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="fancy-tab">
+                          <div class="nav-bar nav-bar-right">
+                            <div class="nav-bar-item px-3 px-sm-4 active">Home</div>
+                            <div class="nav-bar-item px-3 px-sm-4">Profile</div>
+                            <div class="nav-bar-item px-3 px-sm-4">Settings</div>
+                          </div>
+                          <div class="tab-contents">
+                            <div class="tab-content active">
+                              <p class="lead">Duis ac facilisis mauris. Pellentesque leo tortor, maximus sed gravida dapibus, suscipit non nisi. Duis ultrices diam a maximus imperdiet. Nam eu purus a erat tristique ornare. Donec condimentum tristique diam eu congue.</p>
+                            </div>
+                            <div class="tab-content">
+                              <p class="lead">Nullam sed tempus mauris, vitae pretium nibh. Nam pretium diam id massa mollis pretium. Aenean lacus massa, tristique id mauris ac, sollicitudin auctor neque. Cras laoreet nunc nibh, ac tristique orci rutrum quis. Nam luctus, sapien ligula finibus turpis.</p>
+                            </div>
+                            <div class="tab-content">
+                              <p class="lead">Vestibulum convallis diam id nibh tempus, ac scelerisque nulla congue. Cras laoreet nunc nibh, ac tristique orci rutrum quis. Sed eu tellus pharetra, scelerisque nulla in, vehicula libero. Curabitur interdum nec metus ante sed luctus.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <pre class="rounded mt-2"><code class="language-html">&lt;div class=&quot;fancy-tab&quot;&gt;
+  &lt;div class=&quot;nav-bar nav-bar-right&quot;&gt;
+    &lt;div class=&quot;nav-bar-item px-3 px-sm-4 active&quot;&gt;Home&lt;/div&gt;
+    &lt;div class=&quot;nav-bar-item px-3 px-sm-4&quot;&gt;Profile&lt;/div&gt;
+    &lt;div class=&quot;nav-bar-item px-3 px-sm-4&quot;&gt;Settings&lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;progress mb-3&quot; style=&quot;height:10px&quot;&gt;
-  &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; style=&quot;width: 70%&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;progress mb-3&quot; style=&quot;height:20px&quot;&gt;
-  &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; style=&quot;width: 70%&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+  &lt;div class=&quot;tab-contents&quot;&gt;
+    &lt;div class=&quot;tab-content active&quot;&gt;
+      &lt;p class=&quot;lead&quot;&gt;Duis ac facilisis mauris. Pellentesque leo tortor, maximus sed gravida dapibus, suscipit non nisi. Duis ultrices diam a maximus imperdiet. Nam eu purus a erat tristique ornare. Donec condimentum tristique diam eu congue.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
+      &lt;p class=&quot;lead&quot;&gt;Nullam sed tempus mauris, vitae pretium nibh. Nam pretium diam id massa mollis pretium. Aenean lacus massa, tristique id mauris ac, sollicitudin auctor neque. Cras laoreet nunc nibh, ac tristique orci rutrum quis. Nam luctus, sapien ligula finibus turpis.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
+      &lt;p class=&quot;lead&quot;&gt;Vestibulum convallis diam id nibh tempus, ac scelerisque nulla congue. Cras laoreet nunc nibh, ac tristique orci rutrum quis. Sed eu tellus pharetra, scelerisque nulla in, vehicula libero. Curabitur interdum nec metus ante sed luctus.&lt;/p&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="card mb-3">
-              <div class="card-header">
-                <div class="h5 mb-0">Background</div>
-              </div>
-              <div class="card-body bg-light">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="progress mb-3" style="height:15px">
-                      <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                      </div>
-                    </div>
-                    <div class="progress mb-3" style="height:15px">
-                      <div class="progress-bar bg-info" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                      </div>
-                    </div>
-                    <div class="progress mb-3" style="height:15px">
-                      <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                      </div>
-                    </div>
-                    <div class="progress mb-3" style="height:15px">
-                      <div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <pre class="rounded mt-2"><code class="language-html">&lt;div class=&quot;progress mb-3&quot; style=&quot;height:15px&quot;&gt;
-  &lt;div class=&quot;progress-bar bg-success&quot; role=&quot;progressbar&quot; style=&quot;width: 30%&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;progress mb-3&quot; style=&quot;height:15px&quot;&gt;
-  &lt;div class=&quot;progress-bar bg-info&quot; role=&quot;progressbar&quot; style=&quot;width: 40%&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;progress mb-3&quot; style=&quot;height:15px&quot;&gt;
-  &lt;div class=&quot;progress-bar bg-warning&quot; role=&quot;progressbar&quot; style=&quot;width: 50%&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;progress mb-3&quot; style=&quot;height:15px&quot;&gt;
-  &lt;div class=&quot;progress-bar bg-danger&quot; role=&quot;progressbar&quot; style=&quot;width: 60%&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card mb-3">
-              <div class="card-header">
-                <div class="h5 mb-0">Multiple bars</div>
-              </div>
-              <div class="card-body bg-light">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <pre class="rounded mt-2"><code class="language-html">&lt;div class=&quot;progress&quot;&gt;
-  &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; style=&quot;width: 15%&quot; aria-valuenow=&quot;15&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;progress-bar bg-success&quot; role=&quot;progressbar&quot; style=&quot;width: 30%&quot; aria-valuenow=&quot;30&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;progress-bar bg-info&quot; role=&quot;progressbar&quot; style=&quot;width: 20%&quot; aria-valuenow=&quot;20&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card mb-3">
-              <div class="card-header">
-                <div class="h5 mb-0">Striped</div>
-              </div>
-              <div class="card-body bg-light">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="progress mb-3" style="height:15px">
-                      <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                      </div>
-                    </div>
-                    <div class="progress mb-3" style="height:15px">
-                      <div class="progress-bar bg-info progress-bar-striped" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                      </div>
-                    </div>
-                    <div class="progress mb-3" style="height:15px">
-                      <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                      </div>
-                    </div>
-                    <div class="progress mb-3" style="height:15px">
-                      <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                      </div>
-                    </div>
-                    <div class="progress mb-3" style="height:15px">
-                      <div class="progress-bar bg-primary progress-bar-striped" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <pre class="rounded mt-2"><code class="language-html">&lt;div class=&quot;progress mb-3&quot; style=&quot;height:15px&quot;&gt;
-  &lt;div class=&quot;progress-bar bg-success progress-bar-striped&quot; role=&quot;progressbar&quot; style=&quot;width: 30%&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;progress mb-3&quot; style=&quot;height:15px&quot;&gt;
-  &lt;div class=&quot;progress-bar bg-info progress-bar-striped&quot; role=&quot;progressbar&quot; style=&quot;width: 40%&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;progress mb-3&quot; style=&quot;height:15px&quot;&gt;
-  &lt;div class=&quot;progress-bar bg-warning progress-bar-striped&quot; role=&quot;progressbar&quot; style=&quot;width: 50%&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;progress mb-3&quot; style=&quot;height:15px&quot;&gt;
-  &lt;div class=&quot;progress-bar bg-danger progress-bar-striped&quot; role=&quot;progressbar&quot; style=&quot;width: 60%&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;progress mb-3&quot; style=&quot;height:15px&quot;&gt;
-  &lt;div class=&quot;progress-bar bg-primary progress-bar-striped&quot; role=&quot;progressbar&quot; style=&quot;width: 70%&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <div class="h5 mb-0">Animated</div>
-              </div>
-              <div class="card-body bg-light">
-                <div class="progress mb-3" style="height:15px">
-                  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="progress-toggle">
-                  </div>
-                </div>
-                <button class="btn btn-secondary btn-sm mt-2" id="progress-toggle-animation" type="button">Toggle Animation</button>
-                <pre class="mt-2"><code class="language-html">&lt;div class=&quot;progress mb-3&quot; style=&quot;height:15px&quot;&gt;
-  &lt;div class=&quot;progress-bar progress-bar-striped progress-bar-animated&quot; role=&quot;progressbar&quot; style=&quot;width: 70%&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
               </div>
             </div>
           </div>
           <div class="col d-none d-lg-block">
             <ul class="nav flex-column sticky-kit mt-6 accordion font-weight-semi-bold" id="sidebar-nav">
               <li class="nav-item"><a class="nav-link text-info" data-toggle="collapse" href="#components" role="button" aria-expanded="true" aria-controls="components">Components</a>
-                <div class="nav collapse pl-3 show" id="components" data-parent="#sidebar-nav"><a class="nav-link w-100 py-0 text-600" href="../components/alerts.html">Alerts</a><a class="nav-link w-100 py-0 text-600" href="../components/avatar.html">Avatar</a><a class="nav-link w-100 py-0 text-600" href="../components/background.html">Background</a><a class="nav-link w-100 py-0 text-600" href="../components/badges.html">Badges</a><a class="nav-link w-100 py-0 text-600" href="../components/breadcrumb.html">Breadcrumb</a><a class="nav-link w-100 py-0 text-600" href="../components/bulk-select.html">Bulk select</a><a class="nav-link w-100 py-0 text-600" href="../components/buttons.html">Buttons</a><a class="nav-link w-100 py-0 text-600" href="../components/cards.html">Cards</a><a class="nav-link w-100 py-0 text-600" href="../components/carousel.html">Carousel</a><a class="nav-link w-100 py-0 text-600" href="../components/collapse.html">Collapse</a><a class="nav-link w-100 py-0 text-600" href="../components/countup.html">Countup</a><a class="nav-link w-100 py-0 text-600" href="../components/dropdowns.html">Dropdowns</a><a class="nav-link w-100 py-0 text-600" href="../components/fancyscroll.html">Fancyscroll</a><a class="nav-link w-100 py-0 text-600" href="../components/fancytab.html">Fancytab</a><a class="nav-link w-100 py-0 text-600" href="../components/forms.html">Forms</a><a class="nav-link w-100 py-0 text-600" href="../components/hoverbox.html">Hoverbox</a><a class="nav-link w-100 py-0 text-600" href="../components/list-group.html">List group</a><a class="nav-link w-100 py-0 text-600" href="../components/modals.html">Modals</a><a class="nav-link w-100 py-0 text-600" href="../components/media-object.html">Media object</a><a class="nav-link w-100 py-0 text-600" href="../components/navs.html">Navs</a><a class="nav-link w-100 py-0 text-600" href="../components/navbar.html">Navbar</a><a class="nav-link w-100 py-0 text-600" href="../components/page-headers.html">Page headers</a><a class="nav-link w-100 py-0 text-600" href="../components/pagination.html">Pagination</a><a class="nav-link w-100 py-0 text-600" href="../components/popovers.html">Popovers</a><a class="nav-link w-100 py-0 text-info" href="../components/progress.html">Progress</a><a class="nav-link w-100 py-0 text-600" href="../components/scrollspy.html">Scrollspy</a><a class="nav-link w-100 py-0 text-600" href="../components/tables.html">Tables</a><a class="nav-link w-100 py-0 text-600" href="../components/tabs.html">Tabs</a><a class="nav-link w-100 py-0 text-600" href="../components/tooltips.html">Tooltips</a>
+                <div class="nav collapse pl-3 show" id="components" data-parent="#sidebar-nav"><a class="nav-link w-100 py-0 text-600" href="../components/alerts.html">Alerts</a><a class="nav-link w-100 py-0 text-600" href="../components/avatar.html">Avatar</a><a class="nav-link w-100 py-0 text-600" href="../components/background.html">Background</a><a class="nav-link w-100 py-0 text-600" href="../components/badges.html">Badges</a><a class="nav-link w-100 py-0 text-600" href="../components/breadcrumb.html">Breadcrumb</a><a class="nav-link w-100 py-0 text-600" href="../components/bulk-select.html">Bulk select</a><a class="nav-link w-100 py-0 text-600" href="../components/buttons.html">Buttons</a><a class="nav-link w-100 py-0 text-600" href="../components/cards.html">Cards</a><a class="nav-link w-100 py-0 text-600" href="../components/carousel.html">Carousel</a><a class="nav-link w-100 py-0 text-600" href="../components/collapse.html">Collapse</a><a class="nav-link w-100 py-0 text-600" href="../components/countup.html">Countup</a><a class="nav-link w-100 py-0 text-600" href="../components/dropdowns.html">Dropdowns</a><a class="nav-link w-100 py-0 text-600" href="../components/fancyscroll.html">Fancyscroll</a><a class="nav-link w-100 py-0 text-info" href="../components/fancytab.html">Fancytab</a><a class="nav-link w-100 py-0 text-600" href="../components/forms.html">Forms</a><a class="nav-link w-100 py-0 text-600" href="../components/hoverbox.html">Hoverbox</a><a class="nav-link w-100 py-0 text-600" href="../components/list-group.html">List group</a><a class="nav-link w-100 py-0 text-600" href="../components/modals.html">Modals</a><a class="nav-link w-100 py-0 text-600" href="../components/media-object.html">Media object</a><a class="nav-link w-100 py-0 text-600" href="../components/navs.html">Navs</a><a class="nav-link w-100 py-0 text-600" href="../components/navbar.html">Navbar</a><a class="nav-link w-100 py-0 text-600" href="../components/page-headers.html">Page headers</a><a class="nav-link w-100 py-0 text-600" href="../components/pagination.html">Pagination</a><a class="nav-link w-100 py-0 text-600" href="../components/popovers.html">Popovers</a><a class="nav-link w-100 py-0 text-600" href="../components/progress.html">Progress</a><a class="nav-link w-100 py-0 text-600" href="../components/scrollspy.html">Scrollspy</a><a class="nav-link w-100 py-0 text-600" href="../components/tables.html">Tables</a><a class="nav-link w-100 py-0 text-600" href="../components/tabs.html">Tabs</a><a class="nav-link w-100 py-0 text-600" href="../components/tooltips.html">Tooltips</a>
                 </div>
               </li>
               <li class="nav-item"><a class="nav-link text-600 collapsed" data-toggle="collapse" href="#plugins" role="button" aria-expanded="false" aria-controls="plugins">Plugins</a>
@@ -407,7 +405,6 @@
     <script src="../assets/lib/stickyfilljs/stickyfill.min.js"></script>
     <script src="../assets/lib/sticky-kit/sticky-kit.min.js"></script>
     <script src="../assets/lib/prismjs/prism.js"></script>
-    <script src="../assets/lib/progressbar.js/progressbar.min.js"></script>
     <script src="../assets/js/theme.js"></script>
 
   </body>
