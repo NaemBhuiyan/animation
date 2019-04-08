@@ -4,12 +4,19 @@ block append variables
   - var firstParent = 'components'
   - var currentPage = 'scrollspy'
   - var ATTRS_BODY = { 'data-spy': 'scroll', 'data-target': '#v-pills', 'data-offset': 90 };
+  -
+    var pageHeader = {
+      title: 'Scrollspy',
+      description: "Automatically update Bootstrap navigation or list group components based on scroll position to indicate which link is currently active in the viewport.",
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/components/scrollspy/`,
+      linkText: 'Scrollspy Bars on Bootstrap'
+    }
 
 block component
-  +PageHeader('Scrollspy')
-    p.mt-2 Automatically update Bootstrap navigation or list group components based on scroll position to indicate which link is currently active in the viewport.
-    a(href='https://getbootstrap.com/docs/4.3/components/scrollspy/' target='_blank').btn.btn-link.pl-0.btn-sm  Scrollspy Documentation
-      span.fas.fa-chevron-right.ml-1.fs--2
+  .card.mb-3
+    .card-body
+      +PageHeader(pageHeader)
+   
   .card
     .card-body
       .row

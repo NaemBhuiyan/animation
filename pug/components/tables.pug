@@ -1,15 +1,15 @@
 extends ../_skeleton-component
+include mixins/_table
 
 block append variables
   - var firstParent = 'components'              
   - var currentPage = 'tables'
  
 block component
-  +PageHeader('Tables')
-    p.mt-2 Documentation and examples for opt-in styling of tables with #{theme}.
-    a(href='https://getbootstrap.com/docs/4.3/content/tables/' target='_blank').btn.btn-link.pl-0.btn-sm  Tables on Bootstrap
-      span.fas.fa-chevron-right.ml-1.fs--2
-
+  .card.mb-3
+    .card-body
+      +PageHeader(pageHeader)
+  
   .row.no-gutters
     .col-lg-6.pr-lg-2
 
@@ -18,87 +18,22 @@ block component
           h5.mb-0 Example
         .card-body.bg-light
           +componentCard
-            table.table
-              thead
-                tr
-                  th(scope='col') #
-                  th(scope='col') First
-                  th(scope='col') Last
-                  th.white-space-nowrap(scope='col') Handle
-              tbody
-                tr
-                  th(scope='row') 1
-                  td Steven
-                  td Speilberg
-                  td.white-space-nowrap @mdo
-                tr
-                  th(scope='row') 2
-                  td Martin
-                  td Scorsese
-                  td.white-space-nowrap @fat
-                tr
-                  th(scope='row') 3
-                  td James
-                  td Cameron
-                  td.white-space-nowrap @twitter
+            +table
     .col-lg-6.pl-lg-2
       .card.mb-3
         .card-header
           h5.mb-0 Dark
         .card-body.bg-light
           +componentCard
-            table.table.table-dark
-              thead
-                tr
-                  th(scope='col') #
-                  th(scope='col') First
-                  th(scope='col') Last
-                  th.white-space-nowrap(scope='col') Handle
-              tbody
-                tr
-                  th(scope='row') 1
-                  td Client
-                  td Eastwood
-                  td.white-space-nowrap @mdo
-                tr
-                  th(scope='row') 2
-                  td Quentin
-                  td Tarantino
-                  td.white-space-nowrap @fat
-                tr
-                  th(scope='row') 3
-                  td Redley
-                  td Scott
-                  td.white-space-nowrap @twitter
+            +table.table-dark
+            
     .col-lg-6.pr-lg-2
       .card.mb-3
         .card-header
           h5.mb-0 Header Dark
         .card-body.bg-light
           +componentCard
-            table.table
-              thead.thead-dark
-                tr
-                  th(scope='col') #
-                  th(scope='col') First
-                  th(scope='col') Last
-                  th.white-space-nowrap(scope='col') Handle
-              tbody
-                tr
-                  th(scope='row') 1
-                  td Devid
-                  td Fincher
-                  td.white-space-nowrap @mdo
-                tr
-                  th(scope='row') 2
-                  td Alfred
-                  td Hitchcock
-                  td.white-space-nowrap @fat
-                tr
-                  th(scope='row') 3
-                  td Woodley
-                  td Allen
-                  td.white-space-nowrap @twitter
+            +table('thead-dark')
             
     .col-lg-6.pl-lg-2
       .card.mb-3
@@ -106,83 +41,20 @@ block component
           h5.mb-0 Header Light
         .card-body.bg-light
           +componentCard
-            table.table
-              thead.thead-light
-                tr
-                  th(scope='col') #
-                  th(scope='col') First
-                  th(scope='col') Last
-                  th.white-space-nowrap(scope='col') Handle
-              tbody
-                tr
-                  th(scope='row') 1
-                  td Stanley
-                  td Kubrick
-                  td.white-space-nowrap @mdo
-                tr
-                  th(scope='row') 2
-                  td Peter
-                  td Jackson
-                  td.white-space-nowrap @fat
-                tr
-                  th(scope='row') 3
-                  td Francis
-                  td Ford
-                  td.white-space-nowrap @twitter
+            +table('thead-light')
     .col-lg-6.pr-lg-2
       .card.mb-3
         .card-header
           h5.mb-0 Table Striped
         .card-body.bg-light
           +componentCard
-            table.table.table-striped
-              thead
-                tr
-                  th(scope='col') #
-                  th(scope='col') First
-                  th(scope='col') Last
-                  th.white-space-nowrap(scope='col') Handle
-              tbody
-                tr
-                  th(scope='row') 1
-                  td Bob
-                  td Gale
-                  td.white-space-nowrap @mdo
-                tr
-                  th(scope='row') 2
-                  td Wes
-                  td Anderson
-                  td.white-space-nowrap @fat
-                tr
-                  th(scope='row') 3
-                  td Billy
-                  td Wilder
-                  td.white-space-nowrap @twitter
+            +table.table-striped
+           
+                
     .col-lg-6.pl-lg-2
       .card.mb-3
         .card-header
           h5.mb-0 Table Hover
         .card-body.bg-light
           +componentCard
-            table.table.table-hover
-              thead
-                tr
-                  th(scope='col') #
-                  th(scope='col') First
-                  th(scope='col') Last
-                  th.white-space-nowrap(scope='col') Handle
-              tbody
-                tr
-                  th(scope='row') 1
-                  td Steven
-                  td Soderbergh
-                  td.white-space-nowrap @mdo
-                tr
-                  th(scope='row') 2
-                  td Orson
-                  td Welles
-                  td.white-space-nowrap @fat
-                tr
-                  th(scope='row') 3
-                  td(colspan='2') Larry the Bird
-                  td.white-space-nowrap @twitter
+            +table.table-hover
