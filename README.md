@@ -1,5 +1,5 @@
 # create-zion-template
-1. Clone **`create-zion-template`** and renamed it with your template name.
+1. Clone **`create-zion-template`** and rename it with your template name.
     ```
     git clone git@gitlab.com:themewagon/create-zion-template.git TEMPLATE_NAME
     ```
@@ -35,3 +35,5 @@
     ```
     npm start
     ```
+
+Changing a remote's URL: [https://help.github.com/en/articles/changing-a-remotes-url](https://help.github.com/en/articles/changing-a-remotes-url)
