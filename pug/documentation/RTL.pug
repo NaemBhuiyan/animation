@@ -3,16 +3,22 @@ extends ../_skeleton-component
 block append variables
   - var firstParent = 'documentation'              
   - var currentPage = 'RTL'
+  -
+    var pageHeader = {
+      title: 'RTL',
+    }
 
 block component
-  +PageHeader('RTL')
-  .card.mb-3
+  .card.shadow-sm.mb-3
+    .card-body
+      h3.mb-0=pageHeader.title
+  .card.shadow-sm.mb-3
     .card-header
       h5#setting-up-html.mb-0.contains-anchor Setting up HTML
         a(href='#setting-up-html' data-fancyscroll data-offset=96) #
     .card-body.bg-light
       p Your theme comes with a built-in automated rlt feature. 
-        a(href=`${CWD}layouts/RTL.html`) Here
+        a(href=`${CWD}index-rtl.html`) Here
         |  is the example. To use rtl, set the 
         code dir='rtl'
         |  in your html like:
@@ -25,7 +31,7 @@ block component
       pre
         code.lang-html.
           #{'<link href="assets/css/theme-rtl.css" rel="stylesheet">'}
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5#setting-up-buil-tools.mb-0.contains-anchor Setting up build tools
         a(href='#setting-up-buil-tools' data-fancyscroll data-offset=96) #

@@ -110,114 +110,221 @@
           <div class="col-lg-9 col-xxl-10">
             <div class="card mb-3">
               <div class="card-body">
-                <h3>Badges</h3>
-                <p class="mb-0">Documentation and examples for badges, our small count and labeling component.</p><a class="btn btn-link btn-sm pl-0 mt-2" href="https://getbootstrap.com/docs/4.3/components/badge/" target="_blank">Badges on Bootstrap<span class="fas fa-chevron-right ml-1 fs--2"></span></a>
+                <h3>Spinners</h3>
+                <p class="mb-0">Indicate the loading state of a component or page with Bootstrap spinners, built entirely with HTML, CSS, and no JavaScript.</p><a class="btn btn-link btn-sm pl-0 mt-2" href="https://getbootstrap.com/docs/4.3/components/spinners/" target="_blank">Spinners on Bootstrap<span class="fas fa-chevron-right ml-1 fs--2"></span></a>
               </div>
             </div>
             <div class="card mb-3">
               <div class="card-header">
-                <h5 class="mb-0">Contextual variations</h5>
+                <h5 class="mb-0">Basic Example</h5>
               </div>
               <div class="card-body bg-light">
                 <div class="row">
-                  <div class="col-12"><span class="badge badge-primary">Primary</span>
-                    <span class="badge badge-secondary">Secondary</span>
-                    <span class="badge badge-success">Success</span>
-                    <span class="badge badge-info">Info</span>
-                    <span class="badge badge-warning">Warning</span>
-                    <span class="badge badge-danger">Danger</span>
-                    <span class="badge badge-light">Light</span>
-                    <span class="badge badge-dark">Dark</span>
+                  <div class="col-12">
+                    <div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>
                   </div>
-                  <div class="col-12"><pre class="rounded mt-2"><code class="language-html">&lt;span class=&quot;badge badge-primary&quot;&gt;Primary&lt;/span&gt;
-&lt;span class=&quot;badge badge-secondary&quot;&gt;Secondary&lt;/span&gt;
-&lt;span class=&quot;badge badge-success&quot;&gt;Success&lt;/span&gt;
-&lt;span class=&quot;badge badge-info&quot;&gt;Info&lt;/span&gt;
-&lt;span class=&quot;badge badge-warning&quot;&gt;Warning&lt;/span&gt;
-&lt;span class=&quot;badge badge-danger&quot;&gt;Danger&lt;/span&gt;
-&lt;span class=&quot;badge badge-light&quot;&gt;Light&lt;/span&gt;
-&lt;span class=&quot;badge badge-dark&quot;&gt;Dark&lt;/span&gt;</code></pre>
+                  <div class="col-12"><pre class="rounded mt-2"><code class="language-html">&lt;div class=&quot;spinner-border&quot; role=&quot;status&quot;&gt;&lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;&lt;/div&gt;</code></pre>
                   </div>
                 </div>
               </div>
             </div>
             <div class="card mb-3">
               <div class="card-header">
-                <h5 class="mb-0">Pill badges</h5>
+                <h5 class="mb-1">Colors</h5>
+                <p class="mb-0">The border spinner uses <code>currentColor </code>for its <code>border-color</code>, meaning you can customize the color with text color utilities. You can use any of our text color utilities on the standard spinner.</p>
               </div>
               <div class="card-body bg-light">
                 <div class="row">
-                  <div class="col-12"><span class="badge badge-pill badge-primary">Primary</span>
-                    <span class="badge badge-pill badge-secondary">Secondary</span>
-                    <span class="badge badge-pill badge-success">Success</span>
-                    <span class="badge badge-pill badge-info">Info</span>
-                    <span class="badge badge-pill badge-warning">Warning</span>
-                    <span class="badge badge-pill badge-danger">Danger</span>
-                    <span class="badge badge-pill badge-light">Light</span>
-                    <span class="badge badge-pill badge-dark">Dark</span>
+                  <div class="col-12">
+                    <div class="spinner-border text-primary" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-border text-secondary" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-border text-success" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-border text-info" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-border text-warning" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-border text-danger" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-border text-light" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-border text-dark" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
                   </div>
-                  <div class="col-12"><pre class="rounded mt-2"><code class="language-html">&lt;span class=&quot;badge badge-pill badge-primary&quot;&gt;Primary&lt;/span&gt;
-&lt;span class=&quot;badge badge-pill badge-secondary&quot;&gt;Secondary&lt;/span&gt;
-&lt;span class=&quot;badge badge-pill badge-success&quot;&gt;Success&lt;/span&gt;
-&lt;span class=&quot;badge badge-pill badge-info&quot;&gt;Info&lt;/span&gt;
-&lt;span class=&quot;badge badge-pill badge-warning&quot;&gt;Warning&lt;/span&gt;
-&lt;span class=&quot;badge badge-pill badge-danger&quot;&gt;Danger&lt;/span&gt;
-&lt;span class=&quot;badge badge-pill badge-light&quot;&gt;Light&lt;/span&gt;
-&lt;span class=&quot;badge badge-pill badge-dark&quot;&gt;Dark&lt;/span&gt;</code></pre>
+                  <div class="col-12"><pre class="rounded mt-2"><code class="language-html">&lt;div class=&quot;spinner-border text-primary&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spinner-border text-secondary&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spinner-border text-success&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spinner-border text-info&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spinner-border text-warning&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spinner-border text-danger&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spinner-border text-light&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spinner-border text-dark&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;</code></pre>
                   </div>
                 </div>
               </div>
             </div>
             <div class="card mb-3">
               <div class="card-header">
-                <h5 class="mb-0">Soft badges</h5>
+                <h5 class="mb-1">Growing spinner</h5>
+                <p class="mb-0">Place toasts with the helper classes as you need them. The top right is often used for notifications, as is the top middle. If you’re only ever going to show one toast at a time, put the positioning styles right on the <code>.toast</code>.</p>
               </div>
               <div class="card-body bg-light">
                 <div class="row">
-                  <div class="col-12"><span class="badge badge-soft-primary">Primary</span>
-                    <span class="badge badge-soft-secondary">Secondary</span>
-                    <span class="badge badge-soft-success">Success</span>
-                    <span class="badge badge-soft-info">Info</span>
-                    <span class="badge badge-soft-warning">Warning</span>
-                    <span class="badge badge-soft-danger">Danger</span>
-                    <span class="badge badge-soft-light">Light</span>
-                    <span class="badge badge-soft-dark">Dark</span>
+                  <div class="col-12">
+                    <div class="spinner-grow" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
                   </div>
-                  <div class="col-12"><pre class="rounded mt-2"><code class="language-html">&lt;span class=&quot;badge badge-soft-primary&quot;&gt;Primary&lt;/span&gt;
-&lt;span class=&quot;badge badge-soft-secondary&quot;&gt;Secondary&lt;/span&gt;
-&lt;span class=&quot;badge badge-soft-success&quot;&gt;Success&lt;/span&gt;
-&lt;span class=&quot;badge badge-soft-info&quot;&gt;Info&lt;/span&gt;
-&lt;span class=&quot;badge badge-soft-warning&quot;&gt;Warning&lt;/span&gt;
-&lt;span class=&quot;badge badge-soft-danger&quot;&gt;Danger&lt;/span&gt;
-&lt;span class=&quot;badge badge-soft-light&quot;&gt;Light&lt;/span&gt;
-&lt;span class=&quot;badge badge-soft-dark&quot;&gt;Dark&lt;/span&gt;</code></pre>
+                  <div class="col-12"><pre class="rounded mt-2"><code class="language-html">&lt;div class=&quot;spinner-grow&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;</code></pre>
                   </div>
                 </div>
               </div>
             </div>
             <div class="card mb-3">
               <div class="card-header">
-                <h5 class="mb-0">Soft pill badges</h5>
+                <h5 class="mb-1">Growing colors</h5>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="spinner-grow text-primary" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-secondary" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-success" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-info" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-warning" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-danger" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-light" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-dark" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                  </div>
+                  <div class="col-12"><pre class="rounded mt-2"><code class="language-html">&lt;div class=&quot;spinner-grow text-primary&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spinner-grow text-secondary&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spinner-grow text-success&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spinner-grow text-info&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spinner-grow text-warning&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spinner-grow text-danger&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spinner-grow text-light&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spinner-grow text-dark&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-header">
+                <h5 class="mb-1">Size</h5>
+                <p class="mb-0">Add <code>.spinner-border-sm </code>and <code>.spinner-grow-sm </code>to make a smaller spinner that can quickly be used within other components.</p>
               </div>
               <div class="card-body bg-light">
                 <div class="row">
-                  <div class="col-12"><span class="badge badge-pill badge-soft-primary">Primary</span>
-                    <span class="badge badge-pill badge-soft-secondary">Secondary</span>
-                    <span class="badge badge-pill badge-soft-success">Success</span>
-                    <span class="badge badge-pill badge-soft-info">Info</span>
-                    <span class="badge badge-pill badge-soft-warning">Warning</span>
-                    <span class="badge badge-pill badge-soft-danger">Danger</span>
-                    <span class="badge badge-pill badge-soft-light">Light</span>
-                    <span class="badge badge-pill badge-soft-dark">Dark</span>
+                  <div class="col-12">
+                    <div class="spinner-border spinner-border-sm" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-border" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow spinner-grow-sm" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
                   </div>
-                  <div class="col-12"><pre class="rounded mt-2"><code class="language-html">&lt;span class=&quot;badge badge-pill badge-soft-primary&quot;&gt;Primary&lt;/span&gt;
-&lt;span class=&quot;badge badge-pill badge-soft-secondary&quot;&gt;Secondary&lt;/span&gt;
-&lt;span class=&quot;badge badge-pill badge-soft-success&quot;&gt;Success&lt;/span&gt;
-&lt;span class=&quot;badge badge-pill badge-soft-info&quot;&gt;Info&lt;/span&gt;
-&lt;span class=&quot;badge badge-pill badge-soft-warning&quot;&gt;Warning&lt;/span&gt;
-&lt;span class=&quot;badge badge-pill badge-soft-danger&quot;&gt;Danger&lt;/span&gt;
-&lt;span class=&quot;badge badge-pill badge-soft-light&quot;&gt;Light&lt;/span&gt;
-&lt;span class=&quot;badge badge-pill badge-soft-dark&quot;&gt;Dark&lt;/span&gt;</code></pre>
+                  <div class="col-12"><pre class="rounded mt-2"><code class="language-html">&lt;div class=&quot;spinner-border spinner-border-sm&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spinner-border&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spinner-grow spinner-grow-sm&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spinner-grow&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-header">
+                <h5 class="mb-1">Buttons</h5>
+              </div>
+              <div class="card-body bg-light">
+                <div class="row">
+                  <div class="col-12"><button class="btn btn-primary mr-1" type="button" disabled="">
+                      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                      <span class="sr-only">Loading...</span>
+                    </button><button class="btn btn-primary" type="button" disabled="">
+                      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                      Loading...
+                    </button></div>
+                  <div class="col-12"><pre class="rounded mt-2"><code class="language-html">&lt;button class=&quot;btn btn-primary mr-1&quot; type=&quot;button&quot; disabled=&quot;&quot;&gt;
+  &lt;span class=&quot;spinner-border spinner-border-sm&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+&lt;/button&gt;&lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; disabled=&quot;&quot;&gt;
+  &lt;span class=&quot;spinner-border spinner-border-sm&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+  Loading...
+&lt;/button&gt;</code></pre>
                   </div>
                 </div>
               </div>
@@ -229,7 +336,7 @@
                 <div class="nav collapse pl-3" id="documentation" data-parent="#sidebar-nav"><a class="nav-link w-100 py-0 text-600" href="../documentation/getting-started.html">Getting started</a><a class="nav-link w-100 py-0 text-600" href="../documentation/file-structure.html">File structure</a><a class="nav-link w-100 py-0 text-600" href="../documentation/customization.html">Customization</a><a class="nav-link w-100 py-0 text-600" href="../documentation/fluid-layout.html">Fluid layout</a><a class="nav-link w-100 py-0 text-600" href="../documentation/gulp.html">Gulp</a><a class="nav-link w-100 py-0 text-600" href="../documentation/RTL.html">RTL</a><a class="nav-link w-100 py-0 text-600" href="../documentation/plugins.html">Plugins</a></div>
               </li>
               <li class="nav-item"><a class="nav-link text-info" data-toggle="collapse" href="#components" role="button" aria-expanded="true" aria-controls="components">Components</a>
-                <div class="nav collapse pl-3 show" id="components" data-parent="#sidebar-nav"><a class="nav-link w-100 py-0 text-600" href="../components/alerts.html">Alerts</a><a class="nav-link w-100 py-0 text-600" href="../components/background.html">Background</a><a class="nav-link w-100 py-0 text-info" href="../components/badges.html">Badges</a><a class="nav-link w-100 py-0 text-600" href="../components/breadcrumb.html">Breadcrumb</a><a class="nav-link w-100 py-0 text-600" href="../components/buttons.html">Buttons</a><a class="nav-link w-100 py-0 text-600" href="../components/cards.html">Cards</a><a class="nav-link w-100 py-0 text-600" href="../components/carousel.html">Carousel</a><a class="nav-link w-100 py-0 text-600" href="../components/collapse.html">Collapse</a><a class="nav-link w-100 py-0 text-600" href="../components/dropdowns.html">Dropdowns</a><a class="nav-link w-100 py-0 text-600" href="../components/fancyscroll.html">Fancyscroll</a><a class="nav-link w-100 py-0 text-600" href="../components/forms.html">Forms</a><a class="nav-link w-100 py-0 text-600" href="../components/hoverbox.html">Hoverbox</a><a class="nav-link w-100 py-0 text-600" href="../components/list-group.html">List group</a><a class="nav-link w-100 py-0 text-600" href="../components/modals.html">Modals</a><a class="nav-link w-100 py-0 text-600" href="../components/media-object.html">Media object</a><a class="nav-link w-100 py-0 text-600" href="../components/navs.html">Navs</a><a class="nav-link w-100 py-0 text-600" href="../components/navbar.html">Navbar</a><a class="nav-link w-100 py-0 text-600" href="../components/page-headers.html">Page headers</a><a class="nav-link w-100 py-0 text-600" href="../components/pagination.html">Pagination</a><a class="nav-link w-100 py-0 text-600" href="../components/popovers.html">Popovers</a><a class="nav-link w-100 py-0 text-600" href="../components/progress.html">Progress</a><a class="nav-link w-100 py-0 text-600" href="../components/scrollspy.html">Scrollspy</a><a class="nav-link w-100 py-0 text-600" href="../components/spinners.html">Spinners</a><a class="nav-link w-100 py-0 text-600" href="../components/tables.html">Tables</a><a class="nav-link w-100 py-0 text-600" href="../components/tabs.html">Tabs</a><a class="nav-link w-100 py-0 text-600" href="../components/tooltips.html">Tooltips</a><a class="nav-link w-100 py-0 text-600" href="../components/toasts.html">Toasts</a></div>
+                <div class="nav collapse pl-3 show" id="components" data-parent="#sidebar-nav"><a class="nav-link w-100 py-0 text-600" href="../components/alerts.html">Alerts</a><a class="nav-link w-100 py-0 text-600" href="../components/background.html">Background</a><a class="nav-link w-100 py-0 text-600" href="../components/badges.html">Badges</a><a class="nav-link w-100 py-0 text-600" href="../components/breadcrumb.html">Breadcrumb</a><a class="nav-link w-100 py-0 text-600" href="../components/buttons.html">Buttons</a><a class="nav-link w-100 py-0 text-600" href="../components/cards.html">Cards</a><a class="nav-link w-100 py-0 text-600" href="../components/carousel.html">Carousel</a><a class="nav-link w-100 py-0 text-600" href="../components/collapse.html">Collapse</a><a class="nav-link w-100 py-0 text-600" href="../components/dropdowns.html">Dropdowns</a><a class="nav-link w-100 py-0 text-600" href="../components/fancyscroll.html">Fancyscroll</a><a class="nav-link w-100 py-0 text-600" href="../components/forms.html">Forms</a><a class="nav-link w-100 py-0 text-600" href="../components/hoverbox.html">Hoverbox</a><a class="nav-link w-100 py-0 text-600" href="../components/list-group.html">List group</a><a class="nav-link w-100 py-0 text-600" href="../components/modals.html">Modals</a><a class="nav-link w-100 py-0 text-600" href="../components/media-object.html">Media object</a><a class="nav-link w-100 py-0 text-600" href="../components/navs.html">Navs</a><a class="nav-link w-100 py-0 text-600" href="../components/navbar.html">Navbar</a><a class="nav-link w-100 py-0 text-600" href="../components/page-headers.html">Page headers</a><a class="nav-link w-100 py-0 text-600" href="../components/pagination.html">Pagination</a><a class="nav-link w-100 py-0 text-600" href="../components/popovers.html">Popovers</a><a class="nav-link w-100 py-0 text-600" href="../components/progress.html">Progress</a><a class="nav-link w-100 py-0 text-600" href="../components/scrollspy.html">Scrollspy</a><a class="nav-link w-100 py-0 text-info" href="../components/spinners.html">Spinners</a><a class="nav-link w-100 py-0 text-600" href="../components/tables.html">Tables</a><a class="nav-link w-100 py-0 text-600" href="../components/tabs.html">Tabs</a><a class="nav-link w-100 py-0 text-600" href="../components/tooltips.html">Tooltips</a><a class="nav-link w-100 py-0 text-600" href="../components/toasts.html">Toasts</a></div>
               </li>
               <li class="nav-item"><a class="nav-link text-600 collapsed" data-toggle="collapse" href="#utilities" role="button" aria-expanded="false" aria-controls="utilities">Utilities</a>
                 <div class="nav collapse pl-3" id="utilities" data-parent="#sidebar-nav"><a class="nav-link w-100 py-0 text-600" href="../utilities/borders.html">Borders</a><a class="nav-link w-100 py-0 text-600" href="../utilities/colors.html">Colors</a><a class="nav-link w-100 py-0 text-600" href="../utilities/grid.html">Grid</a><a class="nav-link w-100 py-0 text-600" href="../utilities/sizing.html">Sizing</a><a class="nav-link w-100 py-0 text-600" href="../utilities/spacing.html">Spacing</a><a class="nav-link w-100 py-0 text-600" href="../utilities/typography.html">Typography</a></div>

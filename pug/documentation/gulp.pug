@@ -3,10 +3,17 @@ extends ../_skeleton-component
 block append variables
   - var firstParent = 'documentation'              
   - var currentPage = 'gulp'
+  -
+    var pageHeader = {
+      title: 'Gulp',
+    }
 
 block component
-  +PageHeader('Gulp')
-  .card.mb-3
+  .card.shadow-sm.mb-3
+    .card-body
+      h3.mb-0=pageHeader.title
+  
+  .card.shadow-sm.mb-3
     .card-header
       h5#gulp-start.mb-0.contains-anchor To start your project run:
         a(href='#gulp-start' data-fancyscroll data-offset=96) #

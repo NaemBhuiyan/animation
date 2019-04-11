@@ -3,11 +3,18 @@ extends ../_skeleton-component
 block append variables
   - var firstParent = 'documentation'              
   - var currentPage = 'customization'
+  -
+    var pageHeader = {
+      title: 'Customization',
+      description: 'We recommend you customize your theme styles using SCSS. You can customize the theme\'s styles with the two following approaches:',
+    }
 
 block component
-  +PageHeader('Customization')
-    p.mb-1.mt-2 We recommend you customize your theme styles using SCSS. You can customize the theme's styles with the two following approaches:
-  .card.mb-3
+  .card.shadow-sm.mb-3
+    .card-body
+      +PageHeader(pageHeader)
+      
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0
         code _user.scss
@@ -15,7 +22,7 @@ block component
       p.mb-0 You can add your own SCSS and override the theme style in the 
         code scss/_user.scss
         |  file.
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0
         code _user-variables.scss

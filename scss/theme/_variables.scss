@@ -403,3 +403,18 @@ $calendar-color: $danger !default;
 //|   Modal
 //-----------------------------------------------*/
 $modal-content-border-radius: $border-radius-soft;
+
+// /*-----------------------------------------------
+//|   ZiON Semantic UI Accordion
+//-----------------------------------------------*/
+$accordion-color: $body-color !default;
+$accordion-border-radius: $border-radius-soft !default;
+$accordion-border-width: 1px !default;
+$accordion-border-color: $gray-300 !default;
+$accordion-title-color: $gray-800 !default;
+$accordion-active-color: $dark !default;
+$accordion-padding-x: map_get($spacers, 3) !default;
+$accordion-padding-y: map_get($spacers, 2) !default;
+$accordion-content-padding-x: map_get($spacers, 5) !default;
+$accordion-content-padding-y: map_get($spacers, 3) !default;
+$accordion-icon-font-size: $font-size-base !default;

@@ -1,4 +1,5 @@
 extends ../_skeleton-component
+include mixins/_zion-semantic-ui-accordion
 
 block append styles
   link(href=`${CWD}assets/lib/semantic-ui-accordion/accordion.min.css`, rel='stylesheet')
@@ -7,48 +8,33 @@ block append styles
 block append scripts
   script(src=`${CWD}assets/lib/semantic-ui-accordion/accordion.min.js`)
   script(src=`${CWD}assets/lib/semantic-ui-transition/transition.min.js`)
+  script(src=`${CWD}assets/lib/zion-semantic-ui-accordion/js/plugin.min.js`)
 
 block append variables
   - var firstParent = 'plugins'
   - var currentPage = 'accordion'
 
 block component
-  +PageHeader('Accordion')
-    p.mt-2 An accordion allows users to toggle the display of sections of content.
-    a(href='https://semantic-ui.com/modules/accordion.html' target='_blank').btn.btn-link.pl-0.btn-sm  Accordion on semantic ui
-      span.fas.fa-chevron-right.ml-1.fs--2
   .card.mb-3
-    .card-header
-      h5.mb-0 Example
-    .card-body.bg-light
-      .ui.styled.fluid.accordion(data-options!={exclusive: false})
-        .active.title
-          i.dropdown.icon
-          h5.d-inline-block.fs-0 What is a dog?
-        .active.content
-          p A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.
-        .title
-          i.dropdown.icon
-          h5.d-inline-block.fs-0 What kinds of dogs are there?
-        .content
-          p There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.
-        .title
-          i.dropdown.icon
-          h5.d-inline-block.fs-0 How do you acquire a dog?
-        .content
-          p Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.
-          p A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.
+    .card-body
+      +PageHeader(pageHeader)
+      
   .card.mb-3
     .card-header
       h5.mb-0 Stylesheet
     .card-body.bg-light
       +componentCardLib
-        link(href=`assets/lib/semantic-ui-accordion/accordion.min.css`, rel='stylesheet')
-        link(href=`assets/lib/semantic-ui-transition/transition.min.css`, rel='stylesheet')
+        +accordionCSS
+
   .card.mb-3
     .card-header
       h5.mb-0 Javascript
     .card-body.bg-light
       +componentCardLib
-        script(src=`assets/lib/semantic-ui-accordion/accordion.min.js`)
-        script(src=`assets/lib/semantic-ui-transition/transition.min.js`)
+        +accordionJS
+
+  .card.mb-3
+    .card-header
+      h5.mb-0 Example
+    .card-body.bg-light
+      +accordion
