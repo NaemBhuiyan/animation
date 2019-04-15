@@ -1,0 +1,28 @@
+extends ../_skeleton-component
+include mixins/_embed
+block append variables
+  - var firstParent = 'utilities'
+  - var currentPage = 'embed'
+
+block component
+  .card.mb-3.shadow-sm
+    .card-header
+      +PageHeader(pageHeader)
+    
+  .card.mb-3.shadow-sm
+    .card-header
+      h5.mb-2 Example
+      p.mb-0 Rules are directly applied to 
+        code &lt;iframe&gt;, 
+        code &lt;embed&gt;, 
+        code &lt;video&gt;, 
+        | and 
+        code &lt;object&gt; 
+        | elements; optionally use an explicit descendant class 
+        code .embed-responsive-item when you want to match the styling for other attributes.
+    .card-body.bg-light
+      +componentCard
+        +embed
+
+
+

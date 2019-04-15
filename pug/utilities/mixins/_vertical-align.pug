@@ -1,0 +1,36 @@
+block append variables
+  -
+    var pageHeader = {
+      title: 'Vertical Align',
+      description: 'Easily change the vertical alignment of inline, inline-block, inline-table, and table cell elements.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/components/vertical-align/`,
+      linkText: 'vertical-align on Bootstrap'
+    }
+
+
+mixin verticalAlign
+  = '\n'
+  span.align-baseline baseline
+  = '\n'
+  span.align-top top
+  = '\n'
+  span.align-middle middle
+  = '\n'
+  span.align-bottom bottom
+  = '\n'
+  span.align-text-top text-top
+  = '\n'
+  span.align-text-bottom text-bottom
+
+
+
+mixin verticalAlignTable
+  table(style='height: 100px;')
+    tbody
+      tr
+        td.align-baseline baseline
+        td.align-top top
+        td.align-middle middle
+        td.align-bottom bottom
+        td.align-text-top text-top
+        td.align-text-bottom text-bottom

@@ -27,8 +27,6 @@
     <!-- ===============================================-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="../assets/lib/prismjs/prism-okaidia.css" rel="stylesheet">
-    <link href="../assets/lib/semantic-ui-accordion/accordion.min.css" rel="stylesheet">
-    <link href="../assets/lib/semantic-ui-transition/transition.min.css" rel="stylesheet">
     <link href="../assets/css/theme.css" rel="stylesheet">
   </head>
 
@@ -110,46 +108,29 @@
       <div class="container">
         <div class="row mt-3">
           <div class="col-lg-9 col-xxl-10">
-            <div class="card mb-3">
-              <div class="card-body">
-                <h3>Accordion</h3>
-                <p class="mb-0">An accordion allows users to toggle the display of sections of content.</p><a class="btn btn-link btn-sm pl-0 mt-2" href="https://semantic-ui.com/modules/accordion.html" target="_blank">Accordion on semantic UI<span class="fas fa-chevron-right ml-1 fs--2"></span></a>
+            <div class="card mb-3 shadow-sm">
+              <div class="card-header">
+                <h3>Figures</h3>
+                <p class="mb-0">Documentation and examples for displaying related images and text with the figure component in Bootstrap.</p><a class="btn btn-link btn-sm pl-0 mt-2" href="https://getbootstrap.com/docs/4.3/components/figures/" target="_blank">Figures on Bootstrap<span class="fas fa-chevron-right ml-1 fs--2"></span></a>
               </div>
             </div>
-            <div class="card mb-3">
+            <div class="card mb-3 shadow-sm">
               <div class="card-header">
-                <h5 class="mb-0">Stylesheet</h5>
+                <p>Anytime you need to display a piece of content—like an image with an optional caption, consider using a <code>&lt;figure&gt;</code></p>
+                <p>Use the included <code>.figure</code>, <code>.figure-img </code>and <code>.figure-caption </code>classes to provide some baseline styles for the HTML5 <code>&lt;figure&gt; </code>and <code>&lt;figcaption&gt;</code> elements. Images in figures have no explicit size, so be sure to add the .img-fluid class to your <code>&lt;img&gt; </code>to make it responsive.</p>
               </div>
-              <div class="card-body bg-light"><pre class="mt-2"><code class="language-html">&lt;link href=&quot;assets/lib/semantic-ui-accordion/accordion.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
-&lt;link href=&quot;assets/lib/semantic-ui-transition/transition.min.css&quot; rel=&quot;stylesheet&quot; /&gt;</code></pre>
-              </div>
-            </div>
-            <div class="card mb-3">
-              <div class="card-header">
-                <h5 class="mb-0">Javascript</h5>
-              </div>
-              <div class="card-body bg-light"><pre class="mt-2"><code class="language-html">&lt;script src=&quot;assets/lib/semantic-ui-accordion/accordion.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;assets/lib/semantic-ui-transition/transition.min.js&quot;&gt;&lt;/script&gt;</code></pre>
-              </div>
-            </div>
-            <div class="card mb-3">
-              <div class="card-header">
-                <h5 class="mb-0">Example</h5>
-              </div>
-              <div class="card-body bg-light">
-                <div class="ui styled fluid accordion" data-options='{"exclusive":true}'>
-                  <div class="active title"><i class="dropdown icon"></i>What is a dog?</div>
-                  <div class="active content">
-                    <p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+              <div class="card-body bg-light overflow-hidden">
+                <div class="row">
+                  <div class="col-12">
+                    <figure class="figure" style="max-width: 25rem;">
+                      <img class="figure-img img-fluid rounded" src="../assets/img/generic/3.jpg" alt="...">
+                      <figcaption class="figure-caption">A caption for the above image.</figcaption>
+                    </figure>
                   </div>
-                  <div class="title"><i class="dropdown icon"></i>What kinds of dogs are there?</div>
-                  <div class="content">
-                    <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
-                  </div>
-                  <div class="title"><i class="dropdown icon"></i>How do you acquire a dog?</div>
-                  <div class="content">
-                    <p>Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.</p>
-                    <p>A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.</p>
+                  <div class="col-12"><pre class="rounded mt-2"><code class="language-html">&lt;figure class=&quot;figure&quot; style=&quot;max-width: 25rem;&quot;&gt;
+  &lt;img class=&quot;figure-img img-fluid rounded&quot; src=&quot;../assets/img/generic/3.jpg&quot; alt=&quot;...&quot;&gt;
+  &lt;figcaption class=&quot;figure-caption&quot;&gt;A caption for the above image.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
                   </div>
                 </div>
               </div>
@@ -163,11 +144,11 @@
               <li class="nav-item"><a class="nav-link text-600 collapsed" data-toggle="collapse" href="#components" role="button" aria-expanded="false" aria-controls="components">Components</a>
                 <div class="nav collapse pl-3" id="components" data-parent="#sidebar-nav"><a class="nav-link w-100 py-0 text-600" href="../components/alerts.html">Alerts</a><a class="nav-link w-100 py-0 text-600" href="../components/background.html">Background</a><a class="nav-link w-100 py-0 text-600" href="../components/badges.html">Badges</a><a class="nav-link w-100 py-0 text-600" href="../components/breadcrumb.html">Breadcrumb</a><a class="nav-link w-100 py-0 text-600" href="../components/buttons.html">Buttons</a><a class="nav-link w-100 py-0 text-600" href="../components/cards.html">Cards</a><a class="nav-link w-100 py-0 text-600" href="../components/carousel.html">Carousel</a><a class="nav-link w-100 py-0 text-600" href="../components/collapse.html">Collapse</a><a class="nav-link w-100 py-0 text-600" href="../components/dropdowns.html">Dropdowns</a><a class="nav-link w-100 py-0 text-600" href="../components/fancyscroll.html">Fancyscroll</a><a class="nav-link w-100 py-0 text-600" href="../components/forms.html">Forms</a><a class="nav-link w-100 py-0 text-600" href="../components/hoverbox.html">Hoverbox</a><a class="nav-link w-100 py-0 text-600" href="../components/list-group.html">List group</a><a class="nav-link w-100 py-0 text-600" href="../components/modals.html">Modals</a><a class="nav-link w-100 py-0 text-600" href="../components/media-object.html">Media object</a><a class="nav-link w-100 py-0 text-600" href="../components/navs.html">Navs</a><a class="nav-link w-100 py-0 text-600" href="../components/navbar.html">Navbar</a><a class="nav-link w-100 py-0 text-600" href="../components/page-headers.html">Page headers</a><a class="nav-link w-100 py-0 text-600" href="../components/pagination.html">Pagination</a><a class="nav-link w-100 py-0 text-600" href="../components/popovers.html">Popovers</a><a class="nav-link w-100 py-0 text-600" href="../components/progress.html">Progress</a><a class="nav-link w-100 py-0 text-600" href="../components/scrollspy.html">Scrollspy</a><a class="nav-link w-100 py-0 text-600" href="../components/spinners.html">Spinners</a><a class="nav-link w-100 py-0 text-600" href="../components/tables.html">Tables</a><a class="nav-link w-100 py-0 text-600" href="../components/tabs.html">Tabs</a><a class="nav-link w-100 py-0 text-600" href="../components/tooltips.html">Tooltips</a><a class="nav-link w-100 py-0 text-600" href="../components/toasts.html">Toasts</a></div>
               </li>
-              <li class="nav-item"><a class="nav-link text-600 collapsed" data-toggle="collapse" href="#utilities" role="button" aria-expanded="false" aria-controls="utilities">Utilities</a>
-                <div class="nav collapse pl-3" id="utilities" data-parent="#sidebar-nav"><a class="nav-link w-100 py-0 text-600" href="../utilities/borders.html">Borders</a><a class="nav-link w-100 py-0 text-600" href="../utilities/clearfix.html">Clearfix</a><a class="nav-link w-100 py-0 text-600" href="../utilities/close-icon.html">Close icon</a><a class="nav-link w-100 py-0 text-600" href="../utilities/colors.html">Colors</a><a class="nav-link w-100 py-0 text-600" href="../utilities/display.html">Display</a><a class="nav-link w-100 py-0 text-600" href="../utilities/embed.html">Embed</a><a class="nav-link w-100 py-0 text-600" href="../utilities/flex.html">Flex</a><a class="nav-link w-100 py-0 text-600" href="../utilities/figures.html">Figures</a><a class="nav-link w-100 py-0 text-600" href="../utilities/grid.html">Grid</a><a class="nav-link w-100 py-0 text-600" href="../utilities/sizing.html">Sizing</a><a class="nav-link w-100 py-0 text-600" href="../utilities/stretched-link.html">Stretched link</a><a class="nav-link w-100 py-0 text-600" href="../utilities/spacing.html">Spacing</a><a class="nav-link w-100 py-0 text-600" href="../utilities/typography.html">Typography</a><a class="nav-link w-100 py-0 text-600" href="../utilities/vertical-align.html">Vertical align</a><a class="nav-link w-100 py-0 text-600" href="../utilities/visibility.html">Visibility</a></div>
+              <li class="nav-item"><a class="nav-link text-info" data-toggle="collapse" href="#utilities" role="button" aria-expanded="true" aria-controls="utilities">Utilities</a>
+                <div class="nav collapse pl-3 show" id="utilities" data-parent="#sidebar-nav"><a class="nav-link w-100 py-0 text-600" href="../utilities/borders.html">Borders</a><a class="nav-link w-100 py-0 text-600" href="../utilities/clearfix.html">Clearfix</a><a class="nav-link w-100 py-0 text-600" href="../utilities/close-icon.html">Close icon</a><a class="nav-link w-100 py-0 text-600" href="../utilities/colors.html">Colors</a><a class="nav-link w-100 py-0 text-600" href="../utilities/display.html">Display</a><a class="nav-link w-100 py-0 text-600" href="../utilities/embed.html">Embed</a><a class="nav-link w-100 py-0 text-600" href="../utilities/flex.html">Flex</a><a class="nav-link w-100 py-0 text-info" href="../utilities/figures.html">Figures</a><a class="nav-link w-100 py-0 text-600" href="../utilities/grid.html">Grid</a><a class="nav-link w-100 py-0 text-600" href="../utilities/sizing.html">Sizing</a><a class="nav-link w-100 py-0 text-600" href="../utilities/stretched-link.html">Stretched link</a><a class="nav-link w-100 py-0 text-600" href="../utilities/spacing.html">Spacing</a><a class="nav-link w-100 py-0 text-600" href="../utilities/typography.html">Typography</a><a class="nav-link w-100 py-0 text-600" href="../utilities/vertical-align.html">Vertical align</a><a class="nav-link w-100 py-0 text-600" href="../utilities/visibility.html">Visibility</a></div>
               </li>
-              <li class="nav-item"><a class="nav-link text-info" data-toggle="collapse" href="#plugins" role="button" aria-expanded="true" aria-controls="plugins">Plugins</a>
-                <div class="nav collapse pl-3 show" id="plugins" data-parent="#sidebar-nav"><a class="nav-link w-100 py-0 text-info" href="../plugins/accordion.html">Accordion</a></div>
+              <li class="nav-item"><a class="nav-link text-600 collapsed" data-toggle="collapse" href="#plugins" role="button" aria-expanded="false" aria-controls="plugins">Plugins</a>
+                <div class="nav collapse pl-3" id="plugins" data-parent="#sidebar-nav"><a class="nav-link w-100 py-0 text-600" href="../plugins/accordion.html">Accordion</a></div>
               </li>
             </ul>
           </div>
@@ -190,9 +171,6 @@
     <script src="../assets/lib/stickyfilljs/stickyfill.min.js"></script>
     <script src="../assets/lib/sticky-kit/sticky-kit.min.js"></script>
     <script src="../assets/lib/prismjs/prism.js"></script>
-    <script src="../assets/lib/semantic-ui-accordion/accordion.min.js"></script>
-    <script src="../assets/lib/semantic-ui-transition/transition.min.js"></script>
-    <script src="../assets/lib/zion-semantic-ui-accordion/js/plugin.min.js"></script>
     <script src="../assets/js/theme.js"></script>
   </body>
 

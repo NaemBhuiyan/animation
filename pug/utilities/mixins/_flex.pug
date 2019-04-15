@@ -1,0 +1,136 @@
+block append variables
+  -
+    var pageHeader = {
+      title: 'Flex',
+      description: 'Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/components/flex/`,
+      linkText: 'flex on Bootstrap'
+    }
+
+
+mixin flexBasic
+  .d-flex.p-2.bg-200.mb-2 Flexbox container!
+  .d-inline-flex.p-2.bg-200 Inline flexbox container!
+
+mixin flexDirection
+  .d-flex.bg-200.mb-3&attributes(attributes)
+    .p-2.bg-300.border.border-400 Flex item 1
+    .p-2.bg-300.border.border-400 Flex item 2
+    .p-2.bg-300.border.border-400 Flex item 3
+  
+
+
+mixin flexJustifyContent
+  .d-flex.justify-content-start.bg-200.mb-2 
+    .p-2.bg-300.border.border-400 Flex Item
+  .d-flex.justify-content-end.bg-200.mb-2 
+    .p-2.bg-300.border.border-400 Flex Item
+  .d-flex.justify-content-center.bg-200.mb-2 
+    .p-2.bg-300.border.border-400 Flex Item
+  .d-flex.justify-content-between.bg-200.mb-2 
+    .p-2.bg-300.border.border-400 Flex Item
+  .d-flex.justify-content-around.bg-200.mb-2
+    .p-2.bg-300.border.border-400 Flex Item
+
+
+mixin flexAlignItem
+  .d-flex.align-items-start.bg-200.mb-2(style="height: 5rem;") 
+    .p-2.bg-300.border.border-400 Flex item 
+  .d-flex.align-items-end.bg-200.mb-2(style="height: 5rem;") 
+    .p-2.bg-300.border.border-400 Flex item 
+  .d-flex.align-items-center.bg-200.mb-2(style="height: 5rem;") 
+    .p-2.bg-300.border.border-400 Flex item 
+  .d-flex.align-items-baseline.bg-200.mb-2(style="height: 5rem;") 
+    .p-2.bg-300.border.border-400 Flex item 
+  .d-flex.align-items-stretch.bg-200.mb-2(style="height: 5rem;")
+    .p-2.bg-300.border.border-400 Flex item 
+
+
+mixin flexAlignSelf(config)
+  .d-flex.bg-200.mb-2(style="height: 5rem;") 
+    .border.border-400.p-2.bg-300 Flex Item
+    .border.border-400&attributes(attributes).p-2.bg-300 Align self #{config}
+    .border.border-400.p-2.bg-300 Flex Item
+
+mixin flexFill
+  .d-flex.bg-200
+    .p-2.flex-fill.bg-300.border.border-400 Flex item with a lot of content
+    .p-2.flex-fill.bg-300.border.border-400 Flex item
+    .p-2.flex-fill.bg-300.border.border-400 Flex item
+
+mixin flexShrink
+  .d-flex.bg-200
+    .p-2.w-100.bg-300.border.border-400 Flex item
+    .p-2.flex-shrink-1.bg-300.border.border-400 Flex item
+
+mixin flexMargin
+  .d-flex.bg-200.mb-2
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+  .d-flex.bg-200.mb-2
+    .mr-auto.p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+  .d-flex.bg-200.mb-2
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .ml-auto.p-2.bg-300.border.border-400 Flex item
+
+mixin flexWithAlignItems
+  .d-flex&attributes(attributes).flex-column.bg-200.mb-3(style='height: 200px;')
+    .mb-auto.p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+
+
+mixin flexNoWrap
+  .d-flex.flex-nowrap.mb-3.bg-200.border.border-300.py-3(style="width: 8rem")
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+
+
+mixin flexWrap
+  .d-flex&attributes(attributes).mb-3.bg-200.border.border-300
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+
+
+mixin flexOrder
+  .d-flex.flex-nowrap.bg-200
+    .order-3.p-2.bg-300.border.border-400 First flex item
+    .order-2.p-2.bg-300.border.border-400 Second flex item
+    .order-1.p-2.bg-300.border.border-400 Third flex item
+
+
+mixin flexAlignContent
+  .d-flex&attributes(attributes).flex-wrap.bg-200.mb-3(style='height: 300px;')
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item
+    .p-2.bg-300.border.border-400 Flex item

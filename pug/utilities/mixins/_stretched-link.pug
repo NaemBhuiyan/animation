@@ -1,0 +1,19 @@
+block append variables
+  -
+    var pageHeader = {
+      title: 'Stretched Link',
+      description: 'Make any HTML element or Bootstrap component clickable by “stretching” a nested link via CSS.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/components/stretched-link/`,
+      linkText: 'stretched-link on Bootstrap'
+    }
+
+
+mixin stretched-link
+  .card(style='width: 18rem;')
+    = '\n'
+    img.card-img-top(src=`${CWD}assets/img/generic/1.jpg`, alt='...')
+    .card-body
+      h5.card-title Card with stretched link
+      p.card-text
+        | Some quick example text to build on the card title and make up the bulk of the card's content.
+      a.btn.btn-primary.stretched-link(href='#') Go somewhere
