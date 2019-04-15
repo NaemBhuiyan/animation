@@ -19,19 +19,15 @@ block append variables
         icon: 'fas fa-puzzle-piece',
         inners: {
           alerts: 'alerts',
-          avatar: 'avatar',
           background: 'background',
           badges: 'badges',
           breadcrumb: 'breadcrumb',
-          'bulk-select': 'bulk-select',
           buttons: 'buttons',
           cards: 'cards',
           carousel: 'carousel',
           collapse: 'collapse',
-          countup: 'countup',
           dropdowns: 'dropdowns',
           fancyscroll: 'fancyscroll',
-          fancytab: 'fancytab',
           forms: 'forms',
           hoverbox: 'hoverbox',
           'list-group': 'list-group',
@@ -44,9 +40,11 @@ block append variables
           popovers: 'popovers',
           progress: 'progress',
           scrollspy: 'scrollspy',
+          spinners: 'Spinners',
           tables: 'tables',
           tabs: 'tabs',
           tooltips: 'tooltips',
+          toasts: 'Toasts'
         }
       },
       utilities: {
@@ -64,23 +62,6 @@ block append variables
         icon: 'fas fa-plug',
         inners: {
           accordion: 'accordion',
-          charts: 'charts',
-          countdown: 'countdown',
-          'data-table': 'data-table',
-          'date-picker': 'date-picker',
-          fancybox: 'fancybox',
-          fontawesome: 'fontawesome',
-          'google-map': 'google-map',
-          'inline-player': 'inline-player',
-          jqvmap: 'jqvmap',
-          lightbox: 'lightbox',
-          notifications: 'notifications',
-          'owl-carousel': 'owl-carousel',
-          progressbar: 'progressbar',
-          remodal: 'remodal',
-          select2: 'select2',
-          tinymce: 'tinymce',
-          'typed-text': 'typed-text'
         }
       },
       documentation: {
@@ -89,7 +70,6 @@ block append variables
           'getting-started': 'getting-started',
           'file-structure': 'file-structure',
           customization: 'customization',
-          'fluid-layout': 'fluid-layout',
           gulp: 'gulp',
           RTL: 'RTL',
           plugins: 'plugins',
@@ -107,6 +87,7 @@ block append variables
 
 
 block scripts
+  script(src=`${CWD}assets/lib/is/is.min.js`)
   script(src=`${CWD}assets/lib/stickyfilljs/stickyfill.min.js`)
   script(src=`${CWD}assets/lib/sticky-kit/sticky-kit.min.js`)
   
@@ -118,7 +99,7 @@ block styles
   
 
 block mainContent
-  +navbar.fixed-top
+  +navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top.font-weight-semi-bold.fs--1
   block wrapperContent 
     block beforeContent
     block content

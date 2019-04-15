@@ -37,6 +37,11 @@ const domainLock = 'prium.github.io';
 /*-----------------------------------------------
 |   Paths
 -----------------------------------------------*/
+const ZION = {
+  SCSS: 'scss/theme/plugins/',
+  PUG: 'pug/plugins/mixins/',
+  JS: 'js/theme/',
+};
 const CSS = 'pages/assets/css';
 const JS = 'pages/assets/js';
 const lib = 'pages/assets/lib';
@@ -106,84 +111,16 @@ const Paths = {
       FROM: 'node_modules/stickyfilljs/dist/stickyfill.min.js',
       TO: lib,
     },
-    'jquery-countdown': {
-      FROM: 'node_modules/jquery-countdown/dist/jquery.countdown.min.js',
-      TO: lib,
-    },
     'sticky-kit': {
       FROM: 'node_modules/sticky-kit/dist/**/*.*',
-      TO: lib,
-    },
-    'chart.js': {
-      FROM: ['node_modules/chart.js/dist/Chart.min.js', 'node_modules/chart.js/dist/Chart.bundle.min.js'],
       TO: lib,
     },
     '@fortawesome': {
       FROM: 'node_modules/@fortawesome/fontawesome-free/js/all.min.js',
       TO: lib,
     },
-    'progressbar.js': {
-      FROM: 'node_modules/progressbar.js/dist/progressbar.min.js',
-      TO: lib,
-    },
-    toastr: {
-      FROM: 'node_modules/toastr/build/**/*.*',
-      TO: lib,
-    },
-    fancybox: {
-      FROM: 'node_modules/@fancyapps/fancybox/dist/**/*.*',
-      TO: lib,
-    },
-    plyr: {
-      FROM: 'node_modules/plyr/dist/**/*.*',
-      TO: lib,
-    },
-    remodal: {
-      FROM: 'node_modules/remodal/dist/**/*.*',
-      TO: lib,
-    },
     'jquery.mb.ytplayer': {
       FROM: ['node_modules/jquery.mb.ytplayer/dist/css/jquery.mb.YTPlayer.min.css', 'node_modules/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js'],
-      TO: lib,
-    },
-    'owl.carousel': {
-      FROM: ['node_modules/owl.carousel/dist/owl.carousel.js', 'node_modules/owl.carousel/dist/assets/owl.carousel.css'],
-      TO: lib,
-    },
-    lightbox2: {
-      FROM: 'node_modules/lightbox2/dist/**/*.*',
-      TO: lib,
-    },
-    datatables: {
-      FROM: 'node_modules/datatables/media/**/*.*',
-      TO: lib,
-    },
-    'datatables-bs4': {
-      FROM: ['node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js', 'node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css'],
-      TO: lib,
-    },
-    'datatables.net-responsive': {
-      FROM: ['node_modules/datatables.net-responsive/js/dataTables.responsive.js'],
-      TO: lib,
-    },
-    'datatables.net-responsive-bs4': {
-      FROM: ['node_modules/datatables.net-responsive-bs4/js/responsive.bootstrap4.js', 'node_modules/datatables.net-responsive-bs4/css/responsive.bootstrap4.css'],
-      TO: lib,
-    },
-    'typed.js': {
-      FROM: 'node_modules/typed.js/lib/typed.js',
-      TO: lib,
-    },
-    flatpickr: {
-      FROM: ['node_modules/flatpickr/dist/flatpickr.min.css','node_modules/flatpickr/dist/flatpickr.min.js'],
-      TO: lib,
-    },
-    select2: {
-      FROM: ['node_modules/select2/dist/css/select2.min.css','node_modules/select2/dist/js/select2.min.js'],
-      TO: lib,
-    },
-    jqvmap: {
-      FROM: 'node_modules/jqvmap/dist/**/*.*',
       TO: lib,
     },
     'semantic-ui-accordion': {
@@ -194,9 +131,16 @@ const Paths = {
       FROM: ['node_modules/semantic-ui-transition/transition.min.css', 'node_modules/semantic-ui-transition/transition.min.js'],
       TO: lib,
     },
-    tinymce: {
-      FROM: 'node_modules/tinymce/**/*.*',
+    'is': {
+      FROM: 'node_modules/is_js/is.min.js',
       TO: lib,
+    }
+  },
+  ZION: {
+    'zion-semantic-ui-accordion': {
+      SCSS: ['node_modules/zion-semantic-ui-accordion/dist/scss/_zion-semantic-ui-accordion.scss'],
+      PUG: ['node_modules/zion-semantic-ui-accordion/dist/pug/_zion-semantic-ui-accordion.pug'],
+      JS: ['node_modules/zion-semantic-ui-accordion/dist/js/zion-semantic-ui-accordion.js'],
     },
   },
   GENERATED: [
@@ -394,6 +338,19 @@ gulp.task('copy:dependency', () => {
 
 
 /*-----------------------------------------------
+|   ZiON Modules
+-----------------------------------------------*/
+gulp.task('copy:zion', (done) => {
+  Object.keys(Paths.ZION).map(plugin => {
+    Object.keys(Paths.ZION[plugin]).map(fileType => {
+      gulp.src(Paths.ZION[plugin][fileType]).pipe(gulp.dest(ZION[fileType]));
+    });
+  });
+  done();
+});
+  
+
+/*-----------------------------------------------
 |   Watching
 -----------------------------------------------*/
 gulp.task('watch', () => {
@@ -477,7 +434,7 @@ gulp.task('serve', () => {
 /*-----------------------------------------------
 |   Starting everything
 -----------------------------------------------*/
-gulp.task('default', gulp.series('clean', 'copy:dependency', 'scss', 'scss:rtl', 'js', gulp.parallel('watch', 'serve')));
+gulp.task('default', gulp.series('clean', 'copy:dependency', 'copy:zion', 'scss', 'scss:rtl', 'js', gulp.parallel('watch', 'serve')));
 
 
 /*-----------------------------------------------
