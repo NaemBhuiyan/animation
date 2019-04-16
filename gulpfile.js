@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 const fs = require('fs');
 const path = require('path');
 const url = require('url');
@@ -45,7 +43,7 @@ const ZION = {
 const CSS = 'pages/assets/css';
 const JS = 'pages/assets/js';
 const lib = 'pages/assets/lib';
-const Paths = {
+const PATHS = {
   HERE: './',
   PAGES: {
     FOLDER: 'pages',
@@ -157,13 +155,13 @@ const Paths = {
 /*-----------------------------------------------
 |   Cleaning
 -----------------------------------------------*/
-gulp.task('clean', () => del(Paths.GENERATED, { force: true }));
+gulp.task('clean', () => del(PATHS.GENERATED, { force: true }));
 
 
 /*-----------------------------------------------
 |   SCSS
 -----------------------------------------------*/
-gulp.task('scss', () => gulp.src(Paths.SCSS.THEME)
+gulp.task('scss', () => gulp.src(PATHS.SCSS.THEME)
   .pipe(plumber())
   .pipe(sourcemaps.init())
   .pipe(sass({
@@ -175,10 +173,10 @@ gulp.task('scss', () => gulp.src(Paths.SCSS.THEME)
   }))
   .pipe(sourcemaps.write('.'))
   .pipe(plumber.stop())
-  .pipe(gulp.dest(Paths.CSS))
+  .pipe(gulp.dest(PATHS.CSS))
   .pipe(browserSync.stream()));
 
-gulp.task('scss:min', () => gulp.src(Paths.SCSS.THEME)
+gulp.task('scss:min', () => gulp.src(PATHS.SCSS.THEME)
   .pipe(plumber())
   .pipe(sourcemaps.init())
   .pipe(sass({
@@ -192,10 +190,10 @@ gulp.task('scss:min', () => gulp.src(Paths.SCSS.THEME)
   .pipe(rename({ suffix: '.min' }))
   .pipe(sourcemaps.write('.'))
   .pipe(plumber.stop())
-  .pipe(gulp.dest(Paths.CSS))
+  .pipe(gulp.dest(PATHS.CSS))
   .pipe(browserSync.stream()));
 
-gulp.task('scss:rtl', () => gulp.src(Paths.SCSS.THEME)
+gulp.task('scss:rtl', () => gulp.src(PATHS.SCSS.THEME)
   .pipe(plumber())
   .pipe(sourcemaps.init())
   .pipe(sass({
@@ -209,10 +207,10 @@ gulp.task('scss:rtl', () => gulp.src(Paths.SCSS.THEME)
   .pipe(rename({ suffix: '-rtl' })) // Append "-rtl" to the filename.
   .pipe(sourcemaps.write('.'))
   .pipe(plumber.stop())
-  .pipe(gulp.dest(Paths.CSS))
+  .pipe(gulp.dest(PATHS.CSS))
   .pipe(browserSync.stream()));
 
-gulp.task('scss:rtl:min', () => gulp.src(Paths.SCSS.THEME)
+gulp.task('scss:rtl:min', () => gulp.src(PATHS.SCSS.THEME)
   .pipe(plumber())
   .pipe(sourcemaps.init())
   .pipe(sass({
@@ -227,14 +225,14 @@ gulp.task('scss:rtl:min', () => gulp.src(Paths.SCSS.THEME)
   .pipe(rename({ suffix: '-rtl.min' }))
   .pipe(sourcemaps.write('.'))
   .pipe(plumber.stop())
-  .pipe(gulp.dest(Paths.CSS))
+  .pipe(gulp.dest(PATHS.CSS))
   .pipe(browserSync.stream()));
 
 
 /*-----------------------------------------------
 |   JavaScript
 -----------------------------------------------*/
-gulp.task('js:bootstrap', () => gulp.src(Paths.JS.BOOTSTRAP)
+gulp.task('js:bootstrap', () => gulp.src(PATHS.JS.BOOTSTRAP)
   .pipe(concat('bootstrap.js'))
   .pipe(replace(/^(export|import).*/gm, ''))
   .pipe(babel({
@@ -252,14 +250,14 @@ gulp.task('js:bootstrap', () => gulp.src(Paths.JS.BOOTSTRAP)
       '@babel/plugin-proposal-object-rest-spread',
     ].filter(Boolean),
   }))
-  .pipe(gulp.dest(Paths.ASSETS.JS))
+  .pipe(gulp.dest(PATHS.ASSETS.JS))
   .pipe(uglify())
   .pipe(rename({
     suffix: '.min',
   }))
-  .pipe(gulp.dest(Paths.ASSETS.JS)));
+  .pipe(gulp.dest(PATHS.ASSETS.JS)));
 
-gulp.task('js:theme', () => gulp.src(Paths.JS.THEME)
+gulp.task('js:theme', () => gulp.src(PATHS.JS.THEME)
   .pipe(eslint({ fix: true }))
   .pipe(eslint.format())
   .pipe(eslint.failAfterError())
@@ -282,14 +280,14 @@ gulp.task('js:theme', () => gulp.src(Paths.JS.THEME)
       'transform-strict-mode',
     ].filter(Boolean),
   }))
-  .pipe(gulp.dest(Paths.ASSETS.JS))
+  .pipe(gulp.dest(PATHS.ASSETS.JS))
   .pipe(uglify())
   .pipe(rename({
     suffix: '.min',
   }))
-  .pipe(gulp.dest(Paths.ASSETS.JS)));
+  .pipe(gulp.dest(PATHS.ASSETS.JS)));
 
-gulp.task('js:plugins', () => gulp.src(Paths.JS.PLUGINS)
+gulp.task('js:plugins', () => gulp.src(PATHS.JS.PLUGINS)
   .pipe(concat('plugins.js'))
   .pipe(replace(/^(export|import).*/gm, ''))
   .pipe(babel({
@@ -307,12 +305,12 @@ gulp.task('js:plugins', () => gulp.src(Paths.JS.PLUGINS)
       '@babel/plugin-proposal-object-rest-spread',
     ].filter(Boolean),
   }))
-  .pipe(gulp.dest(Paths.ASSETS.JS))
+  .pipe(gulp.dest(PATHS.ASSETS.JS))
   .pipe(uglify())
   .pipe(rename({
     suffix: '.min',
   }))
-  .pipe(gulp.dest(Paths.ASSETS.JS)));
+  .pipe(gulp.dest(PATHS.ASSETS.JS)));
 
 gulp.task('js', gulp.parallel('js:bootstrap', 'js:plugins', 'js:theme'));
 
@@ -321,9 +319,9 @@ gulp.task('js', gulp.parallel('js:bootstrap', 'js:plugins', 'js:theme'));
 |   Dependencies
 -----------------------------------------------*/
 gulp.task('copy:dependency', () => {
-  const promises = Object.keys(Paths.DEPENDENCIES).map(item => new Promise((resolve, reject) => {
-    gulp.src(Paths.DEPENDENCIES[item].FROM)
-      .pipe(gulp.dest((Paths.DEPENDENCIES[item].TO === lib) ? `${Paths.DEPENDENCIES[item].TO}/${item}` : Paths.DEPENDENCIES[item].TO))
+  const promises = Object.keys(PATHS.DEPENDENCIES).map(item => new Promise((resolve, reject) => {
+    gulp.src(PATHS.DEPENDENCIES[item].FROM)
+      .pipe(gulp.dest((PATHS.DEPENDENCIES[item].TO === lib) ? `${PATHS.DEPENDENCIES[item].TO}/${item}` : PATHS.DEPENDENCIES[item].TO))
       .on('end', (err) => {
         if (err) {
           console.log(err);
@@ -341,9 +339,9 @@ gulp.task('copy:dependency', () => {
 |   ZiON Modules
 -----------------------------------------------*/
 gulp.task('copy:zion', (done) => {
-  Object.keys(Paths.ZION).map(plugin => {
-    Object.keys(Paths.ZION[plugin]).map(fileType => {
-      gulp.src(Paths.ZION[plugin][fileType]).pipe(gulp.dest(ZION[fileType]));
+  Object.keys(PATHS.ZION).map(plugin => {
+    Object.keys(PATHS.ZION[plugin]).map(fileType => {
+      gulp.src(PATHS.ZION[plugin][fileType]).pipe(gulp.dest(ZION[fileType]));
     });
   });
   done();
@@ -354,24 +352,24 @@ gulp.task('copy:zion', (done) => {
 |   Watching
 -----------------------------------------------*/
 gulp.task('watch', () => {
-  gulp.watch(Paths.SCSS.ALL, gulp.series('scss'));
+  gulp.watch(PATHS.SCSS.ALL, gulp.series('scss'));
 
-  gulp.watch(Paths.PUG.FOLDER, gulp.series((done) => {
+  gulp.watch(PATHS.PUG.FOLDER, gulp.series((done) => {
     reload();
     done();
   }));
 
-  gulp.watch(Paths.JS.THEME, gulp.series('js:theme', (done) => {
+  gulp.watch(PATHS.JS.THEME, gulp.series('js:theme', (done) => {
     reload();
     done();
   }));
 
-  gulp.watch(Paths.JS.PLUGINS, gulp.series('js:plugins', (done) => {
+  gulp.watch(PATHS.JS.PLUGINS, gulp.series('js:plugins', (done) => {
     reload();
     done();
   }));
 
-  gulp.watch([Paths.ASSETS.FONTS, Paths.ASSETS.VIDEO, Paths.ASSETS.IMG], (done) => {
+  gulp.watch([PATHS.PAGES.HTML, PATHS.ASSETS.FONTS, PATHS.ASSETS.VIDEO, PATHS.ASSETS.IMG], (done) => {
     reload();
     done();
   });
@@ -385,7 +383,7 @@ gulp.task('watch', () => {
  * Browsersync middleware function
  * Compiles .pug files with browsersync
  */
-Paths.PUG = {
+PATHS.PUG = {
   FOLDER: 'pug/**/*.pug',
   PAGES: 'pug/**/!(_)*.pug',
 };
@@ -420,7 +418,7 @@ const compilePug = (req, res, next) => {
 gulp.task('serve', () => {
   browserSync.init({
     server: {
-      baseDir: Paths.PAGES.FOLDER,
+      baseDir: PATHS.PAGES.FOLDER,
     },
     // proxy: '127.0.0.1:8010',
     port: 3000,
@@ -462,12 +460,12 @@ gulp.task('temp', () => {
 
 const themePackage = require('./package.json');
 const {name, version} = themePackage;
-Paths.PRODUCT = {
+PATHS.PRODUCT = {
   FROM: ['product/gulpfile.js', 'product/package.json', 'product/.gitignore', 'product/README.md', 'js/**/*.js', 'pages/**/*.*', 'scss/**/*.scss', '.eslintrc.json'],
-  TO: `${name}-v${version}`,
+  TO: `releases/${name}-v${version}`,
 };
 
-gulp.task('pug2html', () => gulp.src(Paths.PUG.PAGES)
+gulp.task('pug2html', () => gulp.src(PATHS.PUG.PAGES)
   .pipe(plumber())
   .pipe(gulpPug({
     pretty: true,
@@ -484,18 +482,18 @@ gulp.task('pug2html', () => gulp.src(Paths.PUG.PAGES)
     verbosity: gulpJsbeautifier.report.ALL
   }))
   .pipe(plumber.stop())
-  .pipe(gulp.dest(Paths.PAGES.FOLDER)));
+  .pipe(gulp.dest(PATHS.PAGES.FOLDER)));
 
 gulp.task('product:push', () => {
   if (argv.dir) {
-    Paths.PRODUCT.TO = argv.dir;
+    PATHS.PRODUCT.TO = argv.dir;
   }
-  const promises = Paths.PRODUCT.FROM.map((item) => {
+  const promises = PATHS.PRODUCT.FROM.map((item) => {
     let destination;
     if (item.split('/')[1] && item.split('/')[1].includes('*')) {
-      destination = `${Paths.PRODUCT.TO}/${item.split('/')[0]}`;
+      destination = `${PATHS.PRODUCT.TO}/${item.split('/')[0]}`;
     } else {
-      destination = Paths.PRODUCT.TO;
+      destination = PATHS.PRODUCT.TO;
     }
     return new Promise((resolve, reject) => gulp.src(item)
       .pipe(gulp.dest(destination))
@@ -520,7 +518,7 @@ gulp.task('product', gulp.series('pug2html', 'product:push'));
 const through = require('through2');
 const puppeteer = require('puppeteer');
 const ansi = require('ansi');
-const vinylPaths = require('vinyl-paths');
+const vinylPATHS = require('vinyl-paths');
 
 const cursor = ansi(process.stdout);
 let totalWaitingTime = 0;
@@ -622,7 +620,7 @@ gulp.task('through', () => {
 });
 
 gulp.task('shot:rename', () => gulp.src('./pages/assets/img/screenshots/*.jpg')
-  .pipe(vinylPaths(del))
+  .pipe(vinylPATHS(del))
   .pipe(rename({ prefix: 'dist--' }))
   .pipe(gulp.dest('./pages/assets/img/screenshots/')));
 
@@ -668,7 +666,7 @@ const javascriptObfuscator = require('gulp-javascript-obfuscator');
 const htmlmin = require('gulp-htmlmin');
 
 gulp.task('live:html', (done) => {
-  return gulp.src(Paths.PUG.PAGES)
+  return gulp.src(PATHS.PUG.PAGES)
     .pipe(gulpPug({
       pretty: false,
       locals: { ENV: 'LIVE', jsPretty : pretty }
@@ -707,5 +705,7 @@ gulp.task('live:others', (done) => {
   .pipe(gulp.dest(`live/assets`));
 });
 
-
+/*-----------------------------------------------
+|   Create Live
+-----------------------------------------------*/
 gulp.task('live', gulp.parallel('live:html', 'live:css', 'live:js' , 'live:others'));

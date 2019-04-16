@@ -13,11 +13,11 @@
     ```
 3. Change your remote's URL from **SSH** to **HTTPS** with the `git remote set-url` command.
     ```
-    git remote set-url git@gitlab.com:USERNAME/REPOSITORY.git
+    git remote set-url origin git@gitlab.com:USERNAME/REPOSITORY.git
     ```
     or
     ```
-    git remote set-url https://gitlab.com/USERNAME/REPOSITORY.git
+    git remote set-url origin https://gitlab.com/USERNAME/REPOSITORY.git
     ```
     Verify that the remote URL has changed.
     ```
