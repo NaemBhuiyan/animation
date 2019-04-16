@@ -13,21 +13,7 @@ block component
 
   .card.shadow-sm.mb-3
     .card-header
-      h5.mb-2 Example
-      p Change the alignment of elements with the vertical-alignment utilities. Please note that vertical-align only affects inline, inline-block, inline-table, and table cell elements.
-      p Choose from 
-        code .align-baseline, 
-        code .align-top, 
-        code .align-middle, 
-        code .align-bottom, 
-        code .align-text-bottom, 
-        | and 
-        code .align-text-top as needed.
-      p Multiple links and tap targets are not recommended with stretched links. However, some 
-        code position 
-        | and 
-        code z-index 
-        | styles can help should this be required.
+      +verticalAlignDoc
     .card-body.bg-light
       +componentCard
        +verticalAlign
