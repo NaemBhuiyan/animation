@@ -6,18 +6,18 @@ block append variables
   - var currentPage = 'sizing'
  
 block component
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-body
       +PageHeader(pageHeader)
         +sizingDoc
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Width (relative to parent)
     .card-body.bg-light
       +componentCard
         +sizingWidth
 
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Height (relative to parent)
     .card-body.bg-light

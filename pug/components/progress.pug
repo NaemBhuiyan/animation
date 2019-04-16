@@ -9,27 +9,27 @@ block append scripts
   script(src=`${CWD}assets/lib/progressbar.js/progressbar.min.js`)
   
 block component
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-body
       +PageHeader(pageHeader)
    
   .row.no-gutters
     .col-xl-6.pr-xl-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Basic Example
         .card-body.bg-light
           +componentCard
             +progressbarBasic
     .col-xl-6.pl-xl-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           .h5.mb-0 Label
         .card-body.bg-light
           +componentCard
             +progressbarBasic({value: 50,display:true})
         
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       .h5.mb-0 Height
     .card-body.bg-light
@@ -38,7 +38,7 @@ block component
         +progressbarBasic({ height:10})
         +progressbarBasic({ height:20})
 
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       .h5.mb-0 Background
     .card-body.bg-light
@@ -47,14 +47,14 @@ block component
         +progressbarBasic({value: 40}).bg-info
         +progressbarBasic({value: 50}).bg-warning
         +progressbarBasic({value: 60}).bg-danger
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       .h5.mb-0 Multiple bars
     .card-body.bg-light
       +componentCard
         +progressbarMultiColor
  
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       .h5.mb-0 Striped
     .card-body.bg-light

@@ -6,27 +6,27 @@ block append variables
   - var currentPage = 'pagination'
 
 block component
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-body
       +PageHeader(pageHeader)
     
 
   .row.no-gutters
     .col-xl-6.pr-xl-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Example with text
         .card-body.bg-light
           +componentCard
             +paginationText
     .col-xl-6.pl-xl-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Example with icon
         .card-body.bg-light
           +componentCard
             +paginationIcon
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-1 Sizing
       p.mb-0 Fancy larger or smaller pagination add

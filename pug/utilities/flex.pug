@@ -7,12 +7,12 @@ block append variables
   - var currentPage = 'flex'
 
 block component
-  .card.mb-3.shadow-sm
+  .card.shadow-sm.mb-3
     .card-body
       +PageHeader(pageHeader)
     
   
-  .card.mb-3.shadow-sm
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-1 Enable flex behaviors
       p.mb-0 Apply 
@@ -22,7 +22,7 @@ block component
       +componentCard
         +flexBasic
 
-  .card.mb-3.shadow-sm
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-1 Direction
       p.mb-0 Use 
@@ -44,7 +44,7 @@ block component
 
         
     
-  .card.mb-3.shadow-sm
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-1 Justify Content
       p.mb-0 Use 
@@ -62,7 +62,7 @@ block component
     .card-body.bg-light
       +componentCard
         +flexJustifyContent
-  .card.mb-3.shadow-sm
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-1 Align items
       p Use 
@@ -83,7 +83,7 @@ block component
       +componentCard
         +flexAlignItem
 
-  .card.mb-3.shadow-sm
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-1 Align self
       p.mb-0 Use 
@@ -108,7 +108,7 @@ block component
         +flexAlignSelf("stretch").align-self-stretch
         
 
-  .card.mb-3.shadow-sm
+  .card.shadow-sm.mb-3
     .card-header 
       h5.mb-1 Fill
       p.mb-0 Use the 
@@ -117,7 +117,7 @@ block component
     .card-body.bg-light
       +componentCard
         +flexFill
-  .card.mb-3.shadow-sm
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-1 Grow and shrink
       p.mb-0 Use 
@@ -129,7 +129,7 @@ block component
     .card-body.bg-light
       +componentCard
         +flexShrink
-  .card.mb-3.shadow-sm
+  .card.shadow-sm.mb-3
     .card-header 
       h5.mb-1 Auto margins
       p.mb-0 Flexbox can do some pretty awesome things when you mix flex alignments with auto margins. Shown below are three examples of controlling flex items via auto margins: default (no auto margin), pushing two items to the right (
@@ -140,7 +140,7 @@ block component
     .card-body.bg-light
       +componentCard
         +flexMargin
-  .card.mb-3.shadow-sm
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-1 With align items
       p.mb-0 Vertically move one flex item to the top or bottom of a container by mixing 
@@ -153,7 +153,7 @@ block component
       +componentCard
         +flexWithAlignItems.align-items-start
         +flexWithAlignItems.align-items-end
-  .card.mb-3.shadow-sm
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-1 Wrap
       p.mb-0 Change how flex items wrap in a flex container. Choose from no wrapping at all (the browser default) with 
@@ -169,7 +169,7 @@ block component
         +flexWrap.flex-wrap
         +flexWrap.flex-wrap-reverse
         
-  .card.mb-3.shadow-sm
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-1 Order
       p.mb-0 Change the 
@@ -184,7 +184,7 @@ block component
     .card-body.bg-light
       +componentCard
         +flexOrder
-  .card.mb-3.shadow-sm
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-1 Align content
       p.mb-0 Use 

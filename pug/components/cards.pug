@@ -7,35 +7,35 @@ block append variables
   - var currentPage = 'cards'
 
 block component
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-body
       +PageHeader(pageHeader)
     
 
   .row.no-gutters
     .col-xl-6.pr-xl-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Basic Example
         .card-body.bg-light.overflow-hidden
           +componentCard
             +cardBasic
     .col-xl-6.pl-xl-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Card with list
         .card-body.bg-light
           +componentCard
             +CardUserPreferences
 
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Card with image
     .card-body.bg-light.overflow-hidden
       +componentCard
         +cardWithImage
 
-  //- .card.mb-3
+  //- .card.shadow-sm.mb-3
   //-   .card-header
   //-     h5.mb-0 Notification
   //-   .card-body.bg-light.overflow-hidden
@@ -47,14 +47,14 @@ block component
   //-           time: 'Just now',
   //-           emoji: '💬',
   //-         })
-  //- .card.mb-3
+  //- .card.shadow-sm.mb-3
   //-   .card-header
   //-     h5.mb-0 Notification Group
   //-   .card-body.bg-light.overflow-hidden
   //-     +componentCard
   //-       +CardNotification
 
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Background
     .card-body.bg-light.overflow-hidden
@@ -68,19 +68,19 @@ block component
           }
         }).align-items-end.d-flex
   
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Card Groups
     .card-body.bg-light.overflow-hidden
       +componentCard
         +cardGroup
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Card Decks
     .card-body.bg-light.overflow-hidden
       +componentCard
         +cardDeck
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Card styles
     .card-body

@@ -6,25 +6,25 @@ block append variables
   - var currentPage = 'alerts'
 
 block component
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-body
       +PageHeader(pageHeader)
       
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Examples
     .card-body.bg-light
       +componentCard
         +alertBasic
 
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Additional Content
     .card-body.bg-light
       +componentCard
         +alertAditionalContent
 
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Dismissing
     .card-body.bg-light

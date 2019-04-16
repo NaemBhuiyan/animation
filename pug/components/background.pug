@@ -12,23 +12,23 @@ block append variables
   - var currentPage = 'background'
 
 block component
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-body
       +PageHeader(pageHeader)
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Image Background
     .card-body.bg-light
       +componentCard
         +backgroundImage
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Video Background
     .card-body.bg-light
       +componentCard
         +backgroundVideo
             
-  .card.mb-3#ytplayer
+  .card.shadow-sm.mb-3#ytplayer
     .card-header
       +PageHeader(YTPlayerPageHeader)
     .card-body.bg-light
