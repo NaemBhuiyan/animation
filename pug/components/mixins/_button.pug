@@ -15,11 +15,11 @@ block append variables
     },
     ]
   
-  mixin buttonBasic
-    each color in colors
-      button.btn(type='button' class=`btn-${color}`).mr-1.mb-1
-        +cleanText(color)
-      = '\n'
+mixin buttonBasic
+  each color in colors
+    button.btn(type='button' class=`btn-${color}`).mr-1.mb-1
+      +cleanText(color)
+    = '\n'
       
 mixin buttonOutline
   each color in colors
@@ -77,25 +77,25 @@ mixin buttonIcon
 mixin buttonCapsule
   button(type='button').btn.btn-primary.rounded-capsule.mr-1.mb-1 Example
     = '\n'
-    button(type='button').btn.btn-primary.rounded-capsule.mr-1.mb-1
-      = '\n'
-      span.fas.fa-align-left.mr-1(data-fa-transform="shrink-3")
-      | Icon Left
+  button(type='button').btn.btn-primary.rounded-capsule.mr-1.mb-1
     = '\n'
-    button(type='button').btn.btn-primary.rounded-capsule.mr-1.mb-1
-      = '\n'
-      | Icon Right
-      span.fas.fa-align-right.ml-1(data-fa-transform="shrink-3")
-      = '\n'
-    button.ml-1(type='button').btn.btn-outline-primary.rounded-capsule.mr-1.mb-1 Outline
+    span.fas.fa-align-left.mr-1(data-fa-transform="shrink-3")
+    | Icon Left
+  = '\n'
+  button(type='button').btn.btn-primary.rounded-capsule.mr-1.mb-1
     = '\n'
-    hr
+    | Icon Right
+    span.fas.fa-align-right.ml-1(data-fa-transform="shrink-3")
     = '\n'
-    button(type='button').btn.btn-sm.btn-primary.rounded-capsule.mr-1.mb-1 Capsule Small
-    = '\n'
-    button(type='button').btn.btn-primary.rounded-capsule.mr-1.mb-1 Capsule Regular
-    = '\n'
-    button(type='button').btn.btn-lg.btn-primary.rounded-capsule.mr-1.mb-1 Capsule Large
+  button.ml-1(type='button').btn.btn-outline-primary.rounded-capsule.mr-1.mb-1 Outline
+  = '\n'
+  hr
+  = '\n'
+  button(type='button').btn.btn-sm.btn-primary.rounded-capsule.mr-1.mb-1 Capsule Small
+  = '\n'
+  button(type='button').btn.btn-primary.rounded-capsule.mr-1.mb-1 Capsule Regular
+  = '\n'
+  button(type='button').btn.btn-lg.btn-primary.rounded-capsule.mr-1.mb-1 Capsule Large
     
 mixin buttonGroup
   .btn-group(role='group', aria-label='Basic example')

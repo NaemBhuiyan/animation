@@ -9,9 +9,9 @@ block append variables
 
 
 
-mixin tooltips(val)
-  button.btn.btn-secondary.btn-sm.m-1(type='button', data-toggle='tooltip', data-placement=val, title='Tooltip on top')
+mixin tooltips(config)
+  button.btn.btn-secondary.btn-sm.m-1(type='button', data-toggle='tooltip', data-placement=config.placement, title=config.text)&attributes(attributes)
     = '\n'
-    | Tooltip on #{val}
+    | #{config.text}
     = '\n'
   = '\n'

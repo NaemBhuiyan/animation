@@ -75,72 +75,72 @@ mixin displayProperty
 mixin displayInHide
   p For faster mobile-friendly development, use responsive display classes for showing and hiding elements by device. Avoid creating entirely different versions of the same site, instead hide elements responsively for each screen size.
 
-    p To hide elements simply use the 
-      code .d-none 
-      | class or one of the 
-      code .d-{sm,md,lg,xl}-none 
-      | classes for any responsive screen variation.
+  p To hide elements simply use the 
+    code .d-none 
+    | class or one of the 
+    code .d-{sm,md,lg,xl}-none 
+    | classes for any responsive screen variation.
 
-    p To show an element only on a given interval of screen sizes you can combine one 
-      code .d-*-none class with a 
-      code .d-*-* class, for example 
-      code .d-none .d-md-block .d-xl-none 
-      | will hide the element for all screen sizes except on medium and large devices.
+  p To show an element only on a given interval of screen sizes you can combine one 
+    code .d-*-none class with a 
+    code .d-*-* class, for example 
+    code .d-none .d-md-block .d-xl-none 
+    | will hide the element for all screen sizes except on medium and large devices.
 
-    table.table.table-bordered
-      thead
-        tr
-          th Screen Size
-          th Class
-      tbody
-        tr
-          td Hidden on all
-          td
-            code .d-none
-        tr
-          td Hidden only on xs
-          td
-            code .d-none .d-sm-block
-        tr
-          td Hidden only on sm
-          td
-            code .d-sm-none .d-md-block
-        tr
-          td Hidden only on md
-          td
-            code .d-md-none .d-lg-block
-        tr
-          td Hidden only on lg
-          td
-            code .d-lg-none .d-xl-block
-        tr
-          td Hidden only on xl
-          td
-            code .d-xl-none
-        tr
-          td Visible on all
-          td
-            code .d-block
-        tr
-          td Visible only on xs
-          td
-            code .d-block .d-sm-none
-        tr
-          td Visible only on sm
-          td
-            code .d-none .d-sm-block .d-md-none
-        tr
-          td Visible only on md
-          td
-            code .d-none .d-md-block .d-lg-none
-        tr
-          td Visible only on lg
-          td
-            code .d-none .d-lg-block .d-xl-none
-        tr
-          td Visible only on xl
-          td
-            code .d-none .d-xl-block
+  table.table.table-bordered
+    thead
+      tr
+        th Screen Size
+        th Class
+    tbody
+      tr
+        td Hidden on all
+        td
+          code .d-none
+      tr
+        td Hidden only on xs
+        td
+          code .d-none .d-sm-block
+      tr
+        td Hidden only on sm
+        td
+          code .d-sm-none .d-md-block
+      tr
+        td Hidden only on md
+        td
+          code .d-md-none .d-lg-block
+      tr
+        td Hidden only on lg
+        td
+          code .d-lg-none .d-xl-block
+      tr
+        td Hidden only on xl
+        td
+          code .d-xl-none
+      tr
+        td Visible on all
+        td
+          code .d-block
+      tr
+        td Visible only on xs
+        td
+          code .d-block .d-sm-none
+      tr
+        td Visible only on sm
+        td
+          code .d-none .d-sm-block .d-md-none
+      tr
+        td Visible only on md
+        td
+          code .d-none .d-md-block .d-lg-none
+      tr
+        td Visible only on lg
+        td
+          code .d-none .d-lg-block .d-xl-none
+      tr
+        td Visible only on xl
+        td
+          code .d-none .d-xl-block
 
 
 mixin displayPrint

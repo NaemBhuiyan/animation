@@ -11,19 +11,19 @@ block append variables
 
 
 
-mixin navigationBar(vars)
+mixin navigationBar(id)
   nav.navbar.navbar-expand-lg.navbar-dark.fs--1&attributes(attributes)
     a.navbar-brand(href='#') falcon
-    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarContent1', aria-controls='navbarContent1', aria-expanded='false', aria-label='Toggle navigation')
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target=`#navbarContent${id}`, aria-controls=`navbarContent${id}`, aria-expanded='false', aria-label='Toggle navigation')
       span.navbar-toggler-icon
-    #navbarContent1.collapse.navbar-collapse
+    .collapse.navbar-collapse(id=`navbarContent${id}`)
       ul.navbar-nav.mr-auto
         li.nav-item
           a.nav-link(href='#') Link
         li.nav-item.dropdown
-          a#navbarDropdown1.nav-link.dropdown-toggle(href='#', role="button", data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+          a.nav-link.dropdown-toggle(href='#', role="button", data-toggle='dropdown', aria-haspopup='true', aria-expanded='false' id=`navbarDropdown${id}`)
             | Dropdown
-          .dropdown-menu.dropdown-menu-right.py-0(aria-labelledby='navbarDropdown1')
+          .dropdown-menu.dropdown-menu-right.py-0(aria-labelledby=`navbarDropdown${id}`)
             .bg-white.rounded-soft.py-2
               a.dropdown-item(href='#') Action
               a.dropdown-item(href='#') Another action
