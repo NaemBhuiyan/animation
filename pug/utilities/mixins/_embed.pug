@@ -7,7 +7,16 @@ block append variables
       linkText: 'Embed on Bootstrap'
     }
 
-
+mixin embedDoc
+  h5.mb-2 Example
+  p.mb-0 Rules are directly applied to 
+    code &lt;iframe&gt;, 
+    code &lt;embed&gt;, 
+    code &lt;video&gt;, 
+    | and 
+    code &lt;object&gt; 
+    | elements; optionally use an explicit descendant class 
+    code .embed-responsive-item when you want to match the styling for other attributes.
 mixin embed
   .embed-responsive.embed-responsive-16by9
     = '\n'

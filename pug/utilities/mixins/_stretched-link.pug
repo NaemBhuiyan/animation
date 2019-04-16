@@ -7,7 +7,27 @@ block append variables
       linkText: 'Stretched-link on Bootstrap'
     }
 
-
+mixin stretchedDoc
+  h5.mb-2 Example
+    p Add 
+      code .stretched-link 
+      | to a link to make its containing block clickable via a 
+      code ::after 
+      | pseudo element. In most cases, this means that an element with 
+      code position: relative; 
+      | that contains a link with the 
+      code .stretched-link 
+      | class is clickable.
+    p Cards have 
+      code position: relative 
+      | by default in Bootstrap, so in this case you can safely add the 
+      code .stretched-link 
+      | class to a link in the card without any other HTML changes.
+    p Multiple links and tap targets are not recommended with stretched links. However, some 
+      code position 
+      | and 
+      code z-index 
+      | styles can help should this be required.
 mixin stretchedLink
   .card(style='width: 18rem;')
     = '\n'
