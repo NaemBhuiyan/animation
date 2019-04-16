@@ -6,28 +6,28 @@ block append variables
   - var currentPage = 'navs'
 
 block component
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-body
       +PageHeader(pageHeader)
     
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Horizontal
     .card-body.bg-light
       +navs
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Vertical
     .card-body.bg-light
       +componentCard  
         +navs.flex-column
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Pills
     .card-body.bg-light
       +componentCard  
         +navs.nav-pills
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Fill and Justify
     .card-body.bg-light

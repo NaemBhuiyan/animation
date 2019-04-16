@@ -5,12 +5,12 @@ block append variables
   - var currentPage = 'toasts'
  
 block component
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-body
       +PageHeader(pageHeader)
     
 
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header  
       h5.mb-0 Basic Example
     .card-body.bg-light
@@ -19,14 +19,14 @@ block component
         +toastBasic
 
 
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header  
       h5.mb-1 Stacking
       p.mb-0 When you have multiple toasts, we default to vertically stacking them in a readable manner.
     .card-body.bg-light
       +componentCard
         +toastStacking
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header  
       h5.mb-1 Placement
       p.mb-0 Place toasts with the helper classes as you need them. The top right is often used for notifications, as is the top middle. If you’re only ever going to show one toast at a time, put the positioning styles right on the 

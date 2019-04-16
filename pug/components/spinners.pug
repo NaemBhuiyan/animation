@@ -5,12 +5,12 @@ block append variables
   - var currentPage = 'spinners'
  
 block component
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-body
       +PageHeader(pageHeader)
     
 
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header  
       h5.mb-0 Basic Example
     .card-body.bg-light
@@ -19,7 +19,7 @@ block component
 
 
 
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header  
       h5.mb-1 Colors
       p.mb-0 The border spinner uses 
@@ -31,7 +31,7 @@ block component
       +componentCard
         +spinnerWithColor
 
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header  
       h5.mb-1 Growing spinner
       p.mb-0 Place toasts with the helper classes as you need them. The top right is often used for notifications, as is the top middle. If you’re only ever going to show one toast at a time, put the positioning styles right on the 
@@ -41,14 +41,14 @@ block component
       +componentCard
         +spinnerGrowing
 
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-1 Growing colors
     .card-body
       +componentCard
         +spinnerGrowingWithColor
 
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-1 Size
       p.mb-0 Add 
@@ -59,7 +59,7 @@ block component
     .card-body.bg-light
       +componentCard
         +spinnerSize
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-1 Buttons
     .card-body.bg-light

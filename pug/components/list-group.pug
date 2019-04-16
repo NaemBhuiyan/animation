@@ -7,28 +7,28 @@ block append variables
   - var currentPage = 'list-group'
 
 block component
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       +PageHeader(pageHeader)
     
 
   .row.no-gutters
     .col-lg-6.pr-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Basic Example
         .card-body.bg-light
           +componentCard
             +listBasic
     .col-lg-6.pl-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Active Item
         .card-body.bg-light
             +componentCard
               +listWithActive
     .col-lg-6.pr-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 List group flush
         .card-body.bg-light
@@ -36,21 +36,21 @@ block component
             +listGroupFlush
 
     .col-lg-6.pl-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 List group with badge
         .card-body.bg-light
           +componentCard
            +listWithBadge
     .col-lg-6.pr-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 List group background
         .card-body.bg-light
           +componentCard
             +listWithBackground
     .col-lg-6.pl-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 List group with Link
         .card-body.bg-light

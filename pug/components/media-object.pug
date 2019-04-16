@@ -6,22 +6,22 @@ block append variables
   - var currentPage = 'media-object'
 
 block component
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       +PageHeader(pageHeader)
     
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Example
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-body.bg-light
       +componentCard
         +media('Media Heading')
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Alignment
     
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-body.bg-light
       +componentCard
         +media('media top').align-self-start
@@ -32,14 +32,14 @@ block component
       .card-body.bg-light
         +media('media end').align-self-end
 
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Media List
     .card-body.bg-light
       +componentCard
         +mediaList
 
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Nesting
     .card-body.bg-light

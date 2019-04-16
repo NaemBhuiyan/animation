@@ -3,19 +3,25 @@ extends ../_skeleton-component
 block append variables
   - var firstParent = 'components'
   - var currentPage = 'fancyscroll'
+  -
+    var pageHeader = {
+      title: 'Fancyscroll',
+      description: `${theme} includes a smooth scrolling plugin which allows you to animate the page's scrolling to elements within the page. The markup snippet below demonstrates:`,
+    }
 
 block component
-  +PageHeader('Fancyscroll')
-    p.mt-2.mb-0 #{theme} includes a smooth scrolling plugin which allows you to animate the page's scrolling to elements within the page. The markup snippet below demonstrates:
+  .card.shadow-sm.mb-3
+    .card-body
+      +PageHeader(pageHeader)
     
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Example
     .card-body.bg-light
       +componentCard
         a(href="#example-section" data-fancyscroll data-offset="70") Scroll to the #example-section below
 
-  .card.mb-3#example-section
+  .card.shadow-sm.mb-3#example-section
     .card-header
       h5.mb-0 The above link will scroll to this section.
     .card-body.bg-light

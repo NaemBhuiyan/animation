@@ -6,21 +6,21 @@ block append variables
   - var currentPage = 'tables'
  
 block component
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-body
       +PageHeader(pageHeader)
   
   .row.no-gutters
     .col-lg-6.pr-lg-2
 
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Example
         .card-body.bg-light
           +componentCard
             +table
     .col-lg-6.pl-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Dark
         .card-body.bg-light
@@ -28,7 +28,7 @@ block component
             +table.table-dark
             
     .col-lg-6.pr-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Header Dark
         .card-body.bg-light
@@ -36,14 +36,14 @@ block component
             +table('thead-dark')
             
     .col-lg-6.pl-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Header Light
         .card-body.bg-light
           +componentCard
             +table('thead-light')
     .col-lg-6.pr-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Table Striped
         .card-body.bg-light
@@ -52,7 +52,7 @@ block component
            
                 
     .col-lg-6.pl-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Table Hover
         .card-body.bg-light

@@ -7,11 +7,11 @@ block append variables
   - var currentPage = 'forms'
 
 block component
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header 
       +PageHeader(pageHeader[0])
    
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header 
       h5.mb-0 Basic Form
     .card-body.bg-light
@@ -19,20 +19,20 @@ block component
         +formBasic
 
 
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Input Group
     .card-body.bg-light
       +componentCard
         +formInputGroup
 
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-body
       +PageHeader(pageHeader[1])
     
   .row.no-gutters
     .col-lg-6.pr-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Checkboxes
         .card-body.bg-light
@@ -40,7 +40,7 @@ block component
             +formCheckbox
 
     .col-lg-6.pl-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Radios
         .card-body.bg-light
@@ -48,28 +48,28 @@ block component
             +formRadio
 
     .col-lg-6.pr-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Inline Radios
         .card-body.bg-light
           +componentCard
             +formInlineRadio
     .col-lg-6.pl-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Disabled
         .card-body.bg-light
           +componentCard
             +formDisableCheckbox
     .col-lg-6.pr-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Switches
         .card-body.bg-light
           +componentCard
             +formSwithc
     .col-lg-6.pl-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Disabled Switches
         .card-body.bg-light
@@ -77,7 +77,7 @@ block component
              +formSwithcDisable
             
     .col-lg-6.pr-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0   Custom Select
         .card-body.bg-light
@@ -87,7 +87,7 @@ block component
             +formCustomSelect.custom-select-sm.mb-3
             
     .col-lg-6.pl-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0   Multiple Select
         .card-body.bg-light
@@ -96,7 +96,7 @@ block component
             +formCustomSelect(multiple='' size="3")
               
     .col-lg-6.pr-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Range Input
         .card-body.bg-light
@@ -105,7 +105,7 @@ block component
             = '\n'
             input#customRange1.custom-range(type='range')
     .col-lg-6.pl-lg-2
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 File Browser
         .card-body.bg-light

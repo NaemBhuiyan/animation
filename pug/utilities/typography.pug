@@ -6,10 +6,10 @@ block append variables
   - var currentPage = 'typography'
  
 block component
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-body
       +PageHeader(pageHeader)
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5 Font Family
       p.mb-0 You have three 
@@ -18,14 +18,14 @@ block component
     .card-body.bg-light
       +componentCard
         +typoFont
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5 Headings
       +typoHeadingDoc
     .card-body.bg-light
       +componentCard
         +typoHeading
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5 Paragraphs
       +typoParagraph.mb-0
@@ -33,27 +33,27 @@ block component
       +componentCard
         p Your paragraph text goes here.
   
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5 Lead Paragraph and Drop cap
       +typoLeadDropcapDoc
     .card-body.bg-light
       +componentCard
         +typoParagraph.dropcap.lead
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Font Weights
     .card-body.bg-light
         +componentCardLib
           +typoFontWeight
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5 Colors
       p.mb-0 Use the following colors to change the text color
     .card-body.bg-light
       +componentCard
         +typoColor
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5 Sizes
       p.mb-0 If you want different sizes of fonts, you may use the following classes.
@@ -63,7 +63,7 @@ block component
   
   .row 
     .col-sm-6
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Left Alignment
         .card-body.bg-light
@@ -71,7 +71,7 @@ block component
             +typoParagraph.text-left
 
     .col-sm-6
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Right Alignment
         .card-body.bg-light
@@ -79,34 +79,34 @@ block component
             +typoParagraph.text-right
 
     .col-sm-6
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Center Aligned
         .card-body.bg-light
           +componentCard
             +typoParagraph.text-center
     .col-sm-6
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Justified
         .card-body.bg-light
           +componentCard
             +typoParagraph.text-justify
       
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Transformation
     .card-body.bg-light
       +componentCard
         +typoTransformation
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5 Inline styles
       +typoInlineStyleDoc
     .card-body.bg-light
       +componentCard
         +typoInlineStyle
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Blockquotes
     .card-body.bg-light
@@ -115,7 +115,7 @@ block component
   
   .row
     .col-lg-6
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5.mb-0 Unordered List
           p.mb-0 A list of items in which the order does not explicitly matter.
@@ -123,7 +123,7 @@ block component
           +componentCard
             +typoList
     .col-lg-6
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5 Ordered List
           p.mb-0 A list of items in which the order does explicitly matter.
@@ -131,7 +131,7 @@ block component
           +componentCard
             +typoListOrdered
     .col-lg-6
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5 Unstyled List
           p.mb-0 Adding 
@@ -143,7 +143,7 @@ block component
           +componentCard
             +typoList.list-unstyled
     .col-lg-6
-      .card.mb-3
+      .card.shadow-sm.mb-3
         .card-header
           h5 Checkmarked List
           p.mb-0 Adding 

@@ -6,18 +6,18 @@ block append variables
   - var currentPage = 'navbar'
 
 block component
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       +PageHeader(pageHeader)
     
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Navbar Light
     .card-body.bg-light
       +componentCard
         +navigationBar.bg-dark
 
-  .card.mb-3
+  .card.shadow-sm.mb-3
     .card-header
       h5.mb-0 Navbar Primary
     .card-body.bg-light
