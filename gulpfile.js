@@ -369,7 +369,7 @@ gulp.task('watch', () => {
     done();
   }));
 
-  gulp.watch([PATHS.PAGES.HTML, PATHS.ASSETS.FONTS, PATHS.ASSETS.VIDEO, PATHS.ASSETS.IMG], (done) => {
+  gulp.watch([PATHS.ASSETS.FONTS, PATHS.ASSETS.VIDEO, PATHS.ASSETS.IMG], (done) => {
     reload();
     done();
   });
